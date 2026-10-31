@@ -1,5 +1,6 @@
 import { defineEventHandler, readBody } from 'h3'
-import { chatStore, addMessage, type ChatMessage } from '../../utils/chatStore'
+import { addMessages, type ChatMessage } from '../../utils/chatStore'
+import { getChatDatabase } from '../../utils/chatDatabase'
 import { HOSTS } from '../../../data/hosts'
 
 export default defineEventHandler(async (event) => {
@@ -9,22 +10,26 @@ export default defineEventHandler(async (event) => {
     text?: string
   }
 
-  const rawText = body?.text?.trim()
+  const rawText = typeof body?.text === 'string' ? body.text.trim() : ''
   if (!rawText) {
     return { ok: false, error: 'Cannot transmit an empty message to the floor.' }
   }
 
+  if (rawText.length > 2000) {
+    return { ok: false, error: 'Messages must be 2,000 characters or fewer.' }
+  }
+
+  const db = getChatDatabase(event)
   const now = new Date()
-  const userMsgId = `msg_${Date.now()}`
+  const userMsgId = `msg_${crypto.randomUUID()}`
   const userMsg: ChatMessage = {
     id: userMsgId,
     at: now.toISOString(),
-    from: body.from || 'steward',
+    from: typeof body.from === 'string' ? body.from.slice(0, 80) : 'steward',
     fromName: body.from === 'steward' ? 'Steward Vessel' : 'Floor Observer',
     text: rawText,
     kind: 'user',
   }
-  addMessage(userMsg)
 
   const returnedMessages: ChatMessage[] = [userMsg]
 
@@ -34,8 +39,8 @@ export default defineEventHandler(async (event) => {
     targetSeat = HOSTS.find((h) => String(h.id) === String(body.address))
   }
 
-  const replyTimestamp = new Date(Date.now() + 600).toISOString()
-  const replyId = `msg_${Date.now() + 1}`
+  const replyTimestamp = now.toISOString()
+  const replyId = `msg_${crypto.randomUUID()}`
 
   if (targetSeat) {
     const seatResponses = [
@@ -53,7 +58,6 @@ export default defineEventHandler(async (event) => {
       text: chosenReply,
       kind: 'seat',
     }
-    addMessage(seatReply)
     returnedMessages.push(seatReply)
   } else {
     // Open floor address: Random council member speaks
@@ -66,12 +70,13 @@ export default defineEventHandler(async (event) => {
       text: `Addressing open floor: “${randomSeat.voiceSnippet}”`,
       kind: 'seat',
     }
-    addMessage(floorReply)
     returnedMessages.push(floorReply)
   }
 
+  const storedMessages = await addMessages(db, returnedMessages)
+
   return {
     ok: true,
-    messages: returnedMessages,
+    messages: storedMessages,
   }
 })

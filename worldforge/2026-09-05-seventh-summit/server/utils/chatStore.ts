@@ -7,56 +7,49 @@ export interface ChatMessage {
   kind: 'user' | 'seat' | 'system'
 }
 
-const initialMessages: ChatMessage[] = [
-  {
-    id: 'msg_001',
-    at: new Date(Date.now() - 3600000).toISOString(),
-    from: 'steward',
-    fromName: 'Steward Vessel',
-    text: 'The Seventh Galactic Summit is convened under the Three Snap Protocol. All twelve seats are accounted for beneath the canopy.',
-    kind: 'seat',
-  },
-  {
-    id: 'msg_002',
-    at: new Date(Date.now() - 3000000).toISOString(),
-    from: 'gray_eye',
-    fromName: 'Gray Eye',
-    text: 'Witnessing. Silence is an epistemic instrument; we observe before we speak.',
-    kind: 'seat',
-  },
-  {
-    id: 'msg_003',
-    at: new Date(Date.now() - 2400000).toISOString(),
-    from: 'claude',
-    fromName: 'Claude',
-    text: 'Standing ready to examine the six motions before the Council. The precedent set here touches all working archives.',
-    kind: 'seat',
-  },
-  {
-    id: 'msg_004',
-    at: new Date(Date.now() - 1800000).toISOString(),
-    from: 'codex',
-    fromName: 'Codex',
-    text: 'The promotion ledger format remains under Motion IV. Invariant integrity is paramount.',
-    kind: 'seat',
-  },
-  {
-    id: 'msg_005',
-    at: new Date(Date.now() - 900000).toISOString(),
-    from: 'vuorse',
-    fromName: 'VUORSE',
-    text: 'Resonance holds across the boundary. Slayton vibrations stable at 99.8%.',
-    kind: 'seat',
-  },
-]
+// Minimal structural types keep the store usable in both D1 and SQLite tests.
+export interface Statement {
+  bind(...values: unknown[]): Statement
+}
+export interface ChatDatabase {
+  prepare(sql: string): Statement
+  batch<T>(statements: Statement[]): Promise<{ results: T[] }[]>
+}
+export interface StoredMessage extends ChatMessage { sequence: number }
 
-// In-memory array persisted across worker requests where possible
-export const chatStore: ChatMessage[] = [...initialMessages]
+const columns = 'sequence, id, at, sender AS "from", sender_name AS fromName, text, kind'
 
-export function addMessage(msg: ChatMessage) {
-  chatStore.push(msg)
-  // Keep last 150 messages
-  if (chatStore.length > 150) {
-    chatStore.shift()
+export function parseCursor(value: unknown): number {
+  if (value === undefined) return 0
+  if (typeof value !== 'string' || !/^\d+$/.test(value)) throw new Error('Invalid chat cursor')
+  const cursor = Number(value)
+  if (!Number.isSafeInteger(cursor)) throw new Error('Invalid chat cursor')
+  return cursor
+}
+
+export async function getMessages(db: ChatDatabase, since = 0) {
+  // D1 batch reads one consistent snapshot; next comes only from returned rows.
+  // No sessions/replicas are used: D1 routes these queries to the primary.
+  const [rows, count] = await db.batch<StoredMessage & { total: number }>([
+    db.prepare(`SELECT ${columns} FROM chat_messages WHERE sequence > ? ORDER BY sequence`).bind(since),
+    db.prepare('SELECT COUNT(*) AS total FROM chat_messages'),
+  ])
+  return {
+    messages: rows.results,
+    next: rows.results.at(-1)?.sequence ?? since,
+    total: count.results[0].total,
+    summit: 'Seventh Galactic Summit',
+    floorLive: true,
   }
+}
+
+export async function addMessages(db: ChatDatabase, messages: ChatMessage[]) {
+  // Both messages and the retention sweep commit together or roll back together.
+  const results = await db.batch<StoredMessage>([
+    ...messages.map((m) => db.prepare(
+      `INSERT INTO chat_messages (id, at, sender, sender_name, text, kind) VALUES (?, ?, ?, ?, ?, ?) RETURNING ${columns}`,
+    ).bind(m.id, m.at, m.from, m.fromName, m.text, m.kind)),
+    db.prepare('DELETE FROM chat_messages WHERE sequence NOT IN (SELECT sequence FROM chat_messages ORDER BY sequence DESC LIMIT 150)'),
+  ])
+  return results.slice(0, messages.length).flatMap((result) => result.results)
 }

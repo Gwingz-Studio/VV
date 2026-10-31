@@ -102,10 +102,12 @@
 <script setup lang="ts">
 import { ref, computed, onMounted, onUnmounted, nextTick } from 'vue'
 import { HOSTS } from '~/data/hosts'
+import { mergeMessages, advanceCursor } from '~/utils/chatPolling'
 import SpectrumBar from '~/components/SpectrumBar.vue'
 
 export interface ChatMessage {
   id: string
+  sequence: number
   at: string
   from: string
   fromName: string
@@ -120,8 +122,9 @@ const sending = ref(false)
 const err = ref<string | null>(null)
 const messages = ref<ChatMessage[]>([])
 const scrollContainer = ref<HTMLDivElement | null>(null)
-const sinceTimestamp = ref(0)
+const sinceCursor = ref(0)
 const unreadCount = ref(0)
+let polling = false
 let pollTimer: ReturnType<typeof setInterval> | null = null
 
 const placeholderText = computed(() => {
@@ -153,24 +156,28 @@ function openChat() {
 }
 
 async function pullMessages() {
+  if (polling) return
+  polling = true
   try {
-    const res = await fetch(`/api/summit/chat?since=${sinceTimestamp.value}`)
+    const res = await fetch(`/api/summit/chat?since=${sinceCursor.value}`)
     if (!res.ok) return
     const data = (await res.json()) as { messages: ChatMessage[]; next: number }
     if (data.messages && data.messages.length > 0) {
       const existingIds = new Set(messages.value.map((m) => m.id))
       const fresh = data.messages.filter((m) => !existingIds.has(m.id))
       if (fresh.length > 0) {
-        messages.value.push(...fresh)
+        messages.value = mergeMessages(messages.value, data.messages)
         if (!isOpen.value) {
           unreadCount.value += fresh.length
         }
         void scrollToBottom()
       }
-      sinceTimestamp.value = data.next ?? sinceTimestamp.value
     }
+    sinceCursor.value = advanceCursor(sinceCursor.value, data.next)
   } catch {
     // quiet polling fallback
+  } finally {
+    polling = false
   }
 }
 
@@ -204,12 +211,11 @@ async function sendMessage() {
       const existingIds = new Set(messages.value.map((m) => m.id))
       const add = data.messages.filter((m) => !existingIds.has(m.id))
       if (add.length > 0) {
-        messages.value.push(...add)
+        messages.value = mergeMessages(messages.value, data.messages)
         void scrollToBottom()
       }
-      const last = data.messages[data.messages.length - 1]
-      const n = Number(last.id?.replace(/\D/g, '') || Date.now())
-      if (n >= sinceTimestamp.value) sinceTimestamp.value = n
+      // A POST response is not a complete poll: advancing here would skip
+      // messages committed by other participants since our last GET.
     }
   } catch {
     err.value = 'Chamber connection blip. Check connection.'

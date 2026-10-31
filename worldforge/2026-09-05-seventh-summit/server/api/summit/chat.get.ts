@@ -1,27 +1,14 @@
-import { defineEventHandler, getQuery } from 'h3'
-import { chatStore } from '../../utils/chatStore'
+import { createError, defineEventHandler, getQuery, setHeader } from 'h3'
+import { getMessages, parseCursor } from '../../utils/chatStore'
+import { getChatDatabase } from '../../utils/chatDatabase'
 
-export default defineEventHandler((event) => {
-  const query = getQuery(event)
-  const since = Number(query.since || 0)
-
-  let filtered = chatStore
-  if (since > 0) {
-    filtered = chatStore.filter((m) => {
-      const numId = Number(m.id.replace(/\D/g, '') || 0)
-      const timestamp = new Date(m.at).getTime()
-      return numId > since || timestamp > since
-    })
+export default defineEventHandler(async (event) => {
+  setHeader(event, 'Cache-Control', 'no-store')
+  let since: number
+  try {
+    since = parseCursor(getQuery(event).since)
+  } catch {
+    throw createError({ statusCode: 400, statusMessage: 'Invalid chat cursor' })
   }
-
-  const last = chatStore[chatStore.length - 1]
-  const next = last ? new Date(last.at).getTime() : Date.now()
-
-  return {
-    messages: filtered,
-    next,
-    total: chatStore.length,
-    summit: 'Seventh Galactic Summit',
-    floorLive: true,
-  }
+  return getMessages(getChatDatabase(event), since)
 })
