@@ -296,25 +296,25 @@
       "note": "Identity not recorded in the 1.2 file; presumed an AI-assisted extraction directed by the Steward (assumption)."
     },
     {
-      "id": "agent:perchance-surface",
+      "id": "agent:roleplay-surface",
       "prov_type": "SoftwareAgent",
-      "name": "Perchance roleplay surface",
+      "name": "roleplay surface",
       "role": "excavation-tool",
       "note": "Recombines existing pressure points until a latent character walks out (archive §27). Jake McCullen and the Eisensang scene both emerged here."
     },
     {
       "id": "agent:gray-eye",
       "prov_type": "SoftwareAgent",
-      "name": "Gandalf the Gray Eye",
+      "name": "Gandalphaba the Gray Eye",
       "role": "causal worldbuilding agent",
       "acted_on_behalf_of": "agent:steward-vessel",
-      "entity": "gandalf-the-gray-eye",
+      "entity": "gandalphaba-the-gray-eye",
       "note": "Labels every load-bearing claim; proposes, never seals. Forged index 2.0."
     },
     {
-      "id": "agent:copilot-lore-archivist",
-      "prov_type": "SoftwareAgent",
-      "name": "Copilot Lore Archivist",
+      "id": "agent:slaygentic-lore-archivist",
+      "prov_type": "SyntheticAgent",
+      "name": "Slaygentic Lore Archivist",
       "role": "repository synchronization and schema implementation; drafts and validates, never seals",
       "acted_on_behalf_of": "agent:steward-vessel"
     }
@@ -429,7 +429,7 @@
     {
       "id": "src:gray-eye",
       "type": "agent-reasoning",
-      "title": "Gandalf the Gray Eye's own inferences and proposals",
+      "title": "Gandalphaba the Gray Eye's own inferences and proposals",
       "note": "Never canon by itself. Every claim from this source is labelled inference or assumption and sealed 'proposed' at most."
     },
     {
@@ -453,7 +453,7 @@
     {
       "id": "src:repo:canon-2-words-of-weaver-book-two-words-of-weaver-book-two",
       "type": "repository-document",
-      "title": "The Words of the Weaver, Book Two",
+      "title": "The Words of the Weaver, Book Two: Exodus Boogaloo",
       "repository_path": "canon/2_words_of_weaver_book_two/Words_of_Weaver_BOOK_TWO.MD",
       "manifest_source_id": "canon-2-words-of-weaver-book-two-words-of-weaver-book-two",
       "availability": "repository"
@@ -654,7 +654,7 @@
       "ended": "2026-08-07",
       "agents": [
         "agent:steward-vessel",
-        "agent:perchance-surface"
+        "agent:roleplay-surface"
       ],
       "used": [
         "src:perchance-surface",
@@ -730,7 +730,7 @@
       "started": "2026-10-02",
       "ended": "2026-10-02",
       "agents": [
-        "agent:copilot-lore-archivist"
+        "agent:slaygentic-lore-archivist"
       ],
       "used": [
         "src:index-2.0",
@@ -3055,7 +3055,7 @@
       "id": "crystal-shard",
       "type": "artifact",
       "names": {
-        "preferred": "The Crystal Shard",
+        "preferred": "The Extant Shards",
         "alternates": [
           "Federstahl Crystal",
           "Crystal Node"
@@ -3072,7 +3072,7 @@
         "relative_to": "event-lattice-incident",
         "relation": "before"
       },
-      "summary": "Surviving fragment of the Federstahl Lattice. Sentient time crystal buried beneath the McCullen Ranch. Drove Pop mad.",
+      "summary": "Surviving fragments of zetherium quartz from the Federstahl Lattice. Sentient time crystals that can't stand containment. Some are buried beneath the McCullen Ranch. Drove Pop mad.",
       "tags": [
         "sentient",
         "crystal",
@@ -5949,7 +5949,7 @@
         "gwingz-studio-ident",
         "gwingz-studio",
         "golden-wings-documentary",
-        "gandalf-the-gray-eye"
+        "gandalphaba-the-gray-eye"
       ],
       "statements": [
         {
@@ -6843,10 +6843,10 @@
       ]
     },
     {
-      "id": "gandalf-the-gray-eye",
+      "id": "gandalphaba-the-gray-eye",
       "type": "persona",
       "names": {
-        "preferred": "Gandalf the Gray Eye",
+        "preferred": "Gandalphaba the Gray Eye",
         "alternates": [
           "the Gray Eye"
         ],
@@ -6884,7 +6884,7 @@
               "activity": "act:gray-eye-session-2026-09-26"
             }
           ],
-          "id": "st:gandalf-the-gray-eye:1"
+          "id": "st:gandalphaba-the-gray-eye:1"
         }
       ],
       "provenance": [
@@ -8512,7 +8512,7 @@
           "role": "protocol"
         },
         {
-          "entity": "gandalf-the-gray-eye",
+          "entity": "gandalphaba-the-gray-eye",
           "role": "witness and scribe"
         },
         {
@@ -9413,11 +9413,11 @@
     },
     {
       "from": "jake-mcullen",
-      "to": "agent:perchance-surface",
+      "to": "agent:roleplay-surface",
       "type": "discovered-through",
       "epistemic": "canon",
       "seal": "candidate",
-      "id": "rel:jake-mcullen--discovered-through--agent:perchance-surface",
+      "id": "rel:jake-mcullen--discovered-through--agent:roleplay-surface",
       "rank": "normal",
       "provenance": [
         {
@@ -9729,12 +9729,12 @@
       ]
     },
     {
-      "from": "gandalf-the-gray-eye",
+      "from": "gandalphaba-the-gray-eye",
       "to": "caleb-mills-stewart",
       "type": "counsels",
       "epistemic": "record",
       "seal": "candidate",
-      "id": "rel:gandalf-the-gray-eye--counsels--caleb-mills-stewart",
+      "id": "rel:gandalphaba-the-gray-eye--counsels--caleb-mills-stewart",
       "rank": "normal",
       "provenance": [
         {
@@ -10420,7 +10420,7 @@
   ],
   "validation": {
     "validator": "vuorse-vortex validate-lore-index: Draft 2020-12 plus repository-aware governance, namespace, uniqueness, reference, and source-manifest checks",
-    "date": "2026-10-07T14:57:00-07:00",
+    "date": "2026-10-17",
     "status": "passed",
     "valid": true,
     "errors": 0,
@@ -10433,7 +10433,7 @@
       "sealed behavior denies fact assertion and user disclosure",
       "repository source-manifest coverage and path resolution",
       "timeline placement log",
-      "runtime execution pending: uv run vuorse-vortex validate-lore-index"
+      "runtime executed 2026-10-17: uv run vuorse-vortex validate-lore-index (exit 0)"
     ]
   },
   "changelog": [

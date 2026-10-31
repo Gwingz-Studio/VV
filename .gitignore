@@ -47,3 +47,6 @@ web/dist/
 *.bak
 .frolic-backup-*.json
 .frolic-session.json
+
+# Nested design-system sub-repo (self-contained .git)
+CEDS/

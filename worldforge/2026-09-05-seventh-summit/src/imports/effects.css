@@ -1,0 +1,27 @@
+/* Elevation is a hard solid offset in the shade color — never a blurred shadow. */
+:root{
+  --shade-offset:0 6px 0 0; /* @kind shadow */
+  --elevation-flat:var(--shade-offset) var(--color-primary-shade);
+  --effect-editor-body:inset 0 0.25rem 0.25rem 0.0625rem rgba(0,0,0,0.25);
+  --effect-editor-copy:0 0.25rem 0.25rem 0 rgba(0,0,0,0.25),inset 0.125rem 0.25rem 0.375rem 0.125rem rgba(0,0,0,0.25);
+  /* the six-band spectrum as a hard-stop gradient (flat bands, not a blend) */
+  --spectrum-bar:linear-gradient(90deg,var(--spectrum-red) 0 16.6%,var(--spectrum-orange) 16.6% 33.3%,var(--spectrum-yellow) 33.3% 50%,var(--spectrum-green) 50% 66.6%,var(--spectrum-blue) 66.6% 83.3%,var(--spectrum-purple) 83.3% 100%);
+  /* component layer */
+  --button-bg:var(--color-primary);
+  --button-fg:var(--space-black);
+  --button-radius:var(--radius-arc);
+  --button-shade:var(--elevation-flat);
+  --button-hover-bg:var(--color-primary-shade);
+  --button-disabled-bg:rgba(255,255,255,0.14);
+  --card-bg:var(--color-surface);
+  --card-border:1px solid var(--color-border);
+  --card-radius:var(--radius-md);
+  --input-bg:var(--space-black);
+  --input-border:2px solid var(--color-border);
+  --input-focus:var(--color-focus);
+  --input-radius:var(--radius-md);
+  --badge-radius:var(--radius-arc);
+  --badge-fg:var(--space-black);
+  --alert-stripe:6px;
+  --divider-band:4px;
+}

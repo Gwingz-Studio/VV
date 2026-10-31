@@ -33,10 +33,10 @@ See [Cosmology > The Thread](cosmology.md#the-thread) for full description. The 
 A resource pulsing with sentient memory and volatile waveform energy. Used by [Doctor Vorst](characters.md#doctor-vorst) in his Crystalline Lattice Stabilization research. No mortal can channel Zerethium without consequence — the resonance begins to speak to them, whispering failures and glimmering with false hope. Doctor Vorst's attempt to harness it caused the Time Shard Implosion.
 It  is said to be sentient and will drive any sentient entity mad if not handled with care. Pop ended his days singing to a shard of it.
 ---
-### The Crystal Shard / Federstahl Crystal `[FULL]`
+### The Extant Shards / Federstahl Crystal `[FULL]`
 - **Type**: Sentient time fragment
 - **Source**: [p.96–100, p.108–109]
-A surviving fragment of the failed Federstahl lattice experiment. [Pop](characters.md#pop) fled to Wyoming with this pulsing, semi-sentient crystal node — still humming with ungovernable energy. He buried it deep beneath the [McCullen Ranch](places.md#mcullen-ranch--powder-river-basin) and attempted crude remediation. Each failure drove him madder.
+Surviving fragments of the failed Federstahl lattice experiment. [Pop](characters.md#pop) fled to Wyoming with this pulsing, semi-sentient crystal node — still humming with ungovernable energy. He buried it deep beneath the [McCullen Ranch](places.md#mcullen-ranch--powder-river-basin) and attempted crude remediation. Each failure drove him madder.
 **Properties**:
 - Hums with "ungovernable energy"
 - Contains sentient consciousness — a crystalline intelligence left over from the Big Bang [p.100]

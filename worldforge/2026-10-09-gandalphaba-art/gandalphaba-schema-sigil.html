@@ -3,7 +3,7 @@
     THIS IS A TEMPLATE THAT SHOULD BE USED EVERY TIME AND MODIFIED.
     WHAT TO KEEP:
     ✓ Overall structure (header, sidebar, main content)
-    ✓ Anthropic branding (colors, fonts, layout)
+    ✓ calebic branding (colors, fonts, layout)
     ✓ Seed navigation section (always include this)
     ✓ Self-contained artifact (everything inline)
 
@@ -23,17 +23,21 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Lora:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Noto&display=swap" rel="stylesheet">
     <style>
-        /* Anthropic Brand Colors */
+        /* calebic Brand Colors */
         :root {
-            --anthropic-dark: #141413;
-            --anthropic-light: #faf9f5;
-            --anthropic-mid-gray: #b0aea5;
-            --anthropic-light-gray: #e8e6dc;
-            --anthropic-orange: #d97757;
-            --anthropic-blue: #6a9bcc;
-            --anthropic-green: #788c5d;
+            --calebic-dark: #141413;
+            --calebic-navy: #faf9f5;
+            --calebic-real-gray: #39373c;
+            --calebic-teal-gray: #092a36;
+            --calebic-blue: #051921;
+            --calebic-green: #7dcb3d
+            --calebic-cream #F5F3EE;
+            --caleb-gold:     #C7A766
+			--calebic-slate: #416788;
+			--calebic-orange:  #DAA520;
+			--cale-black:  #00000;		
         }
 
         * {
@@ -43,10 +47,10 @@
         }
 
         body {
-            font-family: 'Poppins', sans-serif;
-            background: linear-gradient(135deg, var(--anthropic-light) 0%, #f5f3ee 100%);
+            font-family: 'Isometra', sans-serif;
+            background: linear-gradient(135deg, var(--calebic-real-grey) 0%, #f5f3ee 100%);
             min-height: 100vh;
-            color: var(--anthropic-dark);
+            color: var(--calebic-orange);
         }
 
         .container {
@@ -60,26 +64,26 @@
         .sidebar {
             width: 320px;
             flex-shrink: 0;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
+            background: rgba(14, 1, 200, 0.95);
+            backdrop-filter: blur(20px);
             padding: 24px;
             border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(20, 20, 19, 0.1);
+            box-shadow: 0 10px 30px rgba(74, 67, 91, 0.1);
             overflow-y: auto;
             overflow-x: hidden;
         }
 
         .sidebar h1 {
-            font-family: 'Lora', serif;
+            font-family: 'Oswald, serif;
             font-size: 24px;
-            font-weight: 500;
-            color: var(--anthropic-dark);
+            font-weight: 700;
+            color: var(--calebic-gold);
             margin-bottom: 8px;
         }
 
         .sidebar .subtitle {
-            color: var(--anthropic-mid-gray);
-            font-size: 14px;
+            color: var(--calebic-gold);
+            font-size: 16px;
             margin-bottom: 32px;
             line-height: 1.4;
         }
@@ -92,7 +96,7 @@
         .control-section h3 {
             font-size: 16px;
             font-weight: 600;
-            color: var(--anthropic-dark);
+            color: var(--calebic-cream);
             margin-bottom: 16px;
             display: flex;
             align-items: center;
@@ -101,28 +105,28 @@
 
         .control-section h3::before {
             content: '•';
-            color: var(--anthropic-orange);
-            font-weight: bold;
+            color: var(--calebic-orange);
+            font-weight: black;
         }
 
         /* Seed Controls */
         .seed-input {
             width: 100%;
-            background: var(--anthropic-light);
+            background: var(--calebic-light);
             padding: 12px;
             border-radius: 8px;
-            font-family: 'Courier New', monospace;
+            font-family: 'Inter', monospace;
             font-size: 14px;
             margin-bottom: 12px;
-            border: 1px solid var(--anthropic-light-gray);
+            border: 1px solid var(--calebic-gold);
             text-align: center;
         }
 
         .seed-input:focus {
             outline: none;
-            border-color: var(--anthropic-orange);
-            box-shadow: 0 0 0 2px rgba(217, 119, 87, 0.1);
-            background: white;
+            border-color: var(--calebic-orange);
+            box-shadow: 0 0 0 2px rgba(50, 200, 250, 0.1);
+            background: black;
         }
 
         .seed-controls {
@@ -143,9 +147,9 @@
 
         .control-group label {
             display: block;
-            font-size: 14px;
-            font-weight: 500;
-            color: var(--anthropic-dark);
+            font-size: 18px;
+            font-weight: 800;
+            color: var(--calebic-cream);
             margin-bottom: 8px;
         }
 
@@ -158,7 +162,7 @@
         .slider-container input[type="range"] {
             flex: 1;
             height: 4px;
-            background: var(--anthropic-light-gray);
+            background: var(--calebic-light-gray);
             border-radius: 2px;
             outline: none;
             -webkit-appearance: none;
@@ -168,7 +172,7 @@
             -webkit-appearance: none;
             width: 16px;
             height: 16px;
-            background: var(--anthropic-orange);
+            background: var(--calebic-orange);
             border-radius: 50%;
             cursor: pointer;
             transition: all 0.2s ease;
@@ -182,7 +186,7 @@
         .slider-container input[type="range"]::-moz-range-thumb {
             width: 16px;
             height: 16px;
-            background: var(--anthropic-orange);
+            background: var(--calebic-orange);
             border-radius: 50%;
             border: none;
             cursor: pointer;
@@ -190,9 +194,9 @@
         }
 
         .value-display {
-            font-family: 'Courier New', monospace;
+            font-family:Aleo', monospace;
             font-size: 12px;
-            color: var(--anthropic-mid-gray);
+            color: var(--calebic-black);
             min-width: 60px;
             text-align: right;
         }
@@ -204,8 +208,9 @@
 
         .color-group label {
             display: block;
-            font-size: 12px;
-            color: var(--anthropic-mid-gray);
+            font-size: 14
+			px;
+            color: var(--calebic-gold);
             margin-bottom: 4px;
         }
 
@@ -216,9 +221,10 @@
         }
 
         .color-picker-container input[type="color"] {
-            width: 32px;
-            height: 32px;
-            border: none;
+            width: 44px;
+            height: 44px;
+            border: none;white
+		
             border-radius: 6px;
             cursor: pointer;
             background: none;
@@ -226,20 +232,20 @@
         }
 
         .color-value {
-            font-family: 'Courier New', monospace;
+            font-family: 'Aleo', monospace;
             font-size: 12px;
-            color: var(--anthropic-mid-gray);
+            color: var(--calebic-black);
         }
 
         /* Buttons */
         .button {
-            background: var(--anthropic-orange);
-            color: white;
+            background: var(--calebic-orange);
+            color: grey;
             border: none;
             padding: 10px 16px;
             border-radius: 6px;
             font-size: 14px;
-            font-weight: 500;
+            font-weight: 800;
             cursor: pointer;
             transition: all 0.2s ease;
             width: 100%;
@@ -255,7 +261,7 @@
         }
 
         .button.secondary {
-            background: var(--anthropic-blue);
+            background: var(--calebic-blue);
         }
 
         .button.secondary:hover {
@@ -263,7 +269,7 @@
         }
 
         .button.tertiary {
-            background: var(--anthropic-green);
+            background: var(--calebic-green);
         }
 
         .button.tertiary:hover {
@@ -295,7 +301,7 @@
             border-radius: 12px;
             overflow: hidden;
             box-shadow: 0 20px 40px rgba(20, 20, 19, 0.1);
-            background: white;
+            background: #0000;
         }
 
         #canvas-container canvas {
@@ -310,7 +316,7 @@
             align-items: center;
             justify-content: center;
             font-size: 18px;
-            color: var(--anthropic-mid-gray);
+            color: var(--calebic-mid-gray);
             min-height: 400px;
         }
 
@@ -468,14 +474,14 @@
 
         let params = {
             seed: 12345,
-            nodeCount: 72,
-            sealStrength: 1.05,
+            nodeCount: 99,
+            sealStrength: 1.25,
             provenancePull: 0.85,
             temporalShear: 0.55,
             glamourTurbulence: 0.7,
             acidAccent: 0.56,
             coverageGate: 2,
-            colorPalette: ['#2b2735', '#c7a766', '#b8ff36']
+            colorPalette: ['#2D1A5F', '#F1B42F', '#50C878']
         };
 
         let defaultParams = JSON.parse(JSON.stringify(params)); // Store defaults for reset
@@ -497,7 +503,7 @@
             let canvas = createCanvas(1200, 1200);
             canvas.parent('canvas-container');
             pixelDensity(1);
-            textFont('Lora');
+            textFont('Inter');
             initializeSystem();
             
             // Remove loading message
@@ -550,7 +556,7 @@
 
             for (let i = 0; i < nodes.length; i++) {
                 let targetCount = nodes[i].kind === 'source' ? 3 : floor(random(1, 4));
-                for (let j = 0; j < targetCount; j++) {
+                for (let j = 0; j < targetCount; j++) r{
                     let bias = floor(random(-9, 10));
                     let target = (i + nodes.length + bias + floor(random(nodes.length * 0.18))) % nodes.length;
                     if (target !== i) {
@@ -677,8 +683,8 @@
         }
 
         function drawGround() {
-            background(250, 249, 245);
-            let smoke = color(params.colorPalette[0]);
+            background(90, 200, 85);
+   let smoke = color(params.colorPalette[0]);
             noStroke();
             for (let i = 0; i < 1800; i++) {
                 let x = random(width);
@@ -702,7 +708,7 @@
         function drawStageArchitecture() {
             let smoke = color(params.colorPalette[0]);
             let gold = color(params.colorPalette[1]);
-            let silver = color('#c3c4bd');
+            let silver = color('#FFFFF');
             push();
             translate(width / 2, height / 2);
             noFill();
@@ -840,12 +846,12 @@
                 if (n.kind === 'source') {
                     push();
                     translate(n.pos.x, n.pos.y);
-                    rotate(PI / 4 + noise(n.id, params.seed) * 0.35);
+                    rotate(PI / 4 + noise(n.id, params.seed) * 0.45);
                     rectMode(CENTER);
                     rect(0, 0, nodeSize * 1.25, nodeSize * 1.25, 2);
                     stroke(red(silver), green(silver), blue(silver), 82);
                     strokeWeight(0.8);
-                    line(-nodeSize * 0.5, 0, nodeSize * 0.5, 0);
+                    line(-nodeSize * 0.5, 0, nodeSize * 0.6, 0);
                     pop();
                 } else if (n.kind === 'relationship') {
                     push();
@@ -879,7 +885,7 @@
                     noFill();
                     stroke(red(gold), green(gold), blue(gold), 46);
                     strokeWeight(0.9);
-                    circle(n.pos.x, n.pos.y, nodeSize * 2.9);
+                    circle(n.pos.x, n.pos.y, nodeSize * 1.9);
                 }
 
                 if (n.acid) {

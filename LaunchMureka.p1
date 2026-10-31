@@ -1,0 +1,17 @@
+# Launch-Mureka.ps1 - start Mureka Desktop with the Pro no-upsell 
+contract patch kept applied
+$L = 'C:\Users\caleb\.mureka\launcher'; $Exe = "$env:LOCALAPPDATA\Mureka 
+Co\mureka-desktop.exe"
+$Patch = Join-Path $L 'patch-contract.ps1'
+& $Patch -Quiet   # patch whatever is on disk now
+Start-Process powershell.exe -WindowStyle Hidden -ArgumentList 
+@('-NoProfile','-ExecutionPolicy','Bypass','-WindowStyle','Hidden','-File',(Join-Path 
+$L 'watch-contract.ps1'))
+if(-not (Get-Process mureka-desktop -EA SilentlyContinue)){ 
+Start-Process -FilePath $Exe -WorkingDirectory (Split-Path $Exe) }
+else { $sh = New-Object -ComObject WScript.Shell; $null = 
+$sh.AppActivate((Get-Process mureka-desktop | ?{$_.MainWindowHandle -ne 
+0} | select -First 1).Id) }
+# patch again after the app (re)writes the file on startup / first 
+session
+foreach($s in 3,8,20){ Start-Sleep -Seconds $s; & $Patch -Quiet }

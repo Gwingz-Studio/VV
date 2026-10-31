@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@github/copilot": "^1.0.95",
     "ruff": "^1.5.4"
   }
 }

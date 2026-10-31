@@ -1,0 +1,20 @@
+/* 4px base scale, nine steps. Radius has exactly four moods: subtle, soft, pill, orb. */
+:root{
+  --size-1:0.25rem;
+  --size-2:0.5rem;
+  --size-3:0.75rem;
+  --size-4:1rem;
+  --size-5:1.5rem;
+  --size-6:2rem;
+  --size-7:3rem;
+  --size-8:4rem;
+  --size-9:6rem;
+  --size-editor-copy-inline:0.8125rem;
+  --hero-copy-width:32.5rem;
+  --radius-sm:6px;
+  --radius-md:14px;
+  --radius-arc:999px;
+  --radius-orb:50%;
+  --radius-editor-copy:1.1875rem;
+  --border-editor-width:0.25rem;
+}

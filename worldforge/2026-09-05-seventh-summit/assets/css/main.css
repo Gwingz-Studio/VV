@@ -1,0 +1,366 @@
+/* ─── Google Fonts ─── */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=Lato:wght@800&family=Martian+Mono:wght@800&family=Space+Mono:wght@400;700&display=swap');
+
+/* ─── Design Tokens & CSS Variables ─── */
+:root {
+  /* Primitive Colors */
+  --space-black: #000000;
+  --starlight-white: #FFFFFF;
+  --spectrum-red: #D80716;
+  --spectrum-orange: #FA5F06;
+  --spectrum-yellow: #FDC807;
+  --spectrum-green: #018931;
+  --spectrum-blue: #0049AB;
+  --spectrum-purple: #60237F;
+  --sun-gold: #FDC807;
+  --sun-shade: #EFAA04;
+  --nova-pink: #E7519E;
+  --editor-pink: rgba(224, 40, 153, 0.91);
+  --star-blue: #64A7C9;
+  --deep-indigo: #0F277D;
+
+  /* Semantic Colors */
+  --color-bg: var(--space-black);
+  --color-fg: var(--starlight-white);
+  --color-fg-muted: rgba(255, 255, 255, 0.64);
+  --color-primary: var(--sun-gold);
+  --color-primary-shade: var(--sun-shade);
+  --color-accent: var(--nova-pink);
+  --color-info: var(--star-blue);
+  --color-success: var(--spectrum-green);
+  --color-warning: var(--spectrum-orange);
+  --color-danger: var(--spectrum-red);
+  --color-link: var(--star-blue);
+  --color-focus: var(--star-blue);
+  --color-surface: #0B0B0D;
+  --color-border: rgba(255, 255, 255, 0.16);
+  --color-transparent: rgba(0, 0, 0, 0);
+  --hero-backdrop-base: var(--starlight-white);
+
+  /* Gold Palette */
+  --color-gold-dim: #7A6030;
+  --color-gold-mid: #C9A84C;
+  --color-gold-bright: #F2D377;
+  --color-gold-glow: rgba(201, 168, 76, 0.4);
+  --color-gold-subtle: rgba(201, 168, 76, 0.15);
+  --color-gold-faint: rgba(201, 168, 76, 0.08);
+
+  /* Space Gradients & Panels */
+  --gradient-gold: linear-gradient(135deg, var(--color-gold-dim) 0%, var(--color-gold-mid) 40%, var(--color-gold-bright) 60%, var(--color-gold-mid) 80%, var(--color-gold-dim) 100%);
+  --gradient-gold-short: linear-gradient(135deg, var(--color-gold-mid), var(--color-gold-bright), var(--color-gold-mid));
+  --gradient-card-bg: linear-gradient(145deg, rgba(10, 10, 32, 0.90) 0%, rgba(16, 16, 42, 0.95) 100%);
+  --gradient-card-bg-hover: linear-gradient(145deg, rgba(15, 15, 40, 0.95) 0%, rgba(25, 22, 55, 0.98) 100%);
+  --gradient-modal-bg: linear-gradient(145deg, #0A0A22 0%, #10102E 50%, #0A0A20 100%);
+
+  /* Six-Band Spectrum Hard-Stop */
+  --spectrum-bar: linear-gradient(90deg, var(--spectrum-red) 0 16.6%, var(--spectrum-orange) 16.6% 33.3%, var(--spectrum-yellow) 33.3% 50%, var(--spectrum-green) 50% 66.6%, var(--spectrum-blue) 66.6% 83.3%, var(--spectrum-purple) 83.3% 100%);
+
+  /* Typography */
+  --font-display: 'Cinzel', serif;
+  --font-subhead: 'League Spartan', sans-serif;
+  --font-body: 'Inter', 'Encode Sans', sans-serif;
+  --font-mono: 'Space Mono', monospace;
+  --font-editor-body: 'Lato', sans-serif;
+  --font-editor-copy: 'Martian Mono', monospace;
+
+  /* Scale */
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.25rem;
+  --text-xl: 1.625rem;
+  --text-2xl: 2.25rem;
+  --text-3xl: 3.25rem;
+  --text-4xl: 4.5rem;
+  --weight-extrabold: 800;
+  --tracking-wide: 0.12em;
+  --line-height-editor-copy: 1.6;
+
+  /* Spacing */
+  --size-1: 0.25rem;
+  --size-2: 0.5rem;
+  --size-3: 0.75rem;
+  --size-4: 1rem;
+  --size-5: 1.5rem;
+  --size-6: 2rem;
+  --size-7: 3rem;
+  --size-8: 4rem;
+  --size-9: 6rem;
+  --size-editor-copy-inline: 0.8125rem;
+  --hero-copy-width: 32.5rem;
+
+  /* Radii */
+  --radius-sm: 6px;
+  --radius-md: 14px;
+  --radius-arc: 999px;
+  --radius-orb: 50%;
+  --radius-editor-copy: 1.1875rem;
+  --border-editor-width: 0.25rem;
+
+  /* Effects */
+  --shade-offset: 0 6px 0 0;
+  --elevation-flat: var(--shade-offset) var(--color-primary-shade);
+  --effect-editor-body: inset 0 0.25rem 0.25rem 0.0625rem rgba(0, 0, 0, 0.25);
+  --effect-editor-copy: 0 0.25rem 0.25rem 0 rgba(0, 0, 0, 0.25), inset 0.125rem 0.25rem 0.375rem 0.125rem rgba(0, 0, 0, 0.25);
+
+  /* Component Layer */
+  --button-bg: var(--color-primary);
+  --button-fg: var(--space-black);
+  --button-radius: var(--radius-arc);
+  --button-shade: var(--elevation-flat);
+  --button-hover-bg: var(--color-primary-shade);
+  --button-disabled-bg: rgba(255, 255, 255, 0.14);
+  --card-bg: var(--color-surface);
+  --card-border: 1px solid var(--color-border);
+  --card-radius: var(--radius-md);
+  --badge-radius: var(--radius-arc);
+  --badge-fg: var(--space-black);
+  --divider-band: 4px;
+}
+
+/* ─── Global Base ─── */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body, #__nuxt {
+  height: 100%;
+  background: var(--color-bg);
+  color: var(--color-fg);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  text-transform: uppercase;
+  line-height: 1.15;
+  letter-spacing: 0.02em;
+}
+
+h3, h4 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+code, .mono {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* ─── Scroll Container & Snapping ─── */
+.scroll-container {
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  background: var(--color-bg);
+  scrollbar-width: none;
+}
+
+.scroll-container::-webkit-scrollbar {
+  display: none;
+}
+
+.snap-section {
+  scroll-snap-align: start;
+  min-height: 100vh;
+  position: relative;
+}
+
+/* ─── Hero Section ─── */
+.hero-section {
+  isolation: isolate;
+  background: var(--space-black);
+}
+
+.hero-backdrop {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  mix-blend-mode: luminosity;
+  opacity: 0.45;
+  pointer-events: none;
+}
+
+.hero-intro-copy {
+  display: flex;
+  gap: var(--size-6);
+  align-items: flex-start;
+  margin-top: var(--size-4);
+}
+
+.hero-intro-statement {
+  max-width: var(--hero-copy-width);
+  padding: var(--size-3) var(--size-4);
+  border-left: 3px solid var(--color-primary);
+  background: rgba(11, 11, 13, 0.7);
+  backdrop-filter: blur(8px);
+  border-radius: var(--radius-sm);
+  color: var(--color-fg);
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  line-height: 1.7;
+}
+
+/* ─── Spectrum Divider ─── */
+.spectrum-divider {
+  height: var(--divider-band);
+  width: 120px;
+  border: none;
+  border-radius: var(--radius-arc);
+  background: var(--spectrum-red);
+  box-shadow:
+    0 calc(var(--divider-band) * 1) 0 0 var(--spectrum-orange),
+    0 calc(var(--divider-band) * 2) 0 0 var(--spectrum-yellow),
+    0 calc(var(--divider-band) * 3) 0 0 var(--spectrum-green),
+    0 calc(var(--divider-band) * 4) 0 0 var(--spectrum-blue),
+    0 calc(var(--divider-band) * 5) 0 0 var(--spectrum-purple);
+  margin-bottom: calc(var(--divider-band) * 5);
+}
+
+/* ─── Badges ─── */
+.franchise-badge {
+  display: inline-block;
+  padding: var(--size-1) var(--size-3);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border-radius: var(--badge-radius);
+}
+
+.badge-franchise {
+  background: var(--color-primary);
+  color: var(--space-black);
+}
+
+.badge-independent {
+  background: transparent;
+  border: 1px solid var(--color-info);
+  color: var(--color-info);
+}
+
+/* ─── Avatars ─── */
+.avatar-initial {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-orb);
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  color: var(--color-primary);
+  flex-shrink: 0;
+}
+
+.avatar-initial--large {
+  width: 58px;
+  height: 58px;
+  font-size: var(--text-base);
+  border-color: var(--color-primary);
+}
+
+.avatar-box {
+  width: 48px;
+  height: 48px;
+  background: var(--color-surface);
+  border: 1px dashed var(--color-border);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+}
+
+.avatar-box:hover {
+  border-color: var(--color-primary);
+}
+
+/* ─── Seat Number & Dividers ─── */
+.seat-number {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--color-fg-muted);
+  letter-spacing: 0.12em;
+}
+
+.divider-line {
+  width: 100%;
+  height: 1px;
+  background: var(--color-border);
+}
+
+/* ─── Modals ─── */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.88);
+  backdrop-filter: blur(6px);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--size-4);
+}
+
+.modal-box {
+  animation: modal-in 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  background: var(--gradient-modal-bg);
+  border: 1px solid var(--color-gold-mid);
+  border-radius: var(--card-radius);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.8), 0 0 24px rgba(201, 168, 76, 0.15);
+  width: min(560px, 92vw);
+  position: relative;
+  overflow: hidden;
+}
+
+/* ─── Animations & Keyframes ─── */
+@keyframes glow-pulse {
+  0%, 100% { opacity: 0.3; transform: scale(0.9); }
+  50% { opacity: 1; transform: scale(1.15); }
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@keyframes orbit {
+  from { transform: rotate(0deg) translateX(140px) rotate(0deg); }
+  to { transform: rotate(360deg) translateX(140px) rotate(-360deg); }
+}
+
+@keyframes modal-in {
+  from {
+    opacity: 0;
+    transform: scale(0.92) translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* ─── Tailwind Import ─── */
+@import 'tailwindcss';

@@ -1,0 +1,10 @@
+{
+  "description": "Engage users in an interactive summit experience featuring 12 host seats, each revealing franchise insights and status through dynamic modals.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}

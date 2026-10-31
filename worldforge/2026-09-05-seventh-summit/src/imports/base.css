@@ -1,0 +1,11 @@
+/* Base element styles shared by every Cosmic Expanse surface (dark canvas). */
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--color-bg);color:var(--editor-pink);font-family:var(--font-editor-body);font-size:var(--text-base);font-weight:var(--weight-extrabold);line-height:1.6;box-shadow:var(--effect-editor-body);--figma-make-local-effect-type:INNER_SHADOW}
+h1,h2{font-family:var(--font-display);font-weight:800;text-transform:uppercase;line-height:1.2;letter-spacing:.01em}
+h3,h4{font-family:var(--font-subhead);font-weight:700;line-height:1.2}
+a{color:var(--color-link)}
+a:hover{color:var(--color-primary)}
+code,.mono{font-family:var(--font-mono);font-size:var(--text-sm)}
+:focus-visible{outline:3px solid var(--color-focus);outline-offset:2px}
+/* Signature divider: six hard bands, pride order, stacked box-shadows. */
+.spectrum-divider{height:var(--divider-band);width:120px;border:none;border-radius:var(--radius-arc);background:var(--spectrum-red);box-shadow:0 calc(var(--divider-band)*1) 0 0 var(--spectrum-orange),0 calc(var(--divider-band)*2) 0 0 var(--spectrum-yellow),0 calc(var(--divider-band)*3) 0 0 var(--spectrum-green),0 calc(var(--divider-band)*4) 0 0 var(--spectrum-blue),0 calc(var(--divider-band)*5) 0 0 var(--spectrum-purple);margin-bottom:calc(var(--divider-band)*5)}
