@@ -16,12 +16,66 @@ This guide details how to host the Seventh Galactic Summit Nuxt application on C
 
 ## Prerequisites
 
-1. Node.js `^20.0.0` or newer.
+1. Node.js 24 or newer.
 2. Cloudflare account with the `gwingz.com` domain registered or active on Cloudflare DNS.
 3. Dependencies installed:
    ```bash
    npm install
    ```
+
+---
+
+## Shared chat storage (required before deployment)
+
+Chat requires a D1 database bound as `SUMMIT_CHAT`. There is no in-memory
+fallback: GET and POST return 503 if the binding is absent. D1 batch operations
+use the primary database; each user message and automated reply commits in one
+transaction with the 150-message retention sweep. Welcome messages are seeded
+once by the migration, with fixed Summit opening timestamps.
+
+Both Wrangler configs contain an all-zero database UUID placeholder, not a live
+database. Before any deployment, an operator must provision a D1 database, replace
+that UUID in **both** configs with the returned ID, and apply the migration to
+that database. Use separate databases for preview and production; never point
+preview tests at production. In the Pages dashboard configure the same
+`SUMMIT_CHAT` binding for the appropriate environment if bindings are managed there.
+
+```bash
+# Local only; does not provision or modify any cloud resources.
+npx wrangler d1 migrations apply SUMMIT_CHAT --local --config wrangler.jsonc
+npm run build
+npx wrangler pages dev dist --config wrangler.jsonc
+```
+
+For a planned release (not required for local validation):
+
+```bash
+npx wrangler d1 create seventh-summit-chat
+# Copy its database_id into both configs and verify the selected account/database.
+npx wrangler d1 migrations apply SUMMIT_CHAT --remote --config wrangler.jsonc
+```
+
+The migration cannot recover messages lost from the former isolate-local arrays.
+Persisted history is shared across isolates and survives their eviction; retention
+continues to expose only the latest 150 messages.
+
+### Validation without deployment
+
+Use Node.js 24 or newer. From this application directory:
+
+```bash
+npm ci
+npm test
+npm run build
+npm run test:integration
+```
+
+The unit tests execute production SQL against SQLite. Integration tests execute
+the built Nitro worker in local workerd with an isolated D1 binding, including
+concurrent POSTs, polling, validation, and absent-binding failures. No cloud
+credentials are needed. `since` and `next` are database sequence cursors, never
+message timestamps or digits extracted from IDs. Only complete GET responses
+advance the client cursor; POST responses merge by ID and sequence.
 
 ---
 

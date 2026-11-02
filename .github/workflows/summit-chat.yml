@@ -1,0 +1,23 @@
+name: Summit chat
+on:
+  pull_request:
+    paths:
+      - 'worldforge/2026-09-05-seventh-summit/**'
+      - '.github/workflows/summit-chat.yml'
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: worldforge/2026-09-05-seventh-summit
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+          cache-dependency-path: worldforge/2026-09-05-seventh-summit/package-lock.json
+      - run: npm ci
+      - run: npm test
+      - run: npm run build
+      - run: npm run test:integration

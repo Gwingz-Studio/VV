@@ -11,3 +11,10 @@ SUMMIT_DOMAIN = "summit.gwingz.com"
 SUMMIT_NAME = "Seventh Galactic Summit"
 SUMMIT_CONVENED = "2026-09-05"
 SUMMIT_STATUS = "provisional"
+
+# Replace this placeholder with the provisioned database UUID before deployment.
+[[d1_databases]]
+binding = "SUMMIT_CHAT"
+database_name = "seventh-summit-chat"
+database_id = "00000000-0000-0000-0000-000000000000"
+migrations_dir = "migrations"
