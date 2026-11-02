@@ -1,0 +1,36 @@
+/* THE COSMIC EXPANSE — color tokens. Three layers: primitive -> semantic -> component.
+   Style law: flat vector. No gradients (hard-stop bands only). No blurred shadows. */
+:root{
+  /* primitive */
+  --space-black:#000000;
+  --starlight-white:#FFFFFF;
+  --spectrum-red:#D80716;
+  --spectrum-orange:#FA5F06;
+  --spectrum-yellow:#FDC807;
+  --spectrum-green:#018931;
+  --spectrum-blue:#0049AB;
+  --spectrum-purple:#60237F;
+  --sun-gold:#FDC807;
+  --sun-shade:#EFAA04;
+  --nova-pink:#E7519E;
+  --editor-pink:rgba(224,40,153,0.91);
+  --star-blue:#64A7C9;
+  --deep-indigo:#0F277D;
+  /* semantic */
+  --color-bg:var(--space-black);
+  --color-fg:var(--starlight-white);
+  --color-fg-muted:rgba(255,255,255,0.64);
+  --color-primary:var(--sun-gold);
+  --color-primary-shade:var(--sun-shade);
+  --color-accent:var(--nova-pink);
+  --color-info:var(--star-blue);
+  --color-success:var(--spectrum-green);
+  --color-warning:var(--spectrum-orange);
+  --color-danger:var(--spectrum-red);
+  --color-link:var(--star-blue);
+  --color-focus:var(--star-blue);
+  --color-surface:#0B0B0D;
+  --color-border:rgba(255,255,255,0.16);
+  --color-transparent:rgba(0,0,0,0);
+  --hero-backdrop-base:var(--starlight-white);
+}

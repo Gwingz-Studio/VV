@@ -1,0 +1,2 @@
+import{d as e,g as t}from"../../../_/nitro.mjs";import{c as o}from"../../../_/chatStore.mjs";import"node:buffer";import"node:timers";import"node:events";import"node:process";import"cloudflare:workers";const r=e(e=>{const r=t(e),m=Number(r.since||0);let n=o;m>0&&(n=o.filter(e=>{const t=Number(e.id.replace(/\D/g,"")||0),o=new Date(e.at).getTime();return t>m||o>m}));const s=o[o.length-1];return{messages:n,next:s?new Date(s.at).getTime():Date.now(),total:o.length,summit:"Seventh Galactic Summit",floorLive:!0}});export{r as default};
+//# sourceMappingURL=chat.get.mjs.map

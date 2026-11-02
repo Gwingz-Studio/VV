@@ -9,7 +9,7 @@ Undeveloped hooks, contradictions, gaps, and opportunities for expansion.
 - **Steward seal**: The Weaver does not repeat itself. Do **not** treat Wylus as a rival cosmological authority, a second Weaver, or an open “same vs distinct” identity puzzle for writers’ rooms.
 - **Opportunity**: Leave the name as Expansion-Realm shadow. Stage presence without asking the forbidden question. Catalog entries that reopen “are they the same entity?” contradict Book One — retire those framings.
 ### Eli McCullen `[HOOK ONLY]`
-- **Source**: [p.93, p.96, docs/SLAYVERSE_CHAT_03142026.json]
+- **Source**: [p.93, p.96, Slayverse/json/SLAYVERSE_CHAT_03142026.json@2026-03-16_110102]
 - Jake's grandson. "Thunder in his bones." Pop may have encoded the crystal node's core command structure in Eli's DNA — making Eli not merely a future-generation hook but a **living lattice key**. If true, his body carries the activation sequence for the Wyoming Rift, and his arc becomes inseparable from the Codex Prophecy.
 - **Opportunity**: Eli could be the bridge character for a modern-day continuation of the Jake arc. His DNA encoding raises the stakes: he is both heir and instrument, and any faction aware of the lattice will seek him.
 ### Lisette's Unnamed Companion `[HOOK ONLY]`
@@ -20,7 +20,7 @@ Undeveloped hooks, contradictions, gaps, and opportunities for expansion.
 - **Source**: [p.89]
 - A time-displaced bard. How were they displaced? What era are they from?
 ### Dr. Gerald Pritchard `[HOOK ONLY]`
-- **Source**: [docs/slayton_particle_discovery.md]
+- **Source**: [Slayverse/md/slayton_particle_discovery.md]
 - The skeptic whose wig was snatched. Could be developed as an antagonist to the Slayton science.
 ---
 ## Undeveloped Locations
@@ -53,6 +53,12 @@ Undeveloped hooks, contradictions, gaps, and opportunities for expansion.
 ### Spelling: Hooplehopper vs. Huppelhopper
 - Both spellings used interchangeably throughout the seed text
 - **Resolution**: This catalog standardizes to "Hooplehopper"; "Huppelhopper" is treated as an archaic or European variant
+### Glamoron classification: new category vs. spin-0 boson
+- The discovery note classes glamorons as neither bosons nor fermions [Slayverse/md/slayton_particle_discovery.md]; the CERN paper classes the glamuron as a neutral spin-0 bosonic quasi-particle [`canon/cosmology/Observation of the Glamuron.md`, §2.2.1]
+- **Resolution needed**: both are in-universe publications; the paper is the later and the peer-reviewed one. Preserved until ruled.
+### The Federstahl Institute in the 2026 acknowledgements
+- The CERN paper thanks the Federstahl Institute for support [`canon/cosmology/Observation of the Glamuron.md`, Acknowledgements]; canon's last recorded Federstahl gathering is 1945 [organizations.md]
+- **Resolution needed**: a surviving Institute, a successor using the name, or an in-universe joke. Book One Ch. XI: some contradictions are doors.
 ### The Lattice Incident Timeline
 - Page 97: Described as happening in the "1930s-1940s" (final years of Weimar Republic — but Weimar ended 1933)
 - Page 98: Retconned to researchers being pushed back to "the early 1800s"
@@ -76,6 +82,7 @@ Undeveloped hooks, contradictions, gaps, and opportunities for expansion.
 ### The Gap Between Theresia (1754) and Lisette (1873)
 - Over a century of lineage is unaccounted for
 - **Opportunity**: One or more generations could fill this gap — Napoleonic era, Industrial Revolution, etc.
+- **Seed-only names**: the Hooplehopper Legacy Digest (in `canon/projects/projects.json`) names Eberhardt the Dandy Diplomat (1812) and Ansgar, Lisette's partner (1901). Neither is in canon: Eberhardt sits inside the gap that Book One Ch. II vv.30–31 rules on, and Ansgar conflicts with Book One Ch. II vv.19–20 on Lisette's companion. Preserved here as seed material, not promoted.
 ### The Professor's 100 Years (1905-2005)
 - We have his youth (Mirror Moment at 14) and hints of his later influence (Bowie, Mercury, Vienna)
 - **Gap**: What happened during WWI, WWII, the Cold War? How did he survive? Did he use the 20-Year Sleep?

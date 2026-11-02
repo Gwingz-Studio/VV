@@ -50,3 +50,6 @@ web/dist/
 
 # Nested design-system sub-repo (self-contained .git)
 CEDS/
+
+# Office lock files
+~$*

@@ -12,7 +12,7 @@
   ],
   "includes_pdf": false,
   "includes_finale": false,
-  "source_count": 49,
+  "source_count": 52,
   "sealed_source_count": 16,
   "sources": [
     {
@@ -504,6 +504,36 @@
       "canon_status": "roadmap_private",
       "source_type": "markdown",
       "notes": ""
+    },
+    {
+      "id": "canon-cosmology-observation-of-the-glamuron",
+      "path": "canon/cosmology/Observation of the Glamuron.md",
+      "title": "Observation of the Glamuron",
+      "layer": "canon",
+      "visibility": "public",
+      "canon_status": "draft",
+      "source_type": "markdown",
+      "notes": "In-universe CERN paper (CERN-PH-EP/2026-017) by Dr. Elena Slayton; transcription of the PDF beside it. Dr. Slayton is one person across Mariah/Elena per Steward ruling 2026-10-25."
+    },
+    {
+      "id": "canon-cosmology-theory-of-everything-confirmed",
+      "path": "canon/cosmology/Theory_of_Everything_Confirmed_.md",
+      "title": "Theory of Everything Confirmed",
+      "layer": "canon",
+      "visibility": "public",
+      "canon_status": "draft",
+      "source_type": "markdown",
+      "notes": "In-universe T News Wire story announcing Slayton matter; companion to the Glamuron paper."
+    },
+    {
+      "id": "canon-characters-characters-core-folio",
+      "path": "canon/characters/characters_core_folio.md",
+      "title": "characters core folio",
+      "layer": "canon",
+      "visibility": "public",
+      "canon_status": "draft",
+      "source_type": "markdown",
+      "notes": "Character roster folio partition (Lisette through Eli). Complements canon/characters/characters.md."
     }
   ],
   "notes": [

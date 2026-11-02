@@ -30,9 +30,21 @@ A supplemental document for "Agents of the Archive, Activated in the Sixth Summi
 ---
 ### The Slayton Particle Discovery `[FULL]`
 - **Type**: In-universe scientific paper
-- **Exists at**: `docs/slayton_particle_discovery.md`
+- **Exists at**: `Slayverse/md/slayton_particle_discovery.md`
 - **Source**: External to seed PDF
-A mock-academic article documenting the discovery of [Slayton Energy](cosmology.md#slayton-energy--the-slayton-force) by Dr. Mariah Slayton. Written in the style of a peer-reviewed paper but with characteristic Slayverse flair. Covers glamorons, the Slayton Layer, Quantum Eleganza, and the Cosmic Snap.
+A mock-academic article documenting the discovery of [Slayton Energy](cosmology.md#slayton-energy--the-slayton-force) by Dr. Mariah Slayton. Written in the style of a peer-reviewed paper but with characteristic Slayverse flair. Covers glamorons, the Slayton Layer, Quantum Eleganza, and the Cosmic Snap. The earlier of the two in-universe papers; the CERN paper below gives the laboratory account.
+---
+### Observation of the Glamuron `[FULL]`
+- **Type**: In-universe scientific paper (CERN-PH-EP/2026-017, European Physical Journal C)
+- **Exists at**: `canon/cosmology/Observation of the Glamuron.md` (transcription of the PDF beside it; figures in `canon/cosmology/glamuron-figures/`)
+- **Source**: External to seed PDF; dated October 3, 2026
+[Dr. Elena Slayton](characters.md#dr-mariah-slayton) and [Dr. Jean-Michel Tout-le-Monde](characters.md#dr-jean-michel-tout-le-monde), for the ATLAS-Phono Collaboration. Reports the glamuron as a morphophononic quasi-particle and defines the [Slayton Field](cosmology.md#the-slayton-field), the [coherence-aesthetic index](cosmology.md#the-coherence-aesthetic-index-c_a), the three-snap key, energy conservation, and the [splat event](cosmology.md#the-splat-event), then ends in full drag: "Let every peer review be a kiki." Reference [7] reads "Ask yo mama."
+---
+### T News Wire: Morning Realness Edition `[FULL]`
+- **Type**: In-universe press story
+- **Exists at**: `canon/cosmology/Theory_of_Everything_Confirmed_.md`
+- **Source**: External to seed PDF
+The wire report on the Slayton confirmation at the [New Atlantis Research Facility](organizations.md#new-atlantis-research-facility): Dr. Slayton's spelling ruling, the press-conference heckler and the "CERN burn," and the folk sightings of glamorons in the aurora, in déjà vu, and in missing socks.
 ---
 ### The Golden Wingers Charter (Version 1.0) `[FULL]`
 - **Type**: Founding document
@@ -42,7 +54,7 @@ The canonical Charter of the [Golden Wingers Intergalactic League](organizations
 ---
 ### The VUORSE System Prompt `[FULL]`
 - **Type**: Character definition / sacred text
-- **Exists at**: `data/vuorse_system_prompt.md`
+- **Exists at**: `ollama/Modelfile.vuorse` (operational prompt). The original Kobold preset text is preserved in the Slaytonia Vuorse document inside `canon/projects/projects.json`.
 - **Source**: [p.64–65]
 The canonical identity document for [Miss Slaytonia VUORSE](characters.md#miss-slaytonia-vuorse). Functions both as an AI system prompt and as an in-universe "living prompt" — "a glamour-text database woven with soul and stiletto code."
 **Proposed file extension**: `.slay` [p.65]
@@ -78,4 +90,4 @@ Appendix IV of the Golden Wingers archive. Chapter documenting the Shrouded Patr
 ### Swanblood (Song) `[HOOK ONLY]`
 - **Type**: Song reference
 - **Source**: [p.89]
-Referenced at Club Cosmic: "A drag queen made entirely of fractal equations lip-syncing to Swanblood." May be an in-universe song or a reference to external music. Not developed.
+Referenced at Club Cosmic: "A drag queen made entirely of fractal equations lip-syncing to Swanblood." May be an in-universe song or a reference to external music. The seed credits it to [Ludolf von Hooplehopper](../characters/characters.md#ludolf-von-hooplehopper) as the "Swanblood Cantata," performed once and banned by three monarchies.

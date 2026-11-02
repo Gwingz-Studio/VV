@@ -121,7 +121,7 @@ She was at once courtesan and cloistered nun. A recluse who threw masquerade bal
 - **Era**: Not specified
 - **Role**: Musical mystic
 - **Source**: [p.56]
-**Bio**: Wrote operas that could induce visions. Some say he heard the Thread vibrating in harmonics.
+**Bio**: Wrote operas that could induce visions. Some say he heard the Thread vibrating in harmonics, and the Weaver in his dreams, directing him note by note. His piece "Swanblood Cantata" was performed once before being banned by three monarchies; his scores are hidden in old music boxes across Europe. [Seed: Hooplehopper Legacy Digest, in `canon/projects/projects.json`]
 ---
 ### Lisette von Hooplehopper `[FULL]`
 - **Aliases**: The Swan in Satin, The Matriarch of Mirrors, The Mother of Masks, The Last Flame of Federstahl
@@ -285,12 +285,33 @@ The Weaver is both diegetic (appears in the Jake/Wyoming narrative as a characte
 - **Source**: [p.76]
 **Bio**: Briefly mentioned: "Does knowledge lie shared between The Professor and... the elusive webweaver, Wylus Kalyndros?" No further development.
 ---
-### Dr. Mariah Slayton `[MODERATE]`
-- **Aliases**: None
+### Dr. Mariah Slayton `[FULL]`
+- **Aliases**: Dr. Elena Slayton; "the queen of quantum fabulosity and scientific shade"
 - **Era**: Present/near-future (in-universe)
-- **Role**: Physicist who discovered the Slayton Force
-- **Source**: [docs/slayton_particle_discovery.md]
+- **Role**: Physicist who discovered the Slayton Force; lead author of the glamuron observation; director of the New Atlantis Research Facility
+- **Source**: [Slayverse/md/slayton_particle_discovery.md; `canon/cosmology/Observation of the Glamuron.md`; `canon/cosmology/Theory_of_Everything_Confirmed_.md`]
 **Bio**: Visionary physicist whose theoretical brilliance led to the discovery of the Slayton Force — an energy field hidden between strings of the quantum realm. She classified Slaytons as an entirely new particle category: [glamorons](cosmology.md#glamorons). Key quote: "We may be witnessing a bridge between cosmic fundamentals and the human spirit. Sometimes, hunny, the universe decides it's time for everyone to level up."
+**The CERN paper** (October 3, 2026): with co-author [Dr. Jean-Michel Tout-le-Monde](#dr-jean-michel-tout-le-monde), for the [ATLAS-Phono Collaboration](organizations.md#atlas-phono-collaboration), she reported the observation of the glamuron and the [Slayton Field](cosmology.md#the-slayton-field) in the European Physical Journal C (CERN-PH-EP/2026-017). At the [New Atlantis](organizations.md#new-atlantis-research-facility) press conference she ruled on the spelling ("glamuron, with a u"), answered a heckle with the "CERN burn," and closed: "We are entering a new age of physics, an era of pure, unfiltered cosmic eleganza realness."
+**Canon Notes**:
+- Mariah and Elena are the same woman. She carries a long Hispanic name that she anglicized; this catalog records only the two forms the sources use and does not reconstruct the full name. Steward ruling, 2026-10-25. `[LOCKED]`
+**Relationships**:
+- Co-author [Dr. Jean-Michel Tout-le-Monde](#dr-jean-michel-tout-le-monde)
+- Colleague of [Dr. Jazz Singh](#dr-jazz-singh) at New Atlantis
+- Challenged by Dr. Gerald Pritchard in Tokyo; see [Open Threads](open_threads.md#dr-gerald-pritchard)
+---
+### Dr. Jean-Michel Tout-le-Monde `[SKETCHED]`
+- **Aliases**: None recorded
+- **Era**: Present (in-universe)
+- **Role**: Physicist; co-author of the glamuron observation for the ATLAS-Phono Collaboration
+- **Source**: [`canon/cosmology/Observation of the Glamuron.md`, title page]
+**Bio**: Named only as co-author, CERN, Geneva. No further development.
+---
+### Dr. Jazz Singh `[HOOK ONLY]`
+- **Aliases**: "resident hype girl and queen of the kiki"
+- **Era**: Present (in-universe)
+- **Role**: Scientist at the New Atlantis Research Facility
+- **Source**: [`canon/cosmology/Theory_of_Everything_Confirmed_.md`]
+**Bio**: Delivers the morning update on the particle accelerator ("now sounds like Celine Dion's greatest hits") and the verdict on the press-conference heckler: "And that, darlings, is what we call a CERN burn."
 ---
 ### DJ Parallax `[HOOK ONLY]`
 - **Aliases**: None

@@ -3,12 +3,13 @@
   "canon_version": "1.1",
   "canon_generated": "2026-03-06",
   "canon_amended": "2026-09-03",
-  "entity_count": 81,
-  "surface_form_count": 151,
-  "distinctive_token_count": 59,
+  "entity_count": 91,
+  "surface_form_count": 179,
+  "distinctive_token_count": 78,
   "ambiguous_tokens": [
     "Eisensang",
     "Federstahl",
+    "Glamuron",
     "Hooplehopper",
     "Isolde",
     "McCullen",
@@ -411,7 +412,7 @@
         99,
         100
       ],
-      "summary": "The Velvet Archivist. Son of Lisette. Drag matriarch, resistance theorist. Jungian synchronic double — simultaneously the historical Rolf and the archetypal Velvet Archivist, a living paradox where personal identity and mythic role coexist without resolution. Vanished in 2005 leaving glove, mirror, and note."
+      "summary": "The Velvet Archivist. Son of Lisette, born of Immaculate Slayception. Drag matriarch, resistance theorist. Jungian synchronic double — simultaneously the historical Rolf and the archetypal Velvet Archivist, a living paradox where personal identity and mythic role coexist without resolution. Vanished in 2005 leaving glove, mirror, and note."
     },
     "doctor-vorst": {
       "id": "doctor-vorst",
@@ -422,6 +423,7 @@
       "surface_forms": [
         "Doctor Vorst",
         "Professor A.",
+        "Pop's father",
         "The Shrouded Patriarch"
       ],
       "related": [
@@ -435,7 +437,8 @@
       "tags": [
         "federstahl",
         "temporal-displacement",
-        "erased"
+        "erased",
+        "foundational-paradox"
       ],
       "source_pages": [
         97,
@@ -443,7 +446,7 @@
         99,
         100
       ],
-      "summary": "Federstahl researcher. Erased from existence and displaced to 1832. Simultaneously absent and causal."
+      "summary": "Federstahl researcher who caused the Crystal Lattice Incident. Erased from existence and displaced to 1832. Father of both the Professor and Pop. Foundational paradox of the Slayverse: his erasure is the originating event that splits the timeline into the Hooplehopper soul-line (via the Professor) and the McCullen counter-lineage (via Pop), making him simultaneously absent and causal."
     },
     "pop": {
       "id": "pop",
@@ -714,21 +717,30 @@
       "id": "dr-mariah-slayton",
       "name": "Dr. Mariah Slayton",
       "type": "character",
-      "status": "moderate",
+      "status": "full",
       "era": "present",
       "surface_forms": [
-        "Dr. Mariah Slayton"
+        "Dr. Mariah Slayton",
+        "Dr. Elena Slayton",
+        "Elena Slayton"
       ],
       "related": [
         "glamorons",
-        "slayton-energy"
+        "slayton-energy",
+        "observation-of-the-glamuron",
+        "dr-jean-michel-tout-le-monde",
+        "atlas-phono-collaboration",
+        "new-atlantis-research-facility",
+        "slayton-field"
       ],
       "tags": [
         "science",
-        "slayton-force"
+        "slayton-force",
+        "cern",
+        "glamuron"
       ],
       "source_pages": [],
-      "summary": "Physicist who discovered the Slayton Force and classified glamorons as a new particle category."
+      "summary": "Physicist who discovered the Slayton Force and classified glamorons as a new particle category; lead author, with Dr. Jean-Michel Tout-le-Monde for the ATLAS-Phono Collaboration, of the 2026 CERN paper observing the glamuron and the Slayton Field; director of the New Atlantis Research Facility. Mariah and Elena are one woman who anglicized a longer Hispanic name; the full name is not recorded. Steward ruling 2026-10-25. Sources: Slayverse/md/slayton_particle_discovery.md; canon/cosmology/Observation of the Glamuron.md; canon/cosmology/Theory_of_Everything_Confirmed_.md."
     },
     "mistress-euphoria-blaze": {
       "id": "mistress-euphoria-blaze",
@@ -1150,19 +1162,27 @@
       "era": "present",
       "surface_forms": [
         "Glamorons",
-        "Slayton Particles"
+        "Slayton Particles",
+        "Glamuron",
+        "Glamurons"
       ],
       "related": [
         "dr-mariah-slayton",
-        "slayton-energy"
+        "slayton-energy",
+        "slayton-field",
+        "slayton-matter",
+        "aesthetic-charge",
+        "observation-of-the-glamuron"
       ],
       "tags": [
         "particles",
         "physics",
-        "quantum"
+        "quantum",
+        "quasi-particle",
+        "cern"
       ],
       "source_pages": [],
-      "summary": "New subatomic particle category. Neither bosons nor fermions. Vibrational signatures align with multidimensional storytelling."
+      "summary": "New subatomic particle category. The discovery note: neither bosons nor fermions; vibrational signatures align with multidimensional storytelling. The 2026 CERN paper: a neutral spin-0 bosonic quasi-particle of negligible mass, the elementary excitation of the morphophononic condensate in Slayton matter and the constituent of the Slayton Field, carrying aesthetic charge; resonance near 16.2 kHz, lifetime about 2.3 ms. 'Glamuron' is the paper's technical spelling. The classification conflict is preserved in open_threads. Source: canon/cosmology/Observation of the Glamuron.md §2.2, §4.1."
     },
     "slayton-codex": {
       "id": "slayton-codex",
@@ -1230,7 +1250,8 @@
         "doctor-vorst",
         "crystal-shard",
         "wyoming-rift",
-        "federstahl-lattice"
+        "federstahl-lattice",
+        "atlas-phono-collaboration"
       ],
       "tags": [
         "secret-society",
@@ -1247,7 +1268,7 @@
         100,
         101
       ],
-      "summary": "Secret technocratic society of scholars, mystics, and quantum whisperers. Caused the Crystal Lattice Incident."
+      "summary": "Secret technocratic society of scholars, mystics, and quantum whisperers. Caused the Crystal Lattice Incident. Seam: the 2026 CERN paper's acknowledgements thank the Federstahl Institute for support, 81 years after its last recorded gathering; preserved in open_threads, not resolved. Source: canon/cosmology/Observation of the Glamuron.md Acknowledgements."
     },
     "order-of-the-seam": {
       "id": "order-of-the-seam",
@@ -1359,17 +1380,20 @@
         "Three Snap Protocol"
       ],
       "related": [
-        "golden-wingers"
+        "golden-wingers",
+        "slayton-field",
+        "splat-event"
       ],
       "tags": [
         "protocol",
         "activation",
-        "cosmic"
+        "cosmic",
+        "cern"
       ],
       "source_pages": [
         65
       ],
-      "summary": "Three snaps to activate, open, affirm. Established at the Second Galactic Summit. Begins all cosmic proceedings."
+      "summary": "Three snaps to activate, open, affirm. Established at the Second Galactic Summit. Begins all cosmic proceedings. Laboratory specification per the 2026 CERN paper: three Gaussian pulses at 2 kHz and 85 dB, the second 110 ± 5 ms after the first, the third 220 ± 10 ms after the second; a drift over 10 ms fails the key; a corrupted sequence produces a splat event. Source: canon/cosmology/Observation of the Glamuron.md §4.3, Appendix A.2."
     },
     "slay-mode-activation": {
       "id": "slay-mode-activation",
@@ -1436,7 +1460,8 @@
       "related": [
         "glamorons",
         "dr-mariah-slayton",
-        "quantum-eleganza"
+        "quantum-eleganza",
+        "slayton-field"
       ],
       "tags": [
         "force",
@@ -1509,7 +1534,8 @@
       "era": "fundamental",
       "surface_forms": [
         "Narrative Collapse / Post-Truth Cosmology",
-        "Post-Truth Cosmology"
+        "Post-Truth Cosmology",
+        "Mandela Fractures"
       ],
       "related": [
         "federstahl-lattice",
@@ -1519,10 +1545,11 @@
       "tags": [
         "cosmology",
         "post-truth",
+        "mandela-effect",
         "narrative-theory"
       ],
       "source_pages": [],
-      "summary": "Cosmological framework where consensus reality frays and competing truths coexist. The Thread holds reality together; where it thins, stories contradict and both versions become true."
+      "summary": "Cosmological framework where Mandela Effects are reframed as narrative fractures — points where consensus reality frays and competing truths coexist. In the Slayverse, these are not errors but symptoms of the Lattice Fracture bleeding into collective memory. The Thread holds reality together; where it thins, stories contradict and both versions become true."
     },
     "steward-vessel": {
       "id": "steward-vessel",
@@ -1722,7 +1749,7 @@
         "glamour-as-espionage"
       ],
       "source_pages": [],
-      "summary": "Half character by Steward classification: the wartime cabaret disguise and complete operational self of Professor von Hooplehopper. Allied spy working Belgian cabaret and resistance networks; sultry Garbo-esque contralto; swan brooch; Telefunken U47; extracts secrets by making men feel observed, adored, and doomed. Costume as ontology. All performance, dialogue, and voice generation governed by HEDA_VON_SCHWAHNN_VOICE_KNOWLEDGE_BASE.md: never cartoonish, never goofy, never a generic femme fatale, danger always inside the glamour."
+      "summary": "Half character by Steward classification: the wartime cabaret disguise and complete operational self of Professor von Hooplehopper. Allied spy working Belgian cabaret and resistance networks; sultry Garbo-esque contralto; swan brooch; Telefunken U47; extracts secrets by making men feel observed, adored, and doomed. Costume as ontology. All performance, dialogue, and voice generation governed by persona/heda_von_schwahnn_voice.md: never cartoonish, never goofy, never a generic femme fatale, danger always inside the glamour."
     },
     "seam-state": {
       "id": "seam-state",
@@ -2151,11 +2178,258 @@
       ],
       "source_pages": [],
       "summary": "The Weaver's Steward Vessel and author-of-record. Declares himself in the archive: 'My name is Caleb Mills Stewart. As The Weaver's Steward Vessel it is my duty to inform you...'. Ratifying author of the Golden Wingers charter. Per steward-vessel, a Steward Vessel is not The Weaver. Real person; treat biographical detail as out of scope for canon. Source: canon/session_archives/slayverse_session_archive_2026-08-07.md:359."
+    },
+    "slayton-field": {
+      "id": "slayton-field",
+      "name": "The Slayton Field",
+      "type": "cosmology",
+      "status": "full",
+      "era": "present",
+      "surface_forms": [
+        "The Slayton Field",
+        "Slayton Field"
+      ],
+      "related": [
+        "glamorons",
+        "slayton-matter",
+        "coherence-aesthetic-index",
+        "three-snap-protocol",
+        "splat-event",
+        "slayton-energy"
+      ],
+      "tags": [
+        "physics",
+        "cern",
+        "morphophononic"
+      ],
+      "source_pages": [],
+      "summary": "Programmable quantum-phononic system in which glamuron-mediated energy transformation occurs: a morphophononic condensate in Slayton matter that amplifies and redirects energy in response to coherent acoustic and biometric input. Activated by the three-snap key at a coherence-aesthetic index above about 0.7; output never exceeds input plus stored energy (97.3 ± 2.1%); coherence length about 5 cm; activation one to five seconds. Treated by the catalog as the laboratory-scale expression of the Slayton Force (inference). Source: canon/cosmology/Observation of the Glamuron.md Abstract, §2.1, §4.4, §5.2."
+    },
+    "slayton-matter": {
+      "id": "slayton-matter",
+      "name": "Slayton Matter",
+      "type": "artifact",
+      "status": "full",
+      "era": "present",
+      "surface_forms": [
+        "Slayton Matter",
+        "Slayton matter"
+      ],
+      "related": [
+        "slayton-field",
+        "glamorons",
+        "new-atlantis-research-facility"
+      ],
+      "tags": [
+        "material",
+        "cern",
+        "nanofabrication"
+      ],
+      "source_pages": [],
+      "summary": "The engineered meta-phononic substrate hosting the Slayton Field: mesoporous silica (SBA-15) functionalized with APTES, loaded with 15 nm gold nanoparticles and in-situ barium titanate nanowires, potassium-doped and annealed, layered into hot zones; stable six months in inert atmosphere. The wire describes it as floating orbs and self-redesigning filigree. Source: canon/cosmology/Observation of the Glamuron.md §3.1, Appendix A.1; canon/cosmology/Theory_of_Everything_Confirmed_.md."
+    },
+    "coherence-aesthetic-index": {
+      "id": "coherence-aesthetic-index",
+      "name": "The Coherence-Aesthetic Index",
+      "type": "cosmology",
+      "status": "full",
+      "era": "present",
+      "surface_forms": [
+        "The Coherence-Aesthetic Index",
+        "Coherence-Aesthetic Index",
+        "C_A"
+      ],
+      "related": [
+        "slayton-field",
+        "splat-event",
+        "three-snap-protocol"
+      ],
+      "tags": [
+        "physics",
+        "cern",
+        "measurable"
+      ],
+      "source_pages": [],
+      "summary": "C_A = α · C_acoustic · C_biometric, each in [0, 1]: acoustic coherence of the input sound times biometric coherence of the speaker (microtremor, heart rate, vocal onset). Activation threshold about 0.7, saturation past about 0.95; stress or insincerity fails activation in 92% of trials. The paper's physical basis for intention, authenticity, and aesthetic weight. Source: canon/cosmology/Observation of the Glamuron.md §2.3, §4.2."
+    },
+    "aesthetic-charge": {
+      "id": "aesthetic-charge",
+      "name": "Aesthetic Charge",
+      "type": "cosmology",
+      "status": "moderate",
+      "era": "present",
+      "surface_forms": [
+        "Aesthetic Charge",
+        "ħ_a"
+      ],
+      "related": [
+        "glamorons",
+        "slayton-field"
+      ],
+      "tags": [
+        "physics",
+        "cern",
+        "quantum-number"
+      ],
+      "source_pages": [],
+      "summary": "The glamuron's defining quantum number: its coupling to vibrational energy and biometric coherence. Not conserved in isolation; collective in the condensate, as color charge is confined in QCD. External fields shift the glamuron resonance by about ±0.5 kHz per V/cm. Source: canon/cosmology/Observation of the Glamuron.md §2.2.1, §4.1.5."
+    },
+    "splat-event": {
+      "id": "splat-event",
+      "name": "The Splat Event",
+      "type": "cosmology",
+      "status": "full",
+      "era": "present",
+      "surface_forms": [
+        "The Splat Event",
+        "Splat Event",
+        "splat"
+      ],
+      "related": [
+        "slayton-field",
+        "coherence-aesthetic-index",
+        "miss-slaytonia-verse"
+      ],
+      "tags": [
+        "physics",
+        "cern",
+        "safety",
+        "coherence-collapse"
+      ],
+      "source_pages": [],
+      "summary": "Coherence collapse of the Slayton Field when C_A drops below about 0.7: the glamuron condensate decoheres in under a millisecond, sheds excess as broadband light and low acoustic noise, and returns to rest within 500 ms with no permanent change; five-second quiescent period after. Manual override forces one. Same word canon uses for the Tragedy of Splat; whether that was a splat event in this sense is not stated by either source. Source: canon/cosmology/Observation of the Glamuron.md §2.2.5, §4.5, Appendix C."
+    },
+    "dr-jean-michel-tout-le-monde": {
+      "id": "dr-jean-michel-tout-le-monde",
+      "name": "Dr. Jean-Michel Tout-le-Monde",
+      "type": "character",
+      "status": "sketched",
+      "era": "present",
+      "surface_forms": [
+        "Dr. Jean-Michel Tout-le-Monde",
+        "Jean-Michel Tout-le-Monde"
+      ],
+      "related": [
+        "dr-mariah-slayton",
+        "atlas-phono-collaboration",
+        "observation-of-the-glamuron"
+      ],
+      "tags": [
+        "science",
+        "cern"
+      ],
+      "source_pages": [],
+      "summary": "Physicist at CERN, Geneva; co-author of the 2026 glamuron observation for the ATLAS-Phono Collaboration. Named only on the title page. Source: canon/cosmology/Observation of the Glamuron.md."
+    },
+    "dr-jazz-singh": {
+      "id": "dr-jazz-singh",
+      "name": "Dr. Jazz Singh",
+      "type": "character",
+      "status": "hook",
+      "era": "present",
+      "surface_forms": [
+        "Dr. Jazz Singh",
+        "Jazz Singh"
+      ],
+      "related": [
+        "dr-mariah-slayton",
+        "new-atlantis-research-facility"
+      ],
+      "tags": [
+        "science",
+        "new-atlantis"
+      ],
+      "source_pages": [],
+      "summary": "Scientist at the New Atlantis Research Facility, \"resident hype girl and queen of the kiki\"; delivers the morning accelerator update and the \"CERN burn\" verdict at the press conference. Source: canon/cosmology/Theory_of_Everything_Confirmed_.md."
+    },
+    "atlas-phono-collaboration": {
+      "id": "atlas-phono-collaboration",
+      "name": "ATLAS-Phono Collaboration",
+      "type": "organization",
+      "status": "sketched",
+      "era": "present",
+      "surface_forms": [
+        "ATLAS-Phono Collaboration",
+        "ATLAS-Phono"
+      ],
+      "related": [
+        "dr-mariah-slayton",
+        "dr-jean-michel-tout-le-monde",
+        "observation-of-the-glamuron",
+        "federstahl-institute"
+      ],
+      "tags": [
+        "cern",
+        "research",
+        "organization"
+      ],
+      "source_pages": [],
+      "summary": "CERN collaboration under which the glamuron observation was published in the European Physical Journal C. Acknowledged sponsors: CERN, MAC Cosmetics, Taco Bell, and the Federstahl Institute. Source: canon/cosmology/Observation of the Glamuron.md title page, Acknowledgements."
+    },
+    "new-atlantis-research-facility": {
+      "id": "new-atlantis-research-facility",
+      "name": "New Atlantis Research Facility",
+      "type": "place",
+      "status": "sketched",
+      "era": "present",
+      "surface_forms": [
+        "New Atlantis Research Facility",
+        "New Atlantis"
+      ],
+      "related": [
+        "dr-mariah-slayton",
+        "dr-jazz-singh",
+        "slayton-matter"
+      ],
+      "tags": [
+        "science",
+        "facility",
+        "press-conference"
+      ],
+      "source_pages": [],
+      "summary": "Dr. Slayton's facility where Slayton matter was confirmed and the press conference held; procedures renamed Rituals of Amplification, peer reviews Kiki Sessions, hallways catwalks. Source: canon/cosmology/Theory_of_Everything_Confirmed_.md."
+    },
+    "observation-of-the-glamuron": {
+      "id": "observation-of-the-glamuron",
+      "name": "Observation of the Glamuron",
+      "type": "creative_work",
+      "status": "full",
+      "era": "present",
+      "surface_forms": [
+        "Observation of the Glamuron",
+        "CERN-PH-EP/2026-017",
+        "the Glamuron paper"
+      ],
+      "related": [
+        "dr-mariah-slayton",
+        "dr-jean-michel-tout-le-monde",
+        "atlas-phono-collaboration",
+        "glamorons",
+        "slayton-field",
+        "coherence-aesthetic-index",
+        "splat-event"
+      ],
+      "tags": [
+        "cern",
+        "paper",
+        "creative-work"
+      ],
+      "source_pages": [],
+      "summary": "In-universe CERN paper (European Physical Journal C, October 3, 2026) by Dr. Elena Slayton and Dr. Jean-Michel Tout-le-Monde for the ATLAS-Phono Collaboration: observes the glamuron, defines the Slayton Field, the coherence-aesthetic index, the three-snap key, energy conservation, and the splat event; ends in full drag. Transcribed at canon/cosmology/Observation of the Glamuron.md with figures in canon/cosmology/glamuron-figures/."
     }
   },
   "surface_forms": {
+    "ATLAS-Phono": [
+      "atlas-phono-collaboration"
+    ],
+    "ATLAS-Phono Collaboration": [
+      "atlas-phono-collaboration"
+    ],
     "Adelram von Hooplehopper": [
       "adelram-von-hooplehopper"
+    ],
+    "Aesthetic Charge": [
+      "aesthetic-charge"
     ],
     "Archive Surface": [
       "archive-surface"
@@ -2175,6 +2449,12 @@
     "Bookend Convergence": [
       "bookend-convergence"
     ],
+    "CERN-PH-EP/2026-017": [
+      "observation-of-the-glamuron"
+    ],
+    "C_A": [
+      "coherence-aesthetic-index"
+    ],
     "Caleb Mills Stewart": [
       "caleb-mills-stewart"
     ],
@@ -2183,6 +2463,9 @@
     ],
     "Club Cosmic": [
       "club-cosmic"
+    ],
+    "Coherence-Aesthetic Index": [
+      "coherence-aesthetic-index"
     ],
     "Composer and Mystic": [
       "ludolf-von-hooplehopper"
@@ -2208,7 +2491,19 @@
     "Doctor Vorst": [
       "doctor-vorst"
     ],
+    "Dr. Elena Slayton": [
+      "dr-mariah-slayton"
+    ],
+    "Dr. Jazz Singh": [
+      "dr-jazz-singh"
+    ],
+    "Dr. Jean-Michel Tout-le-Monde": [
+      "dr-jean-michel-tout-le-monde"
+    ],
     "Dr. Mariah Slayton": [
+      "dr-mariah-slayton"
+    ],
+    "Elena Slayton": [
       "dr-mariah-slayton"
     ],
     "Eli McCullen": [
@@ -2244,6 +2539,12 @@
     "Glamorons": [
       "glamorons"
     ],
+    "Glamuron": [
+      "glamorons"
+    ],
+    "Glamurons": [
+      "glamorons"
+    ],
     "Golden Wingers Intergalactic League": [
       "golden-wingers"
     ],
@@ -2277,6 +2578,12 @@
     "Jake McCullen": [
       "jake-mcullen"
     ],
+    "Jazz Singh": [
+      "dr-jazz-singh"
+    ],
+    "Jean-Michel Tout-le-Monde": [
+      "dr-jean-michel-tout-le-monde"
+    ],
     "Keeper of the Candle Tax": [
       "candle-tax"
     ],
@@ -2297,6 +2604,9 @@
     ],
     "Lysander von Hooplehopper": [
       "lysander-von-hooplehopper"
+    ],
+    "Mandela Fractures": [
+      "narrative-collapse"
     ],
     "Margarethe von Hooplehopper": [
       "margarethe-von-hooplehopper"
@@ -2325,6 +2635,15 @@
     "Narrative Collapse / Post-Truth Cosmology": [
       "narrative-collapse"
     ],
+    "New Atlantis": [
+      "new-atlantis-research-facility"
+    ],
+    "New Atlantis Research Facility": [
+      "new-atlantis-research-facility"
+    ],
+    "Observation of the Glamuron": [
+      "observation-of-the-glamuron"
+    ],
     "Order of the Garter's Secret Hem": [
       "order-of-the-garters-secret-hem"
     ],
@@ -2351,6 +2670,9 @@
     ],
     "Pop": [
       "pop"
+    ],
+    "Pop's father": [
+      "doctor-vorst"
     ],
     "Post-Truth Cosmology": [
       "narrative-collapse"
@@ -2404,13 +2726,23 @@
       "slayton-energy"
     ],
     "Slayton Field": [
-      "slayton-energy"
+      "slayton-energy",
+      "slayton-field"
+    ],
+    "Slayton Matter": [
+      "slayton-matter"
     ],
     "Slayton Particles": [
       "glamorons"
     ],
+    "Slayton matter": [
+      "slayton-matter"
+    ],
     "Splat": [
       "miss-slaytonia-verse"
+    ],
+    "Splat Event": [
+      "splat-event"
     ],
     "Steward Vessel": [
       "steward-vessel"
@@ -2438,6 +2770,9 @@
     ],
     "The Candle Tax": [
       "candle-tax"
+    ],
+    "The Coherence-Aesthetic Index": [
+      "coherence-aesthetic-index"
     ],
     "The Crystal Shard": [
       "crystal-shard"
@@ -2499,6 +2834,9 @@
     "The Parchment of Persistence": [
       "the-parchment-of-persistence"
     ],
+    "The Portable Mechanized Wardrobe": [
+      "the-thumper"
+    ],
     "The Professor": [
       "professor-von-hooplehopper"
     ],
@@ -2517,11 +2855,17 @@
     "The Slayton Codex": [
       "slayton-codex"
     ],
+    "The Slayton Field": [
+      "slayton-field"
+    ],
     "The Slayton Force": [
       "slayton-energy"
     ],
     "The Snake in Silk": [
       "velma-the-snake-in-silk"
+    ],
+    "The Splat Event": [
+      "splat-event"
     ],
     "The Steward": [
       "caleb-mills-stewart"
@@ -2536,9 +2880,6 @@
       "the-thread"
     ],
     "The Thumper": [
-      "the-thumper"
-    ],
-    "The Portable Mechanized Wardrobe": [
       "the-thumper"
     ],
     "The Velvet Archive": [
@@ -2606,14 +2947,32 @@
     ],
     "Zerethium Quartz": [
       "zerethium-quartz"
+    ],
+    "splat": [
+      "splat-event"
+    ],
+    "the Glamuron paper": [
+      "observation-of-the-glamuron"
+    ],
+    "ħ_a": [
+      "aesthetic-charge"
     ]
   },
   "distinctive_tokens": {
+    "ATLAS-Phono": [
+      "atlas-phono-collaboration"
+    ],
     "Adelram": [
       "adelram-von-hooplehopper"
     ],
+    "Aesthetic": [
+      "aesthetic-charge"
+    ],
     "Ash-Faced": [
       "benedict-the-ash-faced"
+    ],
+    "Atlantis": [
+      "new-atlantis-research-facility"
     ],
     "Authorial": [
       "steward-vessel"
@@ -2627,8 +2986,20 @@
     "Boogoaloo": [
       "words-of-weaver-book-two"
     ],
+    "CERN-PH-EP": [
+      "observation-of-the-glamuron"
+    ],
     "Candle": [
       "candle-tax"
+    ],
+    "Charge": [
+      "aesthetic-charge"
+    ],
+    "Coherence-Aesthetic": [
+      "coherence-aesthetic-index"
+    ],
+    "Collaboration": [
+      "atlas-phono-collaboration"
     ],
     "Conrad": [
       "conrad-von-hooplehopper"
@@ -2643,6 +3014,9 @@
       "eisensang-march",
       "schloss-eisensang"
     ],
+    "Facility": [
+      "new-atlantis-research-facility"
+    ],
     "Federstahl": [
       "crystal-shard",
       "federstahl-institute",
@@ -2654,6 +3028,13 @@
       "order-of-the-garters-secret-hem"
     ],
     "Glamorons": [
+      "glamorons"
+    ],
+    "Glamuron": [
+      "glamorons",
+      "observation-of-the-glamuron"
+    ],
+    "Glamurons": [
       "glamorons"
     ],
     "Hildebrand": [
@@ -2680,6 +3061,9 @@
       "isolde-of-the-lower-hall",
       "isolde-von-hooplehopper"
     ],
+    "Jean-Michel": [
+      "dr-jean-michel-tout-le-monde"
+    ],
     "Kalyndros": [
       "wylus-kalyndros"
     ],
@@ -2698,16 +3082,25 @@
     "Lysander": [
       "lysander-von-hooplehopper"
     ],
+    "Mandela": [
+      "narrative-collapse"
+    ],
     "Margarethe": [
       "margarethe-von-hooplehopper"
     ],
     "Mariah": [
       "dr-mariah-slayton"
     ],
+    "Matter": [
+      "slayton-matter"
+    ],
     "McCullen": [
       "eli-mcullen",
       "jake-mcullen",
       "mcullen-ranch"
+    ],
+    "Mechanized": [
+      "the-thumper"
     ],
     "Mirrorpath": [
       "velvet-rite"
@@ -2715,9 +3108,15 @@
     "Myrtle": [
       "the-myrtle-burnings"
     ],
+    "Observation": [
+      "observation-of-the-glamuron"
+    ],
     "Ottokar": [
       "ottokar-ii-von-rabenwald",
       "rabenwald-see"
+    ],
+    "Portable": [
+      "the-thumper"
     ],
     "Post-Truth": [
       "narrative-collapse"
@@ -2761,7 +3160,9 @@
       "dr-mariah-slayton",
       "glamorons",
       "slayton-codex",
-      "slayton-energy"
+      "slayton-energy",
+      "slayton-field",
+      "slayton-matter"
     ],
     "Slaytonia": [
       "miss-slaytonia-verse",
@@ -2785,8 +3186,14 @@
     "Thumper": [
       "the-thumper"
     ],
+    "Tout-le-Monde": [
+      "dr-jean-michel-tout-le-monde"
+    ],
     "VUORSE": [
       "miss-slaytonia-vuorse"
+    ],
+    "Wardrobe": [
+      "the-thumper"
     ],
     "Wax-Sealed": [
       "rabenwald-see"
@@ -2811,6 +3218,9 @@
     ],
     "Zerethium": [
       "zerethium-quartz"
+    ],
+    "matter": [
+      "slayton-matter"
     ]
   },
   "case_sensitive_forms": [

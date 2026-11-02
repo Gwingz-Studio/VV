@@ -1,0 +1,21 @@
+/* Type: Akira Expanded (display, caps) / League Spartan (subheads, buttons, labels) /
+   Encode Sans (body) / Space Mono (code, token values, metadata). */
+:root{
+  --font-display:'Akira Expanded',sans-serif;
+  --font-subhead:'League Spartan',sans-serif;
+  --font-body:'Encode Sans',sans-serif;
+  --font-mono:'Space Mono',monospace;
+  --font-editor-body:'Lato',sans-serif;
+  --font-editor-copy:'Martian Mono',monospace;
+  --text-xs:0.75rem;
+  --text-sm:0.875rem;
+  --text-base:1rem;
+  --text-lg:1.25rem;
+  --text-xl:1.625rem;
+  --text-2xl:2.25rem;
+  --text-3xl:3.25rem;
+  --text-4xl:4.5rem;
+  --weight-extrabold:800;
+  --tracking-wide:0.12em;
+  --line-height-editor-copy:1.6;
+}

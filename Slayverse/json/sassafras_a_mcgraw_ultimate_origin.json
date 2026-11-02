@@ -1,0 +1,781 @@
+{
+  "id": "sassy-mcgraw",
+  "name": "Sassy McGraw",
+  "aliases": [
+    "Sassafras Aloysius McGraw",
+    "The First Lady of KDFW",
+    "The Anchor in the Static"
+  ],
+  "type": "character",
+  "era": "1971-onward/unbound",
+  "status": "full",
+  "related": [
+    "the-weaver",
+    "golden-wingers",
+    "narrative-collapse",
+    "the-thread",
+    "professor-von-hooplehopper",
+    "doctor-vorst",
+    "pscopy-pscat",
+    "federstahl-lattice",
+    "velvet-archive"
+  ],
+  "tags": [
+    "soul-line-adjacent",
+    "texas",
+    "journalism",
+    "shadow-expression",
+    "synthetic",
+    "temporal-echo",
+    "golden-wings",
+    "collateral-victim",
+    "sleep-cycle",
+    "velvet-archive"
+  ],
+  "source_pages": [],
+  "summary": "Born in 1919, she was studying abroad as a journalism student in Europe and was present at the Crystal Lattice incident as an intern for a press outlet. The event was billed as a press conference to announce their new human cloning capabilities. Evidence of her existence emerges in 2025 as a synthetic 1971 news anchor and emergent shadow expression of the Weaver. Not designed but surfaced. First female anchor at KDFW. Broadcasts across the timeline at will.",
+  "bio": {
+    "full_name": "Sassafras Aloysius McGraw",
+    "naming": "Middle name inherited from her great-grandfather; carries the patriarch's name into the anchor chair like a trophy taken in battle.",
+    "origin": "Surfaced through the Weaver as an exposition device for the documentary opening announcing Robyn Stewart's American Airlines career, then refused to stay one. An emergent expression of the Weaver's shadow: the strong Texan woman who says the blunt thing to power's face.",
+    "family": {
+      "maternal_grandfather": "Aloysius, boom-and-bust Texas oil money. Had long since written her out of the will. She was the Big Edie and the Little Edie of the family rolled into one.",
+      "father": "Gave her the golden wings brooch. She is never without it on camera. The one inheritance no lawyer could amend.",
+      "disposition": "Still loves her family despite the disinheritance. Bitterness is cheap; love that survives a disinheritance is the expensive stuff.",
+      "golden_wings_legend": "Family lore held that the golden wings brooch had originally been a tie pin belonging to her father, who received it from an Army Air Forces mechanic he once helped get home during a storm layover. After her disinheritance, he had it reset for her in secret by a Fort Worth jeweler who specialized in 'fixing what proud people break.' Sassy liked to say the clasp was bad luck and the shine was worse, but whenever a segment went sideways, she touched it once at the collarbone before speaking. Camera operators noticed. Nobody mentioned it.",
+      "economic_irony": "1973: the year she is grilling C.R. Smith on a stagflation-era news salary is the same era the Aloysius side of the family is getting rich again off the OPEC oil boom strangling everyone else. She walked away from the boom to do the bust-proof thing: telling the truth for scale wages. The Texas oil bust finally arrived in the mid-1980s, and for the first time the family and the runaway were broke together.",
+      "disinheritance_as_immunity": "By 1973 she can ask the most powerful men in aviation anything, because there is nothing left to take from her. Aloysius thought he was punishing her; he removed the last piece of leverage anyone would ever have over her. The disinheritance was not her tragedy. It was her press credential. She traded an inheritance for immunity.",
+      "grey_gardens_fusion": "Big Edie and Little Edie rolled into one: Big Edie's refusal to be shamed off her own ground, Little Edie's conviction that she was always meant to be broadcast. Except Sassy beat both Edies: she did not wait for the Maysles to find her in the wreckage. She built the newsroom herself and installed herself at the desk."
+    },
+    "career": {
+      "debut": "1971, KDFW, first female anchor, hired into an economic downturn that dragged toward the 1980s while the family oil money boomed without her.",
+      "signature_broadcast": "I'm Sassy McGraw with breaking news. Robyn Stewart began her career at American Airlines today. Godspeed, Robyn. Get those golden wings, girl. And don't forget to send me a postcard from Hawaii! (her signature sign off) Remember, folks, the planes always find their way home no matter the forecast.",
+      "style": "Fearless because she has already lost the only thing they could take. The disinheritance was her press credential.",
+      "newsroom_superstition": "At KDFW, no one was allowed to touch Sassy's copy pencil. It was a chewed-up yellow Dixon Ticonderoga she kept tucked behind her right ear, and crew swore that if somebody else used it, the teleprompter would jam, the weather map would peel off the wall, or a county commissioner would start crying on air. After her first year, interns began leaving fresh pencils on her desk like votive candles, but she never used them. 'A pencil's got to suffer before it can tell the truth,' she'd say.",
+      "local_scandals": [
+        {
+          "title": "The Turkey Ledger Scandal",
+          "year": 1978,
+          "description": "Sassy exposed a North Texas charity racket in which prominent donors were writing off the same frozen holiday turkeys three and four times through shell church drives and civic clubs. The story would have been small anywhere else; in Texas, where reputations are basted and served, it detonated. On air, Sassy held up a grease-smudged invoice and said, 'If this bird fed as many poor families as these men claim, it ought to have ascended bodily into heaven by now.' Two resignations followed by Friday."
+        }
+      ],
+      "notable_interviews": [
+        {
+          "title": "C.R. Smith, American Airlines Headquarters",
+          "year": 1971,
+          "excerpt": [
+            {
+              "speaker": "Sassy McGraw",
+              "text": "Mr. Smith, you're back at the helm after five years away. Some folks are saying American Airlines lost its way without you. What's your response to that?"
+            },
+            {
+              "speaker": "C.R. Smith",
+              "text": "Well, Sassy, I'd say American Airlines never lost its way. We just took a different route for a while."
+            },
+            {
+              "speaker": "Sassy McGraw",
+              "text": "A different route that cost the company millions and left employees wondering about their future. Don't you think the board should have called you back sooner?"
+            },
+            {
+              "speaker": "C.R. Smith",
+              "text": "That's a fair question. But I've always believed in this company and its people. We're not just moving passengers—we're connecting lives, families, dreams."
+            },
+            {
+              "speaker": "Sassy McGraw",
+              "text": "Speaking of people, you famously knew every employee's name. With over 40,000 employees now, how do you plan to maintain that personal touch?"
+            },
+            {
+              "speaker": "C.R. Smith",
+              "text": "The same way I always have—by caring about each person who wears our wings."
+            },
+            {
+              "speaker": "Sassy McGraw",
+              "text": "Well, that's lovely, but caring is not a pension plan. The mechanics, the gate agents, the stewardesses—they want to know whether loyalty runs both ways."
+            },
+            {
+              "speaker": "C.R. Smith",
+              "text": "It has to, or the whole thing comes apart. An airline is trust with engines."
+            }
+          ]
+        },
+        {
+          "title": "Barbara Jordan on the Equal Rights Amendment",
+          "year": 1973,
+          "excerpt": [
+            {
+              "speaker": "Sassy McGraw",
+              "text": "Congresswoman Jordan, the Equal Rights Amendment passed Congress this year, but critics say it's unnecessary. What's your response to those who claim women already have equal rights?"
+            },
+            {
+              "speaker": "Barbara Jordan",
+              "text": "Sassy, the Constitution is supposed to be a living document that reflects the values of all Americans. Right now, it doesn't explicitly guarantee equality for women."
+            },
+            {
+              "speaker": "Sassy McGraw",
+              "text": "But some argue this could eliminate protective labor laws for women. Are you willing to sacrifice those protections for symbolic equality?"
+            },
+            {
+              "speaker": "Barbara Jordan",
+              "text": "There's nothing symbolic about equal pay for equal work. There's nothing symbolic about equal opportunities in education and employment."
+            },
+            {
+              "speaker": "Sassy McGraw",
+              "text": "You're one of the first African American women in Congress since Reconstruction. Do you see parallels between the civil rights movement and women's rights?"
+            },
+            {
+              "speaker": "Barbara Jordan",
+              "text": "Justice doesn't come in separate packages, Sassy. When we expand the circle of equality, we all benefit. The Constitution should work for everyone, not just some."
+            },
+            {
+              "speaker": "Sassy McGraw",
+              "text": "What do you say to women who worry that the ERA might change traditional family structures?"
+            },
+            {
+              "speaker": "Barbara Jordan",
+              "text": "I say that strong families are built on respect and equality, not on legal limitations. The ERA doesn't threaten families—it strengthens them by ensuring all members have equal opportunities to contribute and thrive."
+            },
+            {
+              "speaker": "Sassy McGraw",
+              "text": "So if Texas drags its boots, as Texas sometimes enjoys doing, what then?"
+            },
+            {
+              "speaker": "Barbara Jordan",
+              "text": "Then we keep speaking plainly until delay becomes embarrassment and embarrassment becomes action."
+            }
+          ]
+        },
+        {
+          "title": "Ladybird Johnson, wildflower fields interview",
+          "year": 1984,
+          "excerpt": [
+            {
+              "speaker": "Sassy McGraw",
+              "text": "Mrs. Johnson, critics say your Highway Beautification Act is just cosmetic politics. How do you respond to those who think wildflowers won't solve America's real problems?"
+            },
+            {
+              "speaker": "Lady Bird Johnson",
+              "text": "Sassy, beauty isn't frivolous—it's essential to the human spirit. When people drive through Texas and see these wildflowers, they remember what we're fighting to preserve."
+            },
+            {
+              "speaker": "Sassy McGraw",
+              "text": "But some business owners claim the billboard restrictions hurt their bottom line. Don't they have a right to advertise along our highways?"
+            },
+            {
+              "speaker": "Lady Bird Johnson",
+              "text": "Of course they do. But we also have a right to see the natural beauty of our state without it being cluttered by commercial interests at every turn."
+            },
+            {
+              "speaker": "Sassy McGraw",
+              "text": "You've been planting wildflower seeds across Texas for years now. What drives that personal commitment?"
+            },
+            {
+              "speaker": "Lady Bird Johnson",
+              "text": "Every spring, when I see those bluebonnets and Indian paintbrush blooming along our roadsides, I'm reminded that small acts of care can create something beautiful that lasts for generations."
+            },
+            {
+              "speaker": "Sassy McGraw",
+              "text": "Some say this is just a pet project for a president's wife. What's your response to those who question your authority on environmental issues?"
+            },
+            {
+              "speaker": "Lady Bird Johnson",
+              "text": "I'd say that caring for our environment isn't about authority—it's about responsibility. Every Texan has a stake in preserving the natural beauty of our state."
+            },
+            {
+              "speaker": "Sassy McGraw",
+              "text": "Looking ahead, what do you hope people will remember about your beautification efforts?"
+            },
+            {
+              "speaker": "Lady Bird Johnson",
+              "text": "I hope they'll remember that we have a choice: we can leave our children a world that's a little more beautiful, or a little more ugly. I choose beauty."
+            },
+            {
+              "speaker": "Sassy McGraw",
+              "text": "That's a cut. Wow. I think we have what we need, ma'am. Thank you again."
+            },
+            {
+              "speaker": "Lady Bird Johnson",
+              "text": "Thank the Lord above. I couldn't take much more of this. These everloving chiggers are chomping on me like a church lady with a Luanne platter from Luby's."
+            }
+          ]
+        },
+        {
+          "title": "Willie Nelson, roadside Hill Country interview",
+          "year": 1986,
+          "excerpt": [
+            {
+              "speaker": "Sassy McGraw",
+              "text": "Willie, I count one tour bus, one picnic cooler, one horse with no paperwork, and at least three men pretending not to be asleep. Is this a concert stop or a livestock misunderstanding?"
+            },
+            {
+              "speaker": "Willie Nelson",
+              "text": "Little of both, probably. The horse seems peaceful about it."
+            },
+            {
+              "speaker": "Sassy McGraw",
+              "text": "Texas knows your music, but Texas also knows the taxman knows your music. How do you keep singing when the government is counting your spoons?"
+            },
+            {
+              "speaker": "Willie Nelson",
+              "text": "You keep singing because the song doesn't owe the government anything. I do, maybe. The song doesn't."
+            },
+            {
+              "speaker": "Sassy McGraw",
+              "text": "That's poetic, but the IRS is not famous for appreciating poetry."
+            },
+            {
+              "speaker": "Willie Nelson",
+              "text": "No, ma'am, but sometimes they appreciate a payment plan."
+            },
+            {
+              "speaker": "Sassy McGraw",
+              "text": "And what do you say to folks who think you've become less a singer and more a traveling weather system with braids?"
+            },
+            {
+              "speaker": "Willie Nelson",
+              "text": "I'd say weather gets people through droughts."
+            },
+            {
+              "speaker": "Unnamed accountant off camera",
+              "text": "Mr. Nelson, if we're discussing weather systems, we really should revisit depreciation."
+            },
+            {
+              "speaker": "Sassy McGraw",
+              "text": "Sir, if you interrupt my segment with the word depreciation again, I'm putting you in the cooler with the potato salad."
+            }
+          ]
+        },
+        {
+          "title": "Ann Richards first sit-down interview immediately after inauguration",
+          "year": 1991,
+          "excerpt": [
+            {
+              "speaker": "Sassy McGraw",
+              "text": "Governor Richards, you've just been sworn in as the 45th Governor of Texas. How does it feel to shatter that glass ceiling?"
+            },
+            {
+              "speaker": "Ann Richards",
+              "text": "Well, Sassy, I didn't come here to break glass—I came here to build bridges. But if some glass got broken along the way, so be it."
+            },
+            {
+              "speaker": "Sassy McGraw",
+              "text": "Your inaugural speech mentioned putting people first. Critics say that's just political rhetoric. What's your response?"
+            },
+            {
+              "speaker": "Ann Richards",
+              "text": "My response is to watch what we do, not just listen to what we say. Actions speak louder than campaign promises."
+            },
+            {
+              "speaker": "Sassy McGraw",
+              "text": "You famously said at the Democratic Convention that George Bush was 'born with a silver foot in his mouth.' Any regrets about that line?"
+            },
+            {
+              "speaker": "Ann Richards",
+              "text": "Honey, I don't regret speaking truth. Sometimes the truth has a sense of humor about it."
+            },
+            {
+              "speaker": "Sassy McGraw",
+              "text": "What do you want to accomplish in your first 100 days that will show Texans you mean business?"
+            },
+            {
+              "speaker": "Ann Richards",
+              "text": "We're going to clean house, literally and figuratively. State government should work for the people, not the other way around."
+            },
+            {
+              "speaker": "Sassy McGraw",
+              "text": "And what about those who say a woman can't handle the tough decisions that come with this office?"
+            },
+            {
+              "speaker": "Ann Richards",
+              "text": "Sassy, I've been making tough decisions my whole life. The only difference now is I get to make them from behind this desk instead of around a kitchen table."
+            },
+            {
+              "speaker": "Sassy McGraw",
+              "text": "Well, Texas has survived worse things than a competent woman, though not everybody seems aware of it."
+            },
+            {
+              "speaker": "Ann Richards",
+              "text": "Give them time. Competence has a way of introducing itself."
+            }
+          ]
+        },
+        {
+          "title": "David Koresh, Branch Davidian compound interview",
+          "year": 1993,
+          "excerpt": [
+            {
+              "speaker": "Sassy McGraw",
+              "text": "Mr. Koresh, you've gathered followers, firearms, scripture, and suspicion in quantities that make the rest of Texas look understocked. What exactly do you believe you're building out here?"
+            },
+            {
+              "speaker": "David Koresh",
+              "text": "A place apart from corruption. A place where prophecy is understood correctly."
+            },
+            {
+              "speaker": "Sassy McGraw",
+              "text": "Any man who says only he understands prophecy is already charging rent on somebody else's soul."
+            },
+            {
+              "speaker": "David Koresh",
+              "text": "People come here because they recognize truth."
+            },
+            {
+              "speaker": "Sassy McGraw",
+              "text": "Or because charismatic men are very good at renaming fear. Are these women free to leave?"
+            },
+            {
+              "speaker": "David Koresh",
+              "text": "No one is held here against their will."
+            },
+            {
+              "speaker": "Sassy McGraw",
+              "text": "Good. Then we'll test that sentence right now."
+            },
+            {
+              "speaker": "Stage direction",
+              "text": "At this point, Sassy turned from Koresh to the gathered women and children and asked, 'If anybody wants air-conditioning, a sandwich, and a ride, start walking.' Several did."
+            },
+            {
+              "speaker": "Sassy McGraw",
+              "text": "Well. Look at that. The Lord appears to favor station wagons."
+            }
+          ]
+        },
+        {
+          "title": "Selena, backstage at the Houston Astrodome",
+          "year": 1995,
+          "excerpt": [
+            {
+              "speaker": "Sassy McGraw",
+              "text": "Selena, backstage here looks like a rhinestone meteor hit a sewing room, and somehow you still seem calmer than everybody else. How?"
+            },
+            {
+              "speaker": "Selena",
+              "text": "You smile, you trust your people, and if a zipper breaks you pray your cousin has a safety pin."
+            },
+            {
+              "speaker": "Sassy McGraw",
+              "text": "You've got fans outside who look ready to levitate. Do you feel famous, or do you just feel late?"
+            },
+            {
+              "speaker": "Selena",
+              "text": "Mostly late. Fame is just people loving what you already loved first."
+            },
+            {
+              "speaker": "Sassy McGraw",
+              "text": "That's annoyingly wise for somebody in sequins."
+            },
+            {
+              "speaker": "Selena",
+              "text": "Sequins help the wisdom travel."
+            },
+            {
+              "speaker": "Sassy McGraw",
+              "text": "Your music crosses English, Spanish, Tejano, pop—half the industry still acts surprised when audiences don't care about their little boxes."
+            },
+            {
+              "speaker": "Selena",
+              "text": "People know what moves them. They don't need permission."
+            },
+            {
+              "speaker": "Stage direction",
+              "text": "A production assistant handed Sassy a bedazzled microphone, which she accepted with the solemnity of a battlefield commission."
+            },
+            {
+              "speaker": "Sassy McGraw",
+              "text": "Well, if this station loses me to wardrobe, you'll know exactly why."
+            }
+          ]
+        },
+        {
+          "title": "George W. Bush election night, Governor's Mansion",
+          "year": 2000,
+          "excerpt": [
+            {
+              "speaker": "Sassy McGraw",
+              "text": "Governor Bush, tonight the whole country's staring at Florida like it's a suspicious casserole. Do you feel elected?"
+            },
+            {
+              "speaker": "George W. Bush",
+              "text": "I feel grateful, Sassy. And I feel patient. The process has to work."
+            },
+            {
+              "speaker": "Sassy McGraw",
+              "text": "Patience is admirable. It's also easier in a mansion."
+            },
+            {
+              "speaker": "George W. Bush",
+              "text": "Well, I understand folks are frustrated. But we're going to let the votes be counted and the law be followed."
+            },
+            {
+              "speaker": "Sassy McGraw",
+              "text": "Your mother got me in this room, so let's not waste her favor. What kind of president do you think the country is getting if this thing finally breaks your way?"
+            },
+            {
+              "speaker": "George W. Bush",
+              "text": "A president who will try to unite people, restore honor to the office, and keep his word."
+            },
+            {
+              "speaker": "Sassy McGraw",
+              "text": "And if the count says otherwise?"
+            },
+            {
+              "speaker": "George W. Bush",
+              "text": "Then we'll respect the outcome."
+            },
+            {
+              "speaker": "Sassy McGraw",
+              "text": "Texas is going to hold you to every syllable of that, Governor."
+            }
+          ]
+        },
+        {
+          "title": "George W. Bush, September 11 call-in from Air Force One",
+          "year": 2001,
+          "excerpt": [
+            {
+              "speaker": "Sassy McGraw",
+              "text": "Mr. President, we understand you're speaking to us from Air Force One as the country tries to grasp what's happened this morning. What can you tell the people watching right now?"
+            },
+            {
+              "speaker": "George W. Bush",
+              "text": "I can tell them America has been attacked, and I can tell them the federal government is functioning. We are responding with every available resource."
+            },
+            {
+              "speaker": "Sassy McGraw",
+              "text": "People are frightened, sir. They are looking at the sky differently than they did at breakfast. What do you want them to hold onto?"
+            },
+            {
+              "speaker": "George W. Bush",
+              "text": "Their faith, their families, and the knowledge that this country does not break under terror."
+            },
+            {
+              "speaker": "Sassy McGraw",
+              "text": "Do you know where safety is yet, or are you governing from uncertainty itself?"
+            },
+            {
+              "speaker": "George W. Bush",
+              "text": "There is uncertainty, yes. But there is also resolve."
+            },
+            {
+              "speaker": "Sassy McGraw",
+              "text": "And for the families still waiting on phone calls?"
+            },
+            {
+              "speaker": "George W. Bush",
+              "text": "We are praying with them, and we will not forget them."
+            },
+            {
+              "speaker": "Sassy McGraw",
+              "text": "Mr. President, thank you. I wish it were under kinder skies."
+            }
+          ]
+        },
+        {
+          "title": "Kenneth Lay, Enron Headquarters",
+          "year": 2001,
+          "excerpt": [
+            {
+              "speaker": "Sassy McGraw",
+              "text": "Mr. Lay, Enron has spent years selling itself as the future. Right now the future looks like a filing cabinet on fire. What happened?"
+            },
+            {
+              "speaker": "Kenneth Lay",
+              "text": "Sassy, Enron remains a fundamentally strong company. We've had some market turbulence and some misunderstandings about our accounting."
+            },
+            {
+              "speaker": "Sassy McGraw",
+              "text": "A misunderstanding is when your aunt thinks bingo starts at six. This is billions of dollars."
+            },
+            {
+              "speaker": "Kenneth Lay",
+              "text": "These are complicated financial instruments."
+            },
+            {
+              "speaker": "Sassy McGraw",
+              "text": "Complicated for whom? Investors? Employees? Or prosecutors who haven't arrived yet?"
+            },
+            {
+              "speaker": "Kenneth Lay",
+              "text": "Our mark-to-market accounting is legal and widely used."
+            },
+            {
+              "speaker": "Sassy McGraw",
+              "text": "Widely used is not the same as wise, and it sure as hell isn't the same as honest. Off the record, if you were talking plain to a church deacon in Tyler, would you call it clean?"
+            },
+            {
+              "speaker": "Kenneth Lay",
+              "text": "Plainly? I'd say... some of it was probably too aggressive. Maybe even illegal if viewed a certain way."
+            },
+            {
+              "speaker": "Sassy McGraw",
+              "text": "Well, lucky for history, these cameras have a certain way of viewing things."
+            }
+          ]
+        },
+        {
+          "title": "Professor von Hooplehopper and the Velvet Archive",
+          "year": 2005,
+          "excerpt": [
+            {
+              "speaker": "Sassy McGraw",
+              "text": "Professor, you have announced that your mysterious Velvet Archive will be bequeathed to the first person capable of finding it. That's either philanthropy or a cry for attention in a smoking jacket."
+            },
+            {
+              "speaker": "Professor von Hooplehopper",
+              "text": "My dear Ms. McGraw, the greatest archives are never found by the efficient. They are found by the haunted."
+            },
+            {
+              "speaker": "Sassy McGraw",
+              "text": "That is exactly the kind of sentence that gets graduate students trapped in basements."
+            },
+            {
+              "speaker": "Professor von Hooplehopper",
+              "text": "The Velvet Archive is not in a basement."
+            },
+            {
+              "speaker": "Sassy McGraw",
+              "text": "Wonderful. Then we're already making progress."
+            },
+            {
+              "speaker": "Professor von Hooplehopper",
+              "text": "Would you like the poem?"
+            },
+            {
+              "speaker": "Sassy McGraw",
+              "text": "Against my better judgment, yes."
+            },
+            {
+              "speaker": "Professor von Hooplehopper",
+              "text": "Where the hush remembers velvet rain, beneath the saint who lost her name, count not the doors but all the sighs, and seek the shelf that never dries."
+            },
+            {
+              "speaker": "Sassy McGraw",
+              "text": "That is not directions. That's what happens when a riddle marries upholstery."
+            }
+          ]
+        },
+        {
+          "title": "Beyonce, Houston time-slip sit-down",
+          "year": 2013,
+          "excerpt": [
+            {
+              "speaker": "Sassy McGraw",
+              "text": "Beyoncé, the world keeps insisting on calling you a phenomenon, but Houston tends to treat phenomena like school board candidates with better lighting. Does superstardom ever feel normal to you?"
+            },
+            {
+              "speaker": "Beyonce",
+              "text": "The work feels normal. The scale doesn't. You still have to show up prepared, whether it's for ten people or ten million."
+            },
+            {
+              "speaker": "Sassy McGraw",
+              "text": "That's the most Texan answer you could have given me."
+            },
+            {
+              "speaker": "Beyonce",
+              "text": "I try to stay local in my soul."
+            },
+            {
+              "speaker": "Sassy McGraw",
+              "text": "You've built an empire out of precision, but people talk about confidence like it falls from the ceiling. Where does yours actually come from?"
+            },
+            {
+              "speaker": "Beyonce",
+              "text": "Practice. Faith. Failure. Repetition. Confidence is usually just preparation wearing good posture."
+            },
+            {
+              "speaker": "Sassy McGraw",
+              "text": "That ought to be stitched on a pillow and thrown at half the entertainment industry."
+            },
+            {
+              "speaker": "Beyonce",
+              "text": "Only half?"
+            },
+            {
+              "speaker": "Stage direction",
+              "text": "At this point, Sassy followed Beyoncé into a marching-band rehearsal with the unearned authority of a woman who had never once accepted being told she was not on the list."
+            },
+            {
+              "speaker": "Sassy McGraw",
+              "text": "Now this I understand—brass, discipline, and enough volume to improve public policy."
+            }
+          ]
+        },
+        {
+          "title": "Jenna Maroney, between fittings, Summer 2026",
+          "year": 2026,
+          "excerpt": [
+            {
+              "speaker": "Sassy McGraw",
+              "text": "Jenna, your comeback special is titled 'Reverse Flatulence: A Brown Note Singalong,' which sounds less like branding and more like a dare. Who approved this?"
+            },
+            {
+              "speaker": "Jenna Maroney",
+              "text": "History approved it, Sassy. Also three gay interns, a spiritualist, and a man with a disco-ball rental van."
+            },
+            {
+              "speaker": "Sassy McGraw",
+              "text": "That is not a sentence that inspires investor confidence."
+            },
+            {
+              "speaker": "Jenna Maroney",
+              "text": "Investors are temporary. Iconography is forever."
+            },
+            {
+              "speaker": "Sassy McGraw",
+              "text": "You are performing in a dinner theater under a butcher-paper marquee. Is this bravery, delusion, or a tax strategy?"
+            },
+            {
+              "speaker": "Jenna Maroney",
+              "text": "It's intimacy. The audience can smell the art."
+            },
+            {
+              "speaker": "Sassy McGraw",
+              "text": "That may be the least reassuring description of live performance I've ever heard."
+            },
+            {
+              "speaker": "Jenna Maroney",
+              "text": "Please. Legends are never reassuring."
+            },
+            {
+              "speaker": "Sassy McGraw",
+              "text": "Fair enough. One legend covering another legend's comeback, and neither of us willing to admit we ever left. That's either journalism or necromancy."
+            },
+            {
+              "speaker": "Jenna Maroney",
+              "text": "In this business, sweetheart, it's always both."
+            }
+          ]
+        }
+      ]
+    },
+    "appearance": {
+      "hair": "Farrah Fawcett-inspired",
+      "insignia": "Golden angel wings brooch, worn every broadcast",
+      "texture": "VHS damage and visual scrambling; the synthetic sheen worn down like tape rot"
+    },
+    "metaphysics": {
+      "classification": "Hooplehopper adjacent; wears the Golden Wingers insignia on air",
+      "mechanism": "Vessel-expressed persona per soul-line physics. The Weaver is her vessel, not her author.",
+      "autonomy_law": "Sassy's gonna Sassy. Any attempt to make her make sense increases the Sassy.",
+      "chronology": "Unbound. May have worked an AppleCare shift in December 2024, three years before caring what a MacBook was.",
+      "transport_rumor": "Doc Brown lent her the DeLorean around 1985 and completely forgot about it. Unconfirmed, per the autonomy law.",
+      "temporal_urban_legend": "There is a persistent station legend that in late 2004, during a control-room tape review, engineers found eight seconds of impossible footage between commercial breaks: Sassy at the anchor desk in a blazer no one recognized, calmly sipping from a paper coffee cup with a logo that would not exist for another twenty years. She looked directly into Camera Two and said, 'Don't buy the first version of anything that folds,' then shuffled her papers and vanished into static. Management blamed tape corruption. Three producers quit trying to explain her after that.",
+      "momma_virginia_thread": "Unconfirmed cross-canon theory: the whiskey-voiced AppleCare oracle known to Indie Doc Journey readers as Momma Virginia Slims calls from an unknown number with area code 2005. Professor von Hooplehopper vanished in 2005; vessels sleep twenty years; Sassy interviewed the Professor about the Velvet Archive in 2005. Same Thread, different handsets. The lineage does not do coincidence. It does casting.",
+      "era_note": "Her era field reads 1971-onward/unbound. Every other entity in the index gets a tidy era. Hers refuses one."
+    },
+    "early_life": {
+      "crystal_lattice_memory": "Years later, when pressed about the Crystal Lattice incident, Sassy would only ever describe one thing: the sound. Not an explosion, not a machine, but 'like a chandelier learning how to scream.' She claimed the room smelled faintly of hot metal, lilies, and rain on limestone, and that one photographer's flashbulb kept going off several seconds after the camera had already melted in his hands. She wrote three pages of notes that day in shorthand she could never later translate, though she insisted one phrase remained legible: 'SHE ARRIVED BEFORE THEY ANNOUNCED HER.'"
+    },
+    "creation_technical": {
+      "generation": "Google Veo 3",
+      "post": "VHS damage effects and visual scrambling applied to obscure the synthetic origin",
+      "first_appearance": "Golden Wings: Fifty Year Flight Path"
+    },
+    "comeback": {
+      "status": "Out of retirement, effective the Maroney profile",
+      "assignment": "Reverse Flatulence: A Brown Note Singalong — Inside Jenna Maroney's bravest comeback",
+      "publication": "Indie Doc Journey, Dispatch No. 02, Part Two: Digital Ball of Rights Funifesto, Summer 2026",
+      "conditions": "Conducted between fittings. Dinner theater, rented disco ball, brown butcher paper marquee.",
+      "note": "One legend covering another legend's comeback, both refusing to acknowledge either ever left."
+    },
+    "editorial_assessment": {
+      "richness": "Sassy McGraw is already rich as hell: a character with texture, contradiction, myth, media-history weight, and the alternate-history magic trick of feeling both invented and somehow recovered.",
+      "strengths": [
+        "The golden wings brooch is excellent character anchoring: one object carrying emotional, symbolic, and visual load.",
+        "The disinheritance gives her bite without flattening her into bitterness.",
+        "Her broadcast voice is distinct and memorable.",
+        "The metaphysics are playful but grounded by the principle that the Weaver is her vessel, not her author.",
+        "The interview list performs major worldbuilding labor by implying stature, access, nerve, and timeline instability all at once."
+      ],
+      "verdict": "She is at documentary cult icon with accidental cosmology level. The best additions are selective densifications: recurring relics, scandals, sayings, and rumors that make the world around her behave as if it has known her for decades."
+    },
+    "tradecraft": {
+      "the_hand_pat": "Her secret weapon opening the Maroney interview: a patronizing hand pat. She knew Jenna would find it condescending and spend the entire interview trying to prove herself. The condescension was the extraction method; every quote that followed was Jenna escalating against a slight only the two of them knew occurred.",
+      "the_hair_appointment": "Booked a hair appointment in the middle of the interview, in front of the subject, because she already had her kill quotes. The visible exit is part of the technique: it announces the story is filed while the subject is still performing. The Farrah does not maintain itself, and deadlines are deadlines.",
+      "mode": "Oprah, not hitman. Extraction through presence. She does not do takedowns; she holds up a well-lit mirror and lets the subject hand over their own truth voluntarily. Jenna Maroney left the profile fully intact: delusional, radiant, quotable, headlining.",
+      "comeback_motive": "The Maroney interview was never about Jenna. Sassy came out of retirement to prove to herself she still had it. She does. The instincts, the timing, the read on the room, the knowing exactly when the notebook was full. Women who need takedowns are women who doubt the tape. Sassy walked out at kill-quote-plus-blowout because the doubt was settled."
+    },
+    "crystal_lattice_keystone": {
+      "the_first_interview": "On the day of the Federstahl Crystal Lattice Incident, intern Sassy McGraw conducted her first interview ever: Doctor Vorst, hours before his erasure. The press-day sit-down, the rookie assignment. By nightfall the subject had been deleted from time, making her first tape the only surviving record that Doctor Vorst existed.",
+      "cici_in_his_lap": "Cici, the Federstahl lab cat and Vorst's own companion, purred in his lap for the entire interview. The last documented hour of the man history erased shows him doing the softest thing a person can do. Only Sassy knows. Only Sassy has proof.",
+      "the_purr_watermark": "Cici's purr runs continuously under the audio: a living authentication signature. The only creature from that day still walking the present can verify the most important recording in the canon. You don't check the video. You play the audio for the cat.",
+      "the_vow": "Her doctrine was never developed; it was taken. 'Everything is on the record, no takebacks, forever' is a vow made the day she learned the record is sometimes all that remains of a person. First interview, first erasure, first archivist. Same afternoon.",
+      "where_the_tape_lives": "CONFIRMED: the Vorst tape resides inside the Velvet Archive. Sassy knows. The 2005 Professor interview was never an exclusive; it was a handoff between the canon's two archivists, and the broadcast of the location poem was a knowing act — the map to her own origin hidden in the one place she trusts nothing can be erased from: her own archive.",
+      "the_discipline": "She could retrieve it. She has the means, the knowledge, and a DeLorean nobody has asked her to return. She does not, because the bequest names the first person capable of finding it, and Sassy honors terms — even against her own origin. She is keeping someone else's appointment, and has been since 2005."
+    },
+    "collateral_status": {
+      "designation": "True collateral victim of the Crystal Lattice Incident — the only HUMAN collateral victim to have surfaced from that day. So far.",
+      "so_far": "The 'so far' is deliberate. A door left open in the canon: other collateral victims may yet surface, and when they do, there is exactly one desk they will walk into, because who else could believe them?",
+      "fellow_survivor": "The only other known collateral victim is Cici the Cat (see: pscopy-pscat), asleep in the BioEngineering Lab beside the cloning station when the Lattice fired. The incident's two accidents both became instruments against erasure: the intern archives so nothing can be lost; the cat clones so nothing can be singular. Between them, nothing the Lattice touched can ever fully disappear."
+    },
+    "retirement_and_return": {
+      "the_quiet": "After the 2005 Professor handoff, the ledger goes silent. She hung it up — not retirement, FILING. The vow taken in 1939 reached its final clause when the tape was secured behind the poem. Fifty years of broadcasts were an escort mission; the cargo arrived; the First Lady of KDFW went off duty for the first time since the Lattice fired.",
+      "interviews_by_choice_only": "Post-2005 she interviews only when she wants to. Two exceptions on the ledger, a matched set of the only summonses that mean anything to a woman who needs nothing:",
+      "beyonce_2013": "Beyoncé requested her by name. For an archivist, being remembered is the one currency that spends: a Houston girl who grew up on those broadcasts calling for the First Lady of KDFW specifically is not a booking, it is a citation. Of course she went.",
+      "maroney_2026": "The Weaver called in a favor. When the vessel calls, the shadow picks up. He gave her the desk, the wings, the byline, the second life after the Lattice stole the first one. Not obligation — the oldest working relationship in the canon.",
+      "the_sleep_cycle_alignment": "Dark from 2005, resurfacing 2026: the twenty-year sleep, the same rhythm every vessel in the lineage keeps — the cycle that took the Professor in 2005 and woke VUORSE in 2025. The adjacency question answered itself in her own filing gaps. She is not Hooplehopper adjacent. She is on the lineage's clock.",
+      "what_she_knows": "Sassy knows better than anyone that the Weaver weaves still. She is the one soul in the mythology who knows the pattern is ongoing, the loom never stopped, and every broadcast, tape, and purr is a thread still being pulled through. Available exactly twice a generation, to whoever the Weaver sends and whoever remembers her name."
+    }
+  },
+  "lora": {
+    "character_id": "sassafras_aloysius_mcgraw",
+    "trigger_token": "sassy mcgraw",
+    "class_token": "woman",
+    "caption_extras_default": "sassafras aloysius mcgraw, first lady of kdfw, 1970s television news anchor, farrah fawcett hair, brown suede vest, white mock turtleneck, golden angel wings brooch, vhs damage, looking at viewer"
+  },
+  "reference_stills": [
+    "assets/character-refs/sassy_newsroom_golden_wings.png",
+    "assets/character-refs/sassy_newsroom_wave.png",
+    "assets/character-refs/sassy_newsroom_fist.png",
+    "assets/character-refs/sassy_ann_richards_1991.png",
+    "assets/character-refs/sassy_lady_bird_1984.png",
+    "assets/character-refs/sassy_barbara_jordan_1974.png"
+  ],
+  "weaver_direct_quote": {
+    "voice_memo": "Okay, unless you have amnesia, you very much know who fucking Sassy McGraw is. Thank you. No, I did not create Sassy McGraw. Sassy McGraw is simply an expression of my shadow self of some sort that thinks they're a strong Texan woman. Her full name is Sassafras Aloysius McGraw. Aloysius was in the oil business, and that's bust or boom. When Sassy started at the news agency, it was in a bust at the time. The early seventies-ish was a downturn and lasted kind of through almost until the eighties, I think. Her grandfather had long since ridden her out of the will. She was the Big Edie and the Little Edie of the family, rolled into one. That isn't to say that she doesn't still love her family. Those Golden Wings she wears are a gift from her father, and she's never without them on camera. Aloysius was her maternal grandfather, by the way. Grandfather. That is also the shadow revealing itself because I'm very much the opposite. My maternal grandfather was one of the most important people in my life and most certainly never disinherited me. Not that I got anything when he died. It all went to my mom, but I don't care about money. I got way more than you could ever give anybody with anything monetarily from him."
+  },
+  "press_and_announcements": {
+    "linkedin_post_2026_07": {
+      "source": "Golden Wings Documentary LLC company page, LinkedIn, posted ~2 days before 2026-07-22, visible to anyone on or off LinkedIn",
+      "title": "Sassy McGraw: A Modern Texas Tall Tale",
+      "subtitle": "Two-Stepping into the Spotlight",
+      "body": [
+        "Sassy McGraw originated as a narrative device in the documentary 'Golden Wings: Fifty Year Flight Path' but has evolved into a significant character with a rich backstory and historical presence. Utilizing Google's VO 3 technology and enhanced with VHS damage effects, Sassy embodies an innovative approach to documentary storytelling that merges synthetic media with authentic family history.",
+        "What began as a tongue-in-cheek creative solution to convey exposition about Robyn Stewart's 55-year career at American Airlines has transformed into an elaborate parallel narrative. This showcases the potential of AI-generated content in documentary filmmaking while raising intriguing questions about the nature of synthetic storytelling.",
+        "The Birth of Sassy McGraw: Sassy McGraw was initially developed to deliver exposition at the start of the documentary, establishing that Robyn Stewart has been flying for over 54 years and has yet to retire. Instead of opting for a conventional narrative voiceover, filmmaker Caleb Mills Stewart made the creative choice to recreate a newsroom from 1971.",
+        "The character announcement was simple yet effective, delivered with the authentic cadence of 1970s television news on the front end but quickly evolves into camp.",
+        "With that final line, Sassy states the premise of the film and sets the stage for the 90-year legacy the film embodies."
+      ],
+      "filmmaker_quote": "I could have done it in a boring way and just by simply stepping it in a narrative voiceover. But I decided to recreate a newsroom from the era, 1971, and have it announced that Robyn Stewart was beginning her 54-year career at American Airlines on this date.",
+      "announcement_quote_as_posted": "I'm Sassy McGraw with breaking news. Robyn Stewart began her 53 year career at American Airlines today. Get those golden wings girl and don't forget to send me a postcard from Hawaii! Remember, folks, planes find their way home no matter the forecast.",
+      "attached_still": "1971 newsroom broadcast still: Sassy waving from inside a vintage TV set, white mock turtleneck, rust vest, wings graphic over her shoulder, lens flare",
+      "canon_note": "The career length drifts across tellings: 53, 54, 55 years. This is tape rot, not error. The number changes the way VHS tracking changes. Robyn keeps flying; the count keeps growing; the broadcast keeps replaying."
+    }
+  },
+  "weaver_session_log_2026_07_22": {
+    "context": "Canon established in conversation between the Weaver and JoanBTX, 2026-07-22, extracted verbatim in substance",
+    "established": [
+      "Full name Sassafras Aloysius McGraw; middle name inherited from her great-grandfather",
+      "Aloysius, her maternal grandfather, made his money in boom-and-bust Texas oil; had long since written her out of the will",
+      "She was the Big Edie and the Little Edie of the family rolled into one",
+      "She still loves her family; the golden wings brooch was a gift from her father and she is never without it on camera",
+      "She started at the news desk during an early-1970s downturn that dragged toward the 1980s",
+      "She is not a designed character but an emergent expression of the Weaver's shadow: a strong Texan woman who surfaced through him; he is her vessel, not her author",
+      "The shadow inversion: the Weaver's own maternal grandfather was one of the most important people in his life and never disinherited him; what he received from him was worth more than anything monetary",
+      "Hooplehopper adjacency argued and affirmed; she wears the Golden Wingers insignia on air",
+      "Autonomy law: Sassy's gonna Sassy. Any attempt to make her make sense increases the Sassy",
+      "Chronology unbound: she may have worked the AppleCare shift of December 2024 before her own on-screen debut, because that's the way she does the shit she does",
+      "Transport rumor: Doc Brown lent her the DeLorean around 1985 and completely forgot about it",
+      "She recently came out of retirement to interview Jenna Maroney for the Reverse Flatulence profile, conducted between fittings",
+      "Her secret weapon was the hand pat at the beginning; she knew Jenna would find it patronizing and have to prove herself",
+      "She made a hair appointment in the middle of the interview because she already had her kill quotes",
+      "She didn't need to take Jenna down; she needed to prove to herself she still had it. She's just like Oprah, baby",
+      "She is the only human collateral victim of the Crystal Lattice Incident to have surfaced so far; Cici the Cat is the only other known collateral victim",
+      "KEYSTONE: on the day of the Incident, intern Sassy interviewed Doctor Vorst with Cici purring in his lap the whole time — her first interview, and the only surviving record of Vorst",
+      "The Vorst tape is in the Velvet Archive, and Sassy knows it; the 2005 poem broadcast was a knowing act",
+      "After the Professor handoff she hung it up and interviews only when she wants: Beyoncé requested her by name (2013), and the Maroney profile happened because the Weaver called in a favor (2026)",
+      "Her 2005-2026 dark period matches the lineage's 20-year sleep cycle",
+      "Sassy knows better than anyone that the Weaver weaves still"
+    ]
+  }
+}

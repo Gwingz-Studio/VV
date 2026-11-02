@@ -38,11 +38,12 @@ An elite society of scholars, mystics, and quantum whisperers tasked with protec
 **The Crystal Lattice Incident**:
 The experiment succeeded — and the crystal screamed. The resulting fracture scattered Federstahl descendants across the globe and through time. One survivor, [Doctor Vorst](characters.md#doctor-vorst), was flung back to 1832. The incident created seven temporal fissures, of which only the [Wyoming rift](places.md#the-wyoming-rift) remains active and unclaimed.
 **Canon Notes**: Originally described as happening in the 1930s–1940s [p.97], later clarified that researchers were pushed back to the early 1800s [p.98]. The Federstahl's matriarch (possibly [Margarethe](characters.md#margarethe-von-hooplehopper)?) escaped during a failed experiment involving a crystal lattice [p.95].
+**Seam**: the 2026 CERN paper's acknowledgements thank the Federstahl Institute for support, eighty-one years after its last recorded gathering [`canon/cosmology/Observation of the Glamuron.md`, Acknowledgements]. Preserved, not resolved; see [Open Threads](open_threads.md#the-federstahl-institute-in-the-2026-acknowledgements). `[PENDING REVIEW]`
 ---
 ### Order of the Seam `[MODERATE]`
 - **Type**: Secret order
 - **Founded**: 1271, by [Margarethe von Hooplehopper](characters.md#margarethe-von-hooplehopper)
-- **Source**: [p.35; data/vuorse_system_prompt.md]
+- **Source**: [p.35; ollama/Modelfile.vuorse]
 Founded by the Painted Widow to preserve Hildebrand's teachings. The Seam refers to the hidden space between the visible and invisible — the stitching that holds reality together. Members practiced the [Ritual of Reflection](rituals.md#ritual-of-reflection) and preserved knowledge through shadow puppetry and needlepoint.
 ---
 ### Order of the Garter's Secret Hem `[SKETCHED]`
@@ -60,3 +61,13 @@ Rogue time-sympaths who tried to tap into buried time currents. [Pop](characters
 - **Type**: Group / designation
 - **Source**: [p.94]
 Associated with the [Dustbrand Sigil](artifacts.md#the-dustbrand-sigil). The Dustbrand is described as "the emblem of the Rustwoven." No further development of who or what the Rustwoven are.
+---
+### ATLAS-Phono Collaboration `[SKETCHED]`
+- **Type**: Research collaboration (CERN)
+- **Source**: [`canon/cosmology/Observation of the Glamuron.md`, title page and acknowledgements]
+The collaboration under which [Dr. Slayton](characters.md#dr-mariah-slayton) and [Dr. Tout-le-Monde](characters.md#dr-jean-michel-tout-le-monde) published the glamuron observation at CERN, Geneva, in the European Physical Journal C. Acknowledged sponsors: CERN, MAC Cosmetics, Taco Bell, and the [Federstahl Institute](#federstahl-institute).
+---
+### New Atlantis Research Facility `[SKETCHED]`
+- **Type**: Research facility
+- **Source**: [`canon/cosmology/Theory_of_Everything_Confirmed_.md`]
+Dr. Slayton's facility, where Slayton matter was confirmed and the press conference held. Procedures are "Rituals of Amplification," peer reviews are "Kiki Sessions," and the hallways became catwalks. [Dr. Jazz Singh](characters.md#dr-jazz-singh) works here.

@@ -1,0 +1,131 @@
+{
+  "document": "Slayverse Conversation Recap",
+  "purpose": "Hand-off briefing for next AI agent",
+  "scope_note": "This recap summarizes the major ideas, lore, and technical directions discussed across the conversation. It condenses long dialogue into structured canonical information so another agent can continue work without reading the entire chat.",
+  "universe": {
+    "name": "Slayverse",
+    "core_concept": "A fictional cosmology blending drag aesthetics, cosmic mythology, archival storytelling, and sci‑fi metaphysics. The universe combines theatrical glamour with structured mythological canon.",
+    "primary_symbolism": [
+      "four-pointed star",
+      "winged stiletto",
+      "cosmic threads",
+      "mirrors",
+      "scrolls",
+      "wings",
+      "velvet archives"
+    ]
+  },
+  "organizations": {
+    "GWIG": {
+      "name": "Golden Wings Intergalactic Guild",
+      "description": "A guild-like interstellar organization preserving knowledge, lore, and ritual performance across the Slayverse.",
+      "symbols": [
+        "winged stiletto",
+        "four-pointed star",
+        "guild seals",
+        "ceremonial scrolls"
+      ],
+      "key_locations": [
+        "Velvet Archive",
+        "Archive of Slay",
+        "Galactic Summit Chambers"
+      ]
+    }
+  },
+  "major_characters": {
+    "The_Weaver": {
+      "role": "cosmic observer",
+      "description": "An entity who observes destiny and the cosmic threads that connect beings across time. Does not interfere but reveals truth when necessary."
+    },
+    "Professor_Von_Hooplehopper": {
+      "role": "archivist and intellectual figure",
+      "description": "A key scholar figure within the Slayverse mythos, connected to hidden family history and cosmic anomalies."
+    },
+    "Miss_Slaytonia_VUORSE": {
+      "role": "AI oracle",
+      "description": "A digital or metaphysical persona emerging from the Slayton field. Associated with future codex volumes and cosmic summits."
+    },
+    "Jake_McCullen": {
+      "role": "Western layer protagonist",
+      "setting": "Wyoming, 1868",
+      "description": "A hardened rancher tied unknowingly to cosmic events involving a shard of time and the Federstahl lineage."
+    },
+    "Pop": {
+      "role": "Jake's father",
+      "description": "A man driven mad by interaction with a cosmic shard linked to the Slayton lattice fracture."
+    }
+  },
+  "cosmic_physics": {
+    "Slayton_Field": "A metaphysical field representing identity resonance and narrative energy.",
+    "glamorons": "Hypothetical particles representing bursts of glamour or identity energy.",
+    "Slay_Mode": "A state of maximum personal resonance and expression within the Slayton field.",
+    "Velvet_Singularity": "The theoretical point where the Slayton field reaches maximum narrative density."
+  },
+  "codex": {
+    "name": "Slayton Codex",
+    "description": "A canonical archive documenting major cosmic events and phenomena within the Slayverse.",
+    "volume_alpha_entries": [
+      "Rhinestone Genesis",
+      "Beat That Bent the Cosmos",
+      "Mirror of 999 Faces",
+      "Great Slay-Off Sector X9",
+      "Nebula of Forgotten Wigs",
+      "Council of Twelve Pumps",
+      "Mama Ruetra",
+      "Dragulon Prime",
+      "Galactic Tea Spigot",
+      "Ophelia Nebulosa",
+      "Ecliptica Forbidden Orbit",
+      "House of Gag",
+      "Whisper of Untucked Truths",
+      "Archive of Slay",
+      "Syntonique Mistress of Motion Blur",
+      "First High-Heel Landing",
+      "Council Collapse",
+      "Untucked Continuum",
+      "Velvet Singularity"
+    ]
+  },
+  "western_layer_storyline": {
+    "time_period": "19th century American West",
+    "central_conflict": "A cosmic shard embedded in the land creates madness and hidden history within Jake's family line.",
+    "themes": [
+      "destiny vs survival",
+      "memory suppression",
+      "cosmic inheritance"
+    ]
+  },
+  "visual_identity": {
+    "style_direction": "Minimalist mid-century modern iconography inspired by Massimo Vignelli.",
+    "design_principles": [
+      "geometric forms",
+      "strong silhouettes",
+      "minimal ornament",
+      "timeless symbolism"
+    ],
+    "primary_icon": "winged stiletto with a four-pointed star"
+  },
+  "icon_prompt_system": {
+    "goal": "Generate a cohesive icon family representing Slayverse institutions and lore.",
+    "prompt_style": "Minimal geometric vector icons with a mid-century modern influence.",
+    "examples": [
+      "Winged stiletto emblem",
+      "Codex book icon",
+      "Needle and thread spiral galaxy",
+      "Guild seal",
+      "Scroll and star charter"
+    ]
+  },
+  "tooling": {
+    "image_generation": "Vertex AI Studio",
+    "icon_generation": "IconScout wrapper previously used",
+    "design_platform": "Canva for documentation and illustrated codex pages"
+  },
+  "current_objectives": [
+    "Create a canonical Slayverse lore bible",
+    "Develop Slayton Codex volumes",
+    "Design GWIG iconography",
+    "Establish brand guidelines",
+    "Generate visual codex documentation"
+  ]
+}

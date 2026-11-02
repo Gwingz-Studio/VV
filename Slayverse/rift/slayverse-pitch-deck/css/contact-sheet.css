@@ -1,0 +1,13 @@
+/* SLAYVERSE — contact-sheet.css */
+
+body { background: #111; color: #f5f0e8; font-family: 'Source Sans 3', sans-serif; font-weight: 300; }
+        h1 { font-size: 1.8em; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: #c4944a; }
+        .image-cell { position: relative; border-radius: 4px; overflow: hidden; background: #1a1a1a; }
+        .image-cell img { width: 100%; height: auto; cursor: pointer; transition: transform 0.3s; }
+        .image-cell img:hover { transform: scale(1.03); }
+        .image-cell .label { position: absolute; bottom: 0; left: 0; right: 0; background: rgba(13,13,13,0.85); padding: 4px 8px; font-size: 0.65em; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(245,240,232,0.7); }
+        .lightbox { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.95); z-index: 1000; cursor: pointer; align-items: center; justify-content: center; }
+        .lightbox.active { display: flex; }
+        .lightbox img { max-width: 95vw; max-height: 95vh; object-fit: contain; }
+        .btn-sv { color: #c4944a; border-color: rgba(196,148,74,0.4); font-size: 0.7em; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; }
+        .btn-sv:hover { background: rgba(196,148,74,0.15); border-color: #c4944a; color: #c4944a; }

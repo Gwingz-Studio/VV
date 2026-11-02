@@ -90,5 +90,17 @@
       "canon_status": "synthetic_behavioral",
       "notes": "Voice and performance direction for a locked entity. The entity 'heda-von-schwahnn' is status=locked in manifests/corpus/entity_index.json via canon/slayverse_index.json; the identity facts in this document's Core Identity / Character Essence / Relationship sections are canon at the entity level, not by way of this file. Everything from Voice Description onward is direction only and must not be stated as world fact (visibility=behavioral, policies/disclosure/README.md). Scanned clean for sealed topics: no finale, Jake, mother, Vorst, or future Hooplehopper identities."
     }
+  },
+  "canon/cosmology/Observation of the Glamuron.md": {
+    "canon_status": "draft",
+    "notes": "In-universe CERN paper (CERN-PH-EP/2026-017) by Dr. Elena Slayton; transcription of the PDF beside it. Dr. Slayton is one person across Mariah/Elena per Steward ruling 2026-10-25."
+  },
+  "canon/cosmology/Theory_of_Everything_Confirmed_.md": {
+    "canon_status": "draft",
+    "notes": "In-universe T News Wire story announcing Slayton matter; companion to the Glamuron paper."
+  },
+  "canon/characters/characters_core_folio.md": {
+    "canon_status": "draft",
+    "notes": "Character roster folio partition (Lisette through Eli). Complements canon/characters/characters.md."
   }
 }

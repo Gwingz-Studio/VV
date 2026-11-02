@@ -1,0 +1,110 @@
+/* ─── Design System Tokens ─────────────────────────────────────────────────── */
+/* Edit these variables to update the entire UI. All components reference them. */
+
+:root {
+  /* ── Color: Brand Gold ── */
+  --color-gold-dim:    #7A6030;
+  --color-gold-mid:    #C9A84C;
+  --color-gold-bright: #F2D377;
+  --color-gold-glow:   rgba(201, 168, 76, 0.4);
+  --color-gold-subtle: rgba(201, 168, 76, 0.15);
+  --color-gold-faint:  rgba(201, 168, 76, 0.08);
+  --color-gold-trace:  rgba(201, 168, 76, 0.03);
+
+  /* ── Color: Space Background ── */
+  --color-space-0:  #020209;
+  --color-space-1:  #050510;
+  --color-space-2:  #0A0A20;
+  --color-space-3:  #10102A;
+  --color-space-4:  #15153A;
+
+  /* ── Color: Text ── */
+  --color-text-primary:   rgba(200, 215, 255, 0.90);
+  --color-text-secondary: rgba(200, 215, 255, 0.45);
+  --color-text-muted:     rgba(200, 215, 255, 0.35);
+  --color-text-faint:     rgba(200, 215, 255, 0.25);
+  --color-text-gold:      var(--color-gold-mid);
+  --color-text-gold-dim:  rgba(201, 168, 76, 0.55);
+
+  /* ── Color: Accent (Independent badge) ── */
+  --color-accent-blue:        #A0B4DC;
+  --color-accent-blue-subtle: rgba(160, 180, 220, 0.08);
+  --color-accent-blue-border: rgba(160, 180, 220, 0.25);
+
+  /* ── Color: Border ── */
+  --color-border-gold:   rgba(201, 168, 76, 0.25);
+  --color-border-strong: rgba(201, 168, 76, 0.50);
+  --color-border-faint:  rgba(201, 168, 76, 0.12);
+
+  /* ── Gradient: Gold metallic ── */
+  --gradient-gold:        linear-gradient(135deg, var(--color-gold-dim) 0%, var(--color-gold-mid) 40%, var(--color-gold-bright) 60%, var(--color-gold-mid) 80%, var(--color-gold-dim) 100%);
+  --gradient-gold-short:  linear-gradient(135deg, var(--color-gold-mid), var(--color-gold-bright), var(--color-gold-mid));
+  --gradient-card-bg:     linear-gradient(145deg, rgba(10, 10, 32, 0.90) 0%, rgba(16, 16, 42, 0.95) 100%);
+  --gradient-card-bg-hover: linear-gradient(145deg, rgba(15, 15, 40, 0.95) 0%, rgba(25, 22, 55, 0.98) 100%);
+  --gradient-modal-bg:    linear-gradient(145deg, #0A0A22 0%, #10102E 50%, #0A0A20 100%);
+
+  /* ── Typography: Font Families ── */
+  --font-display: 'Cinzel', serif;
+  --font-body:    'Inter', sans-serif;
+
+  /* ── Typography: Scale ── */
+  --text-hero:    clamp(2rem, 6vw, 4.5rem);
+  --text-h2:      clamp(1.5rem, 3.5vw, 2.4rem);
+  --text-h3:      clamp(1.3rem, 3vw, 2rem);
+  --text-h4:      clamp(1.2rem, 2vw, 1.5rem);
+  --text-body-lg: clamp(0.85rem, 2vw, 1rem);
+  --text-body:    0.82rem;
+  --text-body-sm: 0.75rem;
+  --text-caption: 0.68rem;
+  --text-label:   0.65rem;
+  --text-micro:   0.62rem;
+  --text-nano:    0.58rem;
+
+  /* ── Typography: Weight ── */
+  --weight-light:   300;
+  --weight-regular: 400;
+  --weight-medium:  500;
+  --weight-semibold: 600;
+  --weight-bold:    700;
+  --weight-black:   900;
+
+  /* ── Typography: Letter Spacing ── */
+  --tracking-tight:  0.02em;
+  --tracking-normal: 0.05em;
+  --tracking-wide:   0.12em;
+  --tracking-wider:  0.18em;
+  --tracking-widest: 0.25em;
+  --tracking-ultra:  0.30em;
+
+  /* ── Spacing ── */
+  --space-1:  0.25rem;
+  --space-2:  0.5rem;
+  --space-3:  0.75rem;
+  --space-4:  1rem;
+  --space-5:  1.25rem;
+  --space-6:  1.5rem;
+  --space-8:  2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+
+  /* ── Border Radius ── */
+  --radius-none: 0;
+  --radius-sm:   2px;
+  --radius-md:   4px;
+  --radius-lg:   8px;
+  --radius-full: 9999px;
+
+  /* ── Border Width ── */
+  --border-thin:   1px;
+  --border-medium: 2px;
+
+  /* ── Shadow / Glow ── */
+  --shadow-gold-sm:  0 0 12px rgba(201, 168, 76, 0.2);
+  --shadow-gold-md:  0 0 24px rgba(201, 168, 76, 0.25), inset 0 0 24px rgba(201, 168, 76, 0.04);
+  --shadow-gold-lg:  0 0 60px rgba(201, 168, 76, 0.15), 0 0 120px rgba(201, 168, 76, 0.05);
+  --shadow-text-glow: 0 0 40px rgba(242, 211, 119, 0.8), 0 0 80px rgba(201, 168, 76, 0.4);
+
+  /* ── Transition ── */
+  --transition-fast: all 0.2s ease;
+  --transition-base: all 0.3s ease;
+}

@@ -1,0 +1,135 @@
+```json
+{
+  "version": "1.2-normalized",
+  "source": "Slayverse Canon Seed PDF (111 pages)",
+  "generated": "2026-03-06",
+  "schema_ref": "slayverse-canon-schema-v1.2",
+  "characters": [
+    "hildebrand-von-hooplehopper",
+    "conrad-von-hooplehopper",
+    "adelram-von-hooplehopper",
+    "margarethe-von-hooplehopper",
+    "benedict-the-ash-faced",
+    "velma-the-snake-in-silk",
+    "lysander-von-hooplehopper",
+    "theresia-von-hooplehopper",
+    "yssenda-von-hooplehopper",
+    "sigismund-von-hooplehopper",
+    "isolde-von-hooplehopper",
+    "ludolf-von-hooplehopper",
+    "lisette-von-hooplehopper",
+    "professor-von-hooplehopper",
+    "doctor-vorst",
+    "pop",
+    "jake-mcullen",
+    "eli-mcullen",
+    "miss-slaytonia-vuorse",
+    "miss-slaytonia-verse",
+    "the-weaver",
+    "wylus-kalyndros",
+    "pscopy-pscat",
+    "dr-mariah-slayton",
+    "dj-parallax",
+    "caleb-the-keeper",
+    "robyn-of-the-gold-wings",
+    "jock-the-wise"
+  ],
+  "personas": [
+    "mistress-euphoria-blaze"
+  ],
+  "places": [
+    "schloss-eisensang",
+    "mirror-cavern",
+    "schloss-federstahl",
+    "mcullen-ranch",
+    "velvet-archive",
+    "club-cosmic",
+    "wyoming-rift"
+  ],
+  "organizations": [
+    "golden-wingers",
+    "federstahl-institute",
+    "order-of-the-seam",
+    "order-of-the-garters-secret-hem"
+  ],
+  "artifacts": [
+    "crystal-shard",
+    "dustbrand-sigil",
+    "zerethium-quartz",
+    "hildebrands-ring",
+    "slayton-codex",
+    "forbidden-suitcase",
+    "federkreis-devices"
+  ],
+  "documents": [
+    "golden-wingers-charter",
+    "the-747-scrolls"
+  ],
+  "rituals": [
+    "velvet-rite",
+    "ritual-of-reflection",
+    "three-snap-protocol",
+    "slay-mode-activation",
+    "twenty-year-sleep"
+  ],
+  "cosmologies": [
+    "the-thread",
+    "slayton-energy",
+    "federstahl-lattice",
+    "quantum-eleganza",
+    "narrative-collapse"
+  ],
+  "phenomena": [
+    "glamorons",
+    "seven-fissures",
+    "temporal-diaspora"
+  ],
+  "entity_index": {
+    "hildebrand-von-hooplehopper": {
+      "collection": "characters"
+    },
+    "mistress-euphoria-blaze": {
+      "collection": "personas"
+    },
+    "golden-wingers-charter": {
+      "collection": "documents"
+    },
+    "the-thread": {
+      "collection": "cosmologies"
+    },
+    "glamorons": {
+      "collection": "phenomena"
+    }
+  },
+  "events": [
+    "event-hildebrand-active",
+    "event-hildebrand-vanishes",
+    "event-margarethe-order",
+    "event-margarethe-death",
+    "event-benedict-active",
+    "event-velma-venice",
+    "event-lysander-persona",
+    "event-theresia-court",
+    "event-vorst-displaced",
+    "event-lisette-born",
+    "event-federstahl-active",
+    "event-lattice-incident",
+    "event-professor-born",
+    "event-mirror-moment",
+    "event-suitcase-sealed",
+    "event-federstahl-last-gathering",
+    "event-lisette-death",
+    "event-professor-vanishes",
+    "event-vuorse-awakens",
+    "event-weaver-confronts-jake",
+    "event-charter-ratified"
+  ],
+  "lineages": [
+    "hooplehopper-bloodline",
+    "hooplehopper-soul-line",
+    "mcullen-counter-lineage",
+    "temporal-echo-line",
+    "archival-inheritance-line"
+  ]
+}
+```

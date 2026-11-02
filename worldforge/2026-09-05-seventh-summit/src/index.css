@@ -1,0 +1,202 @@
+/* Design system imports — edit files in src/imports/ to restyle the whole app */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@800&family=Martian+Mono:wght@800&family=Space+Mono:wght@400;700&display=swap');
+@import './styles/global.css';
+@import './imports/fonts.css';
+@import './imports/colors.css';
+@import './imports/typography.css';
+@import './imports/spacing.css';
+@import './imports/effects.css';
+@import './imports/base.css';
+@import 'tailwindcss';
+
+html, body, #root {
+  height: 100%;
+}
+
+/* ── Scroll snap ── */
+.scroll-container {
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  background: var(--color-bg);
+}
+.scroll-container::-webkit-scrollbar { display: none; }
+.scroll-container { scrollbar-width: none; }
+
+.snap-section {
+  scroll-snap-align: start;
+  height: 100vh;
+  min-height: 100vh;
+}
+
+.hero-section {
+  isolation: isolate;
+  background: var(--hero-backdrop-base);
+}
+
+.hero-backdrop {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  mix-blend-mode: multiply;
+  pointer-events: none;
+}
+
+.hero-intro-copy {
+  display: flex;
+  gap: var(--size-6);
+  align-items: flex-start;
+  margin-top: var(--size-4);
+  border-style: none;
+  border-color: var(--color-transparent);
+}
+
+.hero-intro-statement {
+  position: sticky;
+  max-width: var(--hero-copy-width);
+  padding-right: var(--size-editor-copy-inline);
+  padding-left: var(--size-editor-copy-inline);
+  border: var(--border-editor-width) outset var(--color-primary);
+  border-radius: var(--radius-editor-copy);
+  color: var(--nova-pink);
+  font-family: var(--font-editor-copy);
+  font-size: var(--text-xl);
+  font-weight: var(--weight-extrabold);
+  line-height: var(--line-height-editor-copy);
+  letter-spacing: var(--tracking-wide);
+  box-shadow: var(--effect-editor-copy);
+  --figma-make-local-effect-type: INNER_SHADOW;
+}
+
+/* ── Keyframes ── */
+@keyframes glow-pulse {
+  0%, 100% { opacity: 0.5; }
+  50%       { opacity: 1; }
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+@keyframes orbit {
+  from { transform: rotate(0deg) translateX(140px) rotate(0deg); }
+  to   { transform: rotate(360deg) translateX(140px) rotate(-360deg); }
+}
+
+@keyframes modal-in {
+  from { opacity: 0; transform: scale(0.94) translateY(8px); }
+  to   { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+/* ── Stars ── */
+.stars {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+.star {
+  position: absolute;
+  border-radius: var(--radius-orb);
+  background: var(--starlight-white);
+}
+
+/* ── Seat cards ── */
+.seat-card {
+  background: var(--card-bg);
+  border: var(--card-border);
+  border-radius: var(--card-radius);
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+.seat-card:hover {
+  border-color: var(--color-primary);
+  box-shadow: var(--button-shade);
+}
+.seat-card:active { transform: translateY(2px); }
+
+/* ── Modal ── */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.88);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modal-box {
+  animation: modal-in 0.22s ease forwards;
+  background: var(--card-bg);
+  border: var(--card-border);
+  border-radius: var(--card-radius);
+  box-shadow: var(--button-shade);
+  width: min(480px, 90vw);
+  position: relative;
+  overflow: hidden;
+}
+
+/* ── Badges ── */
+.franchise-badge {
+  display: inline-block;
+  padding: var(--size-1) var(--size-3);
+  font-family: var(--font-subhead);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border-radius: var(--badge-radius);
+}
+.badge-franchise {
+  background: var(--color-primary);
+  color: var(--badge-fg);
+}
+.badge-independent {
+  background: transparent;
+  border: 2px solid var(--color-border);
+  color: var(--color-fg-muted);
+}
+
+/* ── Avatar ── */
+.avatar-initial {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-orb);
+  border: 2px solid var(--color-border);
+  background: var(--color-surface);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-subhead);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  color: var(--color-primary);
+  flex-shrink: 0;
+}
+.avatar-initial--large {
+  width: 56px;
+  height: 56px;
+  font-size: var(--text-sm);
+}
+
+/* ── Seat number label ── */
+.seat-number {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--color-fg-muted);
+  letter-spacing: 0.08em;
+}
+
+/* ── Divider ── */
+.divider-line {
+  width: 100%;
+  height: 1px;
+  background: var(--color-border);
+}

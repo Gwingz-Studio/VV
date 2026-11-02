@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SLAYVERSE — Image Contact Sheet</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: #111;
+            color: #f5f0e8;
+            font-family: 'Source Sans 3', sans-serif;
+            font-weight: 300;
+            padding: 30px;
+        }
+        h1 {
+            font-size: 1.8em;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            color: #c4944a;
+        }
+        .subtitle {
+            font-size: 0.85em;
+            color: rgba(245,240,232,0.5);
+            margin-bottom: 40px;
+        }
+        .slide-row {
+            margin-bottom: 40px;
+            border-bottom: 1px solid rgba(245,240,232,0.1);
+            padding-bottom: 30px;
+        }
+        .slide-row h2 {
+            font-size: 1em;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: #c4944a;
+            margin-bottom: 14px;
+        }
+        .image-row {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 12px;
+        }
+        .image-cell {
+            position: relative;
+            border-radius: 4px;
+            overflow: hidden;
+            background: #1a1a1a;
+        }
+        .image-cell img {
+            width: 100%;
+            height: auto;
+            display: block;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        .image-cell img:hover {
+            transform: scale(1.03);
+        }
+        .image-cell .label {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(13,13,13,0.85);
+            padding: 4px 8px;
+            font-size: 0.65em;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: rgba(245,240,232,0.7);
+        }
+        /* Lightbox */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0,0,0,0.95);
+            z-index: 1000;
+            cursor: pointer;
+            align-items: center;
+            justify-content: center;
+        }
+        .lightbox.active { display: flex; }
+        .lightbox img {
+            max-width: 95vw;
+            max-height: 95vh;
+            object-fit: contain;
+        }
+        .nav-links {
+            margin-bottom: 30px;
+            display: flex;
+            gap: 20px;
+        }
+        .nav-links a {
+            color: #c4944a;
+            text-decoration: none;
+            font-size: 0.8em;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            padding: 6px 14px;
+            border: 1px solid rgba(196,148,74,0.4);
+            border-radius: 3px;
+            transition: all 0.2s;
+        }
+        .nav-links a:hover {
+            background: rgba(196,148,74,0.15);
+            border-color: #c4944a;
+        }
+    </style>
+</head>
+<body>
+    <h1>Slayverse — Image Contact Sheet</h1>
+    <p class="subtitle">All images across all director variants. Click any image to view full size.</p>
+
+    <div class="nav-links">
+        <a href="deck-original.html">Original Deck</a>
+        <a href="deck-john-waters.html">John Waters</a>
+        <a href="deck-almodovar.html">Almodovar</a>
+        <a href="deck-tarantino.html">Tarantino</a>
+        <a href="deck-romero.html">Romero</a>
+    </div>
+
+    <div id="contact-sheet"></div>
+
+    <div class="lightbox" id="lightbox" onclick="this.classList.remove('active')">
+        <img id="lightbox-img" src="" alt="">
+    </div>
+
+    <script>
+        const SLIDES = [
+            "cover.png",
+            "world-wyoming.png",
+            "character-jake.png",
+            "character-weaver.png",
+            "character-pop.png",
+            "character-vuorse.png",
+            "braided-structure.png",
+            "tone-mood.png",
+            "pilot-scene.png",
+            "season-arc.png",
+            "world-lattice.png",
+            "comp-titles.png",
+            "roadmap-schloss.png",
+            "writers-room.png",
+            "emotional-spine.png",
+            "leave-behind.png"
+        ];
+
+        const DIRS = [
+            { label: "Original", path: "images" },
+            { label: "John Waters", path: "images/john-waters" },
+            { label: "Almodovar", path: "images/almodovar" },
+            { label: "Tarantino", path: "images/tarantino" },
+            { label: "Romero", path: "images/romero" }
+        ];
+
+        const SLIDE_LABELS = {
+            "cover.png": "1. Cover",
+            "world-wyoming.png": "2. Series Overview",
+            "character-jake.png": "3. Jake McCullen",
+            "character-weaver.png": "4. The Weaver",
+            "character-pop.png": "5. Pop",
+            "character-vuorse.png": "6. VUORSE",
+            "braided-structure.png": "7. Braided Structure",
+            "tone-mood.png": "8. Tone / Why Now",
+            "pilot-scene.png": "9. Pilot Scene",
+            "season-arc.png": "10. Season Arc",
+            "world-lattice.png": "11. World / Lattice",
+            "comp-titles.png": "12. Comp Titles",
+            "roadmap-schloss.png": "13. Season Roadmap",
+            "writers-room.png": "14. Writers Room",
+            "emotional-spine.png": "15. Emotional Spine",
+            "leave-behind.png": "16. Leave-Behind"
+        };
+
+        const container = document.getElementById('contact-sheet');
+
+        SLIDES.forEach(slide => {
+            const row = document.createElement('div');
+            row.className = 'slide-row';
+
+            const h2 = document.createElement('h2');
+            h2.textContent = SLIDE_LABELS[slide] || slide;
+            row.appendChild(h2);
+
+            const imageRow = document.createElement('div');
+            imageRow.className = 'image-row';
+
+            DIRS.forEach(dir => {
+                const cell = document.createElement('div');
+                cell.className = 'image-cell';
+
+                const img = document.createElement('img');
+                img.src = `${dir.path}/${slide}`;
+                img.alt = `${dir.label} - ${slide}`;
+                img.loading = 'lazy';
+                img.onclick = function(e) {
+                    e.stopPropagation();
+                    document.getElementById('lightbox-img').src = this.src;
+                    document.getElementById('lightbox').classList.add('active');
+                };
+                cell.appendChild(img);
+
+                const label = document.createElement('div');
+                label.className = 'label';
+                label.textContent = dir.label;
+                cell.appendChild(label);
+
+                imageRow.appendChild(cell);
+            });
+
+            row.appendChild(imageRow);
+            container.appendChild(row);
+        });
+    </script>
+</body>
+</html>

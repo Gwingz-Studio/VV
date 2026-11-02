@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SLAYVERSE — Pitch Deck Site</title>
+    <link rel="stylesheet" href="vendor/fonts.css">
+    <link rel="stylesheet" href="vendor/bootstrap.min.css">
+    <style>
+        body { background: #0d0d0d; color: #f5f0e8; font-family: 'Source Sans 3', sans-serif; font-weight: 300; display: flex; flex-direction: column; align-items: center; min-height: 100vh; padding: 60px 40px; }
+        h1 { font-family: 'Playfair Display', serif; font-weight: 900; font-size: 3em; letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 8px; }
+        .tagline { font-size: 0.85em; color: rgba(245,240,232,0.45); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 50px; }
+        .deck-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; max-width: 1000px; width: 100%; margin-bottom: 40px; }
+        .deck-card { position: relative; border-radius: 6px; overflow: hidden; aspect-ratio: 16/9; transition: transform 0.3s, box-shadow 0.3s; }
+        .deck-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(196,148,74,0.2); }
+        .deck-card img { width: 100%; height: 100%; object-fit: cover; }
+        .deck-card .card-overlay { position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(0deg, rgba(13,13,13,0.9) 0%, transparent 100%); padding: 20px 16px 14px; }
+        .deck-card .card-title { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.1em; }
+        .deck-card .card-sub { font-size: 0.7em; color: rgba(245,240,232,0.5); margin-top: 4px; }
+        .deck-card a { position: absolute; top: 0; left: 0; right: 0; bottom: 0; }
+        .tools-row { display: flex; gap: 20px; margin-top: 10px; }
+        .tools-row a { color: #c4944a; text-decoration: none; font-size: 0.75em; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; padding: 8px 18px; border: 1px solid rgba(196,148,74,0.4); border-radius: 3px; transition: all 0.2s; }
+        .tools-row a:hover { background: rgba(196,148,74,0.15); border-color: #c4944a; }
+        .footer { margin-top: 50px; font-size: 0.6em; color: rgba(245,240,232,0.25); text-align: center; line-height: 1.6; }
+    </style>
+</head>
+<body>
+    <h1>Slayverse</h1>
+    <p class="tagline">Pitch Deck — Director Variants</p>
+    <div class="deck-grid">
+        <div class="deck-card"><img src="images/cover.png" alt="Original"><div class="card-overlay"><div class="card-title">Original</div><div class="card-sub">Base cinematography</div></div><a href="deck-original.html"></a></div>
+        <div class="deck-card"><img src="images/john-waters/cover.png" alt="John Waters"><div class="card-overlay"><div class="card-title">John Waters</div><div class="card-sub">Trash elegance</div></div><a href="deck-john-waters.html"></a></div>
+        <div class="deck-card"><img src="images/almodovar/cover.png" alt="Almodovar"><div class="card-overlay"><div class="card-title">Pedro Almodovar</div><div class="card-sub">Saturated melodrama</div></div><a href="deck-almodovar.html"></a></div>
+        <div class="deck-card"><img src="images/tarantino/cover.png" alt="Tarantino"><div class="card-overlay"><div class="card-title">Quentin Tarantino</div><div class="card-sub">Violent beauty</div></div><a href="deck-tarantino.html"></a></div>
+        <div class="deck-card"><img src="images/romero/cover.png" alt="Romero"><div class="card-overlay"><div class="card-title">George Romero</div><div class="card-sub">Social horror</div></div><a href="deck-romero.html"></a></div>
+    </div>
+    <div class="tools-row">
+        <a href="contact-sheet.html">Contact Sheet — All Images</a>
+    </div>
+    <div class="footer">All materials original IP of Caleb Mills Stewart. Prepared for development consideration.</div>
+    <script src="vendor/bootstrap.bundle.min.js"></script>
+</body>
+</html>

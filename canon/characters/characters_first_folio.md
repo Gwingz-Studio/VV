@@ -120,5 +120,5 @@ She was at once courtesan and cloistered nun. A recluse who threw masquerade bal
 - **Era**: Not specified
 - **Role**: Musical mystic
 - **Source**: [p.56]
-**Bio**: Wrote operas that could induce visions. Some say he heard the Thread vibrating in harmonics.
+**Bio**: Wrote operas that could induce visions. Some say he heard the Thread vibrating in harmonics, and the Weaver in his dreams, directing him note by note. His piece "Swanblood Cantata" was performed once before being banned by three monarchies; his scores are hidden in old music boxes across Europe. [Seed: Hooplehopper Legacy Digest, in `canon/projects/projects.json`]
 ---

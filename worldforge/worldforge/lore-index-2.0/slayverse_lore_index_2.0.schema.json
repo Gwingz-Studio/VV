@@ -877,6 +877,7 @@
             "Person",
             "Organization",
             "SoftwareAgent",
+            "SyntheticAgent",
             "slay:Protocol",
             "unknown"
           ]

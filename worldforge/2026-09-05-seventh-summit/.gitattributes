@@ -1,0 +1,24 @@
+# Standard Git Attributes (No Git LFS required)
+* text=auto eol=lf
+
+# Binary Assets
+*.jpeg binary
+*.jpg binary
+*.png binary
+*.webp binary
+*.gif binary
+*.ico binary
+*.pdf binary
+*.otf binary
+*.ttf binary
+*.woff binary
+*.woff2 binary
+
+# Text Assets
+*.svg text
+*.json text
+*.vue text
+*.ts text
+*.js text
+*.css text
+*.md text

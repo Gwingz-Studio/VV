@@ -115,7 +115,7 @@ status: Locked Canon
 12. This is the throne room.
 13. All other splendors shall enter only when summoned.
 ---
-## Chapter V
+## Chapter VI
 ### Of the Tiers of Revelation
 1. The lore is abundant, and abundance is both blessing and peril.
 2. Therefore let it be ordered into tiers.

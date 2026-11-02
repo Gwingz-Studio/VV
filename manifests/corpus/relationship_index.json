@@ -1,19 +1,28 @@
 {
   "generated_from": "canon/slayverse_index.json",
   "canon_version": "1.1",
-  "edge_count": 27,
+  "edge_count": 37,
   "dangling_count": 0,
   "dangling_related_count": 5,
   "relationship_types": [
+    "acknowledged-supporter-of",
+    "activates",
+    "authored",
     "bookend-convergence",
     "buried",
     "caused",
     "caused-by",
+    "co-authored",
     "confrontation",
+    "constituted-by",
     "contains",
     "counter-lineage-of",
     "creator",
     "data-rebirth",
+    "deactivates",
+    "directs",
+    "erased-father",
+    "father",
     "founding-mandate",
     "grandfather",
     "guardian-lineage",
@@ -23,6 +32,7 @@
     "mother",
     "operational-identity-of",
     "protocol-of",
+    "published",
     "soul-line-echo",
     "soul-line-succession",
     "spiritual-successor",
@@ -164,6 +174,56 @@
       "from": "isolde-of-the-lower-hall",
       "to": "isolde-von-hooplehopper",
       "type": "unresolved-name-echo"
+    },
+    {
+      "from": "doctor-vorst",
+      "to": "professor-von-hooplehopper",
+      "type": "erased-father"
+    },
+    {
+      "from": "doctor-vorst",
+      "to": "pop",
+      "type": "father"
+    },
+    {
+      "from": "slayton-field",
+      "to": "glamorons",
+      "type": "constituted-by"
+    },
+    {
+      "from": "dr-mariah-slayton",
+      "to": "observation-of-the-glamuron",
+      "type": "authored"
+    },
+    {
+      "from": "dr-jean-michel-tout-le-monde",
+      "to": "observation-of-the-glamuron",
+      "type": "co-authored"
+    },
+    {
+      "from": "atlas-phono-collaboration",
+      "to": "observation-of-the-glamuron",
+      "type": "published"
+    },
+    {
+      "from": "dr-mariah-slayton",
+      "to": "new-atlantis-research-facility",
+      "type": "directs"
+    },
+    {
+      "from": "federstahl-institute",
+      "to": "observation-of-the-glamuron",
+      "type": "acknowledged-supporter-of"
+    },
+    {
+      "from": "three-snap-protocol",
+      "to": "slayton-field",
+      "type": "activates"
+    },
+    {
+      "from": "splat-event",
+      "to": "slayton-field",
+      "type": "deactivates"
     }
   ],
   "dangling_edges": [],
@@ -185,6 +245,9 @@
     ]
   },
   "adjacency": {
+    "atlas-phono-collaboration": [
+      "observation-of-the-glamuron"
+    ],
     "benedict-the-ash-faced": [
       "margarethe-von-hooplehopper"
     ],
@@ -193,14 +256,24 @@
     ],
     "doctor-vorst": [
       "federstahl-institute",
-      "jake-mcullen"
+      "jake-mcullen",
+      "pop",
+      "professor-von-hooplehopper"
+    ],
+    "dr-jean-michel-tout-le-monde": [
+      "observation-of-the-glamuron"
+    ],
+    "dr-mariah-slayton": [
+      "new-atlantis-research-facility",
+      "observation-of-the-glamuron"
     ],
     "eli-mcullen": [
       "jake-mcullen"
     ],
     "federstahl-institute": [
       "doctor-vorst",
-      "federstahl-lattice"
+      "federstahl-lattice",
+      "observation-of-the-glamuron"
     ],
     "federstahl-lattice": [
       "federstahl-institute",
@@ -209,6 +282,9 @@
     "first-steward-transmission": [
       "order-of-the-seam",
       "the-parchment-of-persistence"
+    ],
+    "glamorons": [
+      "slayton-field"
     ],
     "heda-von-schwahnn": [
       "professor-von-hooplehopper"
@@ -250,17 +326,36 @@
       "professor-von-hooplehopper",
       "the-weaver"
     ],
+    "new-atlantis-research-facility": [
+      "dr-mariah-slayton"
+    ],
+    "observation-of-the-glamuron": [
+      "atlas-phono-collaboration",
+      "dr-jean-michel-tout-le-monde",
+      "dr-mariah-slayton",
+      "federstahl-institute"
+    ],
     "order-of-the-seam": [
       "first-steward-transmission"
     ],
     "pop": [
       "crystal-shard",
+      "doctor-vorst",
       "jake-mcullen"
     ],
     "professor-von-hooplehopper": [
+      "doctor-vorst",
       "heda-von-schwahnn",
       "lisette-von-hooplehopper",
       "miss-slaytonia-vuorse"
+    ],
+    "slayton-field": [
+      "glamorons",
+      "splat-event",
+      "three-snap-protocol"
+    ],
+    "splat-event": [
+      "slayton-field"
     ],
     "the-myrtle-burnings": [
       "isolde-of-the-lower-hall",
@@ -276,6 +371,9 @@
     ],
     "theresia-von-hooplehopper": [
       "lysander-von-hooplehopper"
+    ],
+    "three-snap-protocol": [
+      "slayton-field"
     ],
     "velma-the-snake-in-silk": [
       "lysander-von-hooplehopper",
@@ -397,7 +495,7 @@
     },
     {
       "year": "1905",
-      "event": "Professor born",
+      "event": "Professor born (Immaculate Slayception)",
       "entities": [
         "professor-von-hooplehopper"
       ],
@@ -471,6 +569,17 @@
         "hildebrand-von-hooplehopper",
         "margarethe-von-hooplehopper",
         "order-of-the-seam"
+      ],
+      "unknown_entities": []
+    },
+    {
+      "year": "2026",
+      "event": "Glamuron observed; CERN paper published (October 3)",
+      "entities": [
+        "dr-mariah-slayton",
+        "dr-jean-michel-tout-le-monde",
+        "observation-of-the-glamuron",
+        "slayton-field"
       ],
       "unknown_entities": []
     }

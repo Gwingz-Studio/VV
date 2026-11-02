@@ -1,0 +1,13 @@
+# Cloudflare Pages & Workers configuration for Seventh Galactic Summit
+# Production Domain: https://summit.gwingz.com
+
+name = "seventh-summit"
+compatibility_date = "2024-11-01"
+compatibility_flags = ["nodejs_compat"]
+pages_build_output_dir = "dist"
+
+[vars]
+SUMMIT_DOMAIN = "summit.gwingz.com"
+SUMMIT_NAME = "Seventh Galactic Summit"
+SUMMIT_CONVENED = "2026-09-05"
+SUMMIT_STATUS = "provisional"
