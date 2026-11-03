@@ -34,7 +34,13 @@ $id = docker compose ps -aq forge
 docker cp "${id}:/data/export.tgz" output/forge-export/export.tgz
 ```
 
-Use a fresh output directory for a changed input/model/seed/image. Do not run two workers against one output directory. A malformed model response stops the batch and leaves completed records resumable. A process failure after journaling but before Chroma upsert is repaired on restart. The final incomplete journal line is discarded. Run manifest binds input, generation model, embedding model and worker code SHA256, context settings, seed and image revision; lineage refers to immutable record IDs. Generation is stochastic and bit-for-bit model reproducibility across hardware is not promised.
+<!-- coderabbit-ai-generated:v1 -->
+
+<!-- coderabbit-ai-generated-section:v1:db4b36e06471897b35f0cc21ae18c1651378b331325e3dfd151bbc512c872a65 -->
+
+Use a fresh output directory for a changed input/model/seed/image or completion endpoint. Existing manifests without the endpoint cannot be resumed with this version; retain the old image for those runs or start a new directory.
+
+<!-- /coderabbit-ai-generated:v1 --> Do not run two workers against one output directory. A malformed model response stops the batch and leaves completed records resumable. A process failure after journaling but before Chroma upsert is repaired on restart. The final incomplete journal line is discarded. Run manifest binds input, generation model, embedding model and worker code SHA256, context settings, seed and image revision; lineage refers to immutable record IDs. Generation is stochastic and bit-for-bit model reproducibility across hardware is not promised.
 
 ## Buildx and registry
 
@@ -55,9 +61,21 @@ Use a private registry, supply registry authentication through Vast, and record 
 
 Start with one H100 80 GB, verified host, reliability >0.99, North America and 500 GB disk. Use a driver-compatible host (the worksheet conservatively asks for CUDA >=13.2). The old cuda_max_good>=12.0 filter is unsuitable for this image. Driver compatibility is still a host requirement; startup executes an actual CUDA kernel before large asset downloads or generation. Preflight/model-server failure exits nonzero; it does not stop Vast billing.
 
-Provide a durable volume at `/data`, writable by UID 10001, or explicitly prepare ownership before launch. Local instance storage is not a backup. The worksheet supplies the publisher's pinned model URL and SHA256. Your local model may differ: compare with `Get-FileHash -Algorithm SHA256` and use a matching URL/checksum for an exact copy. Supply your own HTTPS input JSONL URL and SHA256 or pre-stage it at `/input/debriefing_walled.jsonl`; URLs containing credentials belong only in instance secrets/settings. Nothing uploads automatically from MAX. Input must contain at least two valid MemoryRecord objects.
+Provide a durable volume at `/data`, writable by UID 10001, or explicitly prepare ownership before launch. Local instance storage is not a backup. The worksheet supplies the publisher's pinned model URL and SHA256. Your local model may differ: compare with `Get-FileHash -Algorithm SHA256` and use a matching URL/checksum for an exact copy. <!-- coderabbit-ai-generated:v1 -->
 
-The container verifies downloaded assets before renaming them into place. Interrupted downloads restart; large completed files are reused. Both model servers have a shared ten-minute readiness deadline. Qwen thinking is disabled in requests to spend the token budget on the generated memory. Worker progress reports completed/target counts and elapsed seconds; errors appear in container logs. Run a five-record test first. Transfer the entire run directory through your chosen durable volume/cloud-copy workflow before destroying the instance. JSONL is authoritative and portable even if Chroma storage versions later change. Reconstruct Chroma using the same pinned image. Evaluation and promotion happen later on MAX.
+<!-- coderabbit-ai-generated-section:v1:8c61fd3d6e5fafd7fb6ecd3c0636d07b233ea0975f5632d3028077aaf4af6d93 -->
+
+Supply your own HTTPS input JSONL URL and SHA256 or pre-stage it at `/input/debriefing_walled.jsonl`. For pre-staging, clear both `INPUT_URL` and `INPUT_SHA256` from the template environment before startup. URLs containing credentials belong only in instance secrets/settings.
+
+<!-- /coderabbit-ai-generated:v1 --> Nothing uploads automatically from MAX. Input must contain at least two valid MemoryRecord objects.
+
+<!-- coderabbit-ai-generated:v1 -->
+
+<!-- coderabbit-ai-generated-section:v1:4837b704bbdf9e0c3262652d3ea7bafc0f64348149fa5b213d14e3c5fcc548d0 -->
+
+The container verifies downloaded assets before renaming them into place. Downloads are limited to 64 GiB per model and 1 GiB per input, and are locked per asset. Interrupted downloads restart; matching completed files are reused. Startup, including asset checks, downloads and both model servers, has a 90-minute budget; server readiness also has a ten-minute deadline. Docker health checks allow 95 minutes for startup.
+
+<!-- /coderabbit-ai-generated:v1 --> Qwen thinking is disabled in requests to spend the token budget on the generated memory. Worker progress reports completed/target counts and elapsed seconds; errors appear in container logs. Run a five-record test first. Transfer the entire run directory through your chosen durable volume/cloud-copy workflow before destroying the instance. JSONL is authoritative and portable even if Chroma storage versions later change. Reconstruct Chroma using the same pinned image. Evaluation and promotion happen later on MAX.
 
 <!-- coderabbit-ai-generated:v1 -->
 

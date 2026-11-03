@@ -151,9 +151,15 @@ def make_record(
 def run(args: argparse.Namespace) -> None:
     if args.cycles < 1:
         raise ValueError("cycles must be positive")
-    if validate_jsonl(args.input):
+    input_bytes = args.input.read_bytes()
+    input_sha256 = hashlib.sha256(input_bytes).hexdigest()
+    if validate_jsonl(args.input, data=input_bytes):
         raise ValueError("Input fails MemoryRecord/schema/firewall validation")
-    roots = [json.loads(line) for line in args.input.read_text().splitlines() if line.strip()]
+    roots = [
+        MemoryRecord.model_validate_json(line).model_dump(exclude_none=True)
+        for line in input_bytes.splitlines()
+        if line.strip()
+    ]
     if len(roots) < 2:
         raise ValueError("At least two input records are required")
     args.output.mkdir(parents=True, exist_ok=True)
@@ -162,16 +168,17 @@ def run(args: argparse.Namespace) -> None:
 
     with (args.output / ".writer.lock").open("w") as lock:
         fcntl.flock(lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
-        _run_locked(args, roots)
+        _run_locked(args, roots, input_sha256)
 
 
-def _run_locked(args: argparse.Namespace, roots: list[dict[str, Any]]) -> None:
+def _run_locked(args: argparse.Namespace, roots: list[dict[str, Any]], input_sha256: str) -> None:
     from chromadb import PersistentClient
 
     identity = {
-        "input_sha256": file_hash(args.input),
+        "input_sha256": input_sha256,
         "model_sha256": file_hash(args.model),
         "seed": args.seed,
+        "completion_url": args.url.rstrip("/"),
         "image_revision": os.environ.get("FORGE_REVISION", "unknown"),
         "protocol": 1,
         "engine_sha256": file_hash(Path(__file__)),
@@ -198,7 +205,8 @@ def _run_locked(args: argparse.Namespace, roots: list[dict[str, Any]]) -> None:
     client = PersistentClient(path=str(args.output / "chroma"))
     collection = client.get_or_create_collection(
         # Chroma's protocol also accepts images; this worker's adapter is text-only.
-        "drafts", embedding_function=cast(Any, LlamaEmbeddingFunction())
+        "drafts",
+        embedding_function=cast(Any, LlamaEmbeddingFunction()),
     )
     journal = args.output / "candidates.jsonl"
     prior = []

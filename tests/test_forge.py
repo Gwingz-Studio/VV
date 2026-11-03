@@ -111,8 +111,11 @@ def test_completion_validates_response(monkeypatch):
         return BytesIO(json.dumps(payload).encode())
 
     monkeypatch.setattr(forge.urllib.request, "urlopen", respond)
-    assert forge.complete("http://local", [], 7) == {"title": "X", "text": "Y"}
+    assert forge.complete(
+        "http://local", [{"id": "root", "title": "Source", "text": "identifiable parent text"}], 7
+    ) == {"title": "X", "text": "Y"}
     assert requests[0]["seed"] == 7
+    assert "identifiable parent text" in requests[0]["messages"][1]["content"]
     payload["choices"][0]["message"]["content"] = '{"title": "X", "text": []}'
     with pytest.raises(ValueError, match="nonempty"):
         forge.complete("http://local", [], 7)
@@ -193,3 +196,160 @@ def test_restart_repairs_failure_between_journal_and_chroma(setup_run, monkeypat
     forge.run(args)
     assert journal.read_bytes() == before
     assert json.loads(before.splitlines()[-1])["id"] in rows
+
+
+def test_resume_rejects_changed_seed(setup_run):
+    args, _, _ = setup_run
+    forge.run(args)
+    args.seed += 1
+    with pytest.raises(ValueError, match="differ"):
+        forge.run(args)
+
+
+def test_resume_rejects_changed_input(setup_run):
+    args, _, _ = setup_run
+    forge.run(args)
+    args.input.write_bytes(args.input.read_bytes() + b"\n")
+    with pytest.raises(ValueError, match="differ"):
+        forge.run(args)
+
+
+def test_resume_endpoint_identity(setup_run):
+    args, _, _ = setup_run
+    forge.run(args)
+    journal = args.output / "candidates.jsonl"
+    before = journal.read_bytes()
+    args.url += "/"
+    forge.run(args)
+    assert journal.read_bytes() == before
+    args.url = "http://different"
+    with pytest.raises(ValueError, match="differ"):
+        forge.run(args)
+    assert journal.read_bytes() == before
+
+
+def test_input_snapshot_is_normalized_and_hashed(setup_run, monkeypatch):
+    import hashlib
+
+    args, roots, _ = setup_run
+    for root in roots:
+        root["metadata"]["provenance"]["generation"] = "2"
+    original = ("\n".join(json.dumps(root) for root in roots) + "\n").encode()
+    args.input.write_bytes(original)
+    validate = forge.validate_jsonl
+
+    def swap(path, *, data):
+        path.write_bytes(b"changed after read")
+        return validate(path, data=data)
+
+    monkeypatch.setattr(forge, "validate_jsonl", swap)
+    args.cycles = 1
+    forge.run(args)
+    manifest = json.loads((args.output / "run.json").read_text())
+    assert manifest["identity"]["input_sha256"] == hashlib.sha256(original).hexdigest()
+    generated = json.loads((args.output / "candidates.jsonl").read_text())
+    assert generated["metadata"]["provenance"]["generation"] == 3
+
+
+@pytest.fixture
+def entrypoint():
+    import importlib.util
+    from pathlib import Path
+
+    spec = importlib.util.spec_from_file_location(
+        "forge_entrypoint", Path(__file__).parents[1] / "containers/forge/entrypoint.py"
+    )
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module
+
+
+def test_asset_cache_replacement(entrypoint, tmp_path, monkeypatch):
+    import hashlib
+    from io import BytesIO
+
+    target = tmp_path / "input.jsonl"
+    target.write_bytes(b"old")
+    digest = hashlib.sha256(b"new").hexdigest()
+    calls = []
+    monkeypatch.setattr(
+        entrypoint.urllib.request, "urlopen", lambda *a, **k: (calls.append(1), BytesIO(b"new"))[1]
+    )
+    entrypoint.fetch_asset(target, "https://example.test/input", digest, 3)
+    assert target.read_bytes() == b"new"
+    entrypoint.fetch_asset(target, "https://example.test/input", digest, 3)
+    entrypoint.fetch_asset(target, None, None, 3)
+    assert len(calls) == 1
+    with pytest.raises(SystemExit, match="Existing asset checksum"):
+        entrypoint.fetch_asset(target, None, "0" * 64, 3)
+
+
+@pytest.mark.parametrize(
+    "header,body,error",
+    [("4", b"x", ValueError), (None, b"1234", ValueError), (None, b"123", OSError)],
+)
+def test_asset_failure_removes_partial(entrypoint, tmp_path, monkeypatch, header, body, error):
+    from io import BytesIO
+
+    class Response(BytesIO):
+        headers = {"Content-Length": header} if header else {}
+
+        def read(self, size=-1):
+            if error is OSError:
+                raise OSError("interrupted")
+            return super().read(size)
+
+    target = tmp_path / "input"
+    monkeypatch.setattr(entrypoint.urllib.request, "urlopen", lambda *a, **k: Response(body))
+    with pytest.raises(error):
+        entrypoint.fetch_asset(target, "https://example.test/input", "0" * 64, 3)
+    assert not target.exists()
+    assert not (tmp_path / "input.partial").exists()
+
+
+def test_concurrent_downloads_share_lock(entrypoint, tmp_path, monkeypatch):
+    import hashlib
+    import threading
+    import time
+    from concurrent.futures import ThreadPoolExecutor
+    from io import BytesIO
+
+    target = tmp_path / "model"
+    digest = hashlib.sha256(b"model").hexdigest()
+    started = threading.Event()
+    calls = []
+
+    def respond(*args, **kwargs):
+        calls.append(1)
+        started.set()
+        time.sleep(0.1)
+        return BytesIO(b"model")
+
+    monkeypatch.setattr(entrypoint.urllib.request, "urlopen", respond)
+    with ThreadPoolExecutor(max_workers=2) as executor:
+        one = executor.submit(
+            entrypoint.fetch_asset, target, "https://example.test/model", digest, 10
+        )
+        assert started.wait(2)
+        two = executor.submit(
+            entrypoint.fetch_asset, target, "https://example.test/model", digest, 10
+        )
+        one.result()
+        two.result()
+    assert len(calls) == 1
+    assert target.read_bytes() == b"model"
+
+
+def test_startup_deadline_interrupts_stalled_preflight(entrypoint, monkeypatch):
+    import signal
+    import time
+
+    previous = signal.getsignal(signal.SIGALRM)
+    monkeypatch.setattr(entrypoint, "STARTUP_BUDGET_SECONDS", 1)
+    monkeypatch.setattr(entrypoint.subprocess, "run", lambda *a, **k: time.sleep(3))
+    try:
+        with pytest.raises(TimeoutError, match="Startup exceeded"):
+            entrypoint.main()
+    finally:
+        signal.alarm(0)
+        signal.signal(signal.SIGALRM, previous)

@@ -7,7 +7,8 @@ int main() {
     if (error == cudaSuccess) {
         check<<<1, 1>>>(device);
         error = cudaMemcpy(&value, device, sizeof(int), cudaMemcpyDeviceToHost);
-        cudaFree(device);
+        cudaError_t free_error = cudaFree(device);
+        if (error == cudaSuccess) error = free_error;
     }
     if (error != cudaSuccess || value != 42) {
         std::fprintf(stderr, "CUDA preflight failed: %s; value=%d\n", cudaGetErrorString(error), value);

@@ -1,5 +1,6 @@
 """Supervise the local GGUF server and batch; forward signals and reap children."""
 
+import fcntl
 import hashlib
 import json
 import os
@@ -13,42 +14,79 @@ from pathlib import Path
 
 from vuorse_vortex.jsonl import validate_jsonl
 
+# Maximum accepted asset sizes: 64 GiB for weights, 1 GiB for source JSONL.
+MODEL_MAX_BYTES = 64 * 1024**3
+INPUT_MAX_BYTES = 1024**3
+STARTUP_BUDGET_SECONDS = 5400
 
-def fetch_asset(path, url, expected):
-    if path.exists():
-        if expected:
-            digest = hashlib.sha256()
-            with path.open("rb") as handle:
-                for block in iter(lambda: handle.read(1024 * 1024), b""):
-                    digest.update(block)
-            if digest.hexdigest() != expected.lower():
-                raise SystemExit(f"Existing asset checksum mismatch: {path.name}")
+
+def fetch_asset(path, url, expected, max_bytes=MODEL_MAX_BYTES):
+    def reusable():
+        if not path.exists():
+            return False
+        if not expected:
+            return True
+        digest = hashlib.sha256()
+        with path.open("rb") as handle:
+            for block in iter(lambda: handle.read(1024 * 1024), b""):
+                digest.update(block)
+        if digest.hexdigest() == expected.lower():
+            return True
+        if not url:
+            raise SystemExit(f"Existing asset checksum mismatch: {path.name}")
+        return False
+
+    if reusable():
         return
     if not url or not expected:
         raise SystemExit(f"Missing {path}; mount it or supply its URL and SHA256")
     if not url.startswith("https://"):
         raise SystemExit("Asset URLs must use HTTPS")
     path.parent.mkdir(parents=True, exist_ok=True)
-    partial = path.with_suffix(path.suffix + ".partial")
-    digest = hashlib.sha256()
-    with urllib.request.urlopen(url, timeout=120) as response, partial.open("wb") as handle:
-        for block in iter(lambda: response.read(1024 * 1024), b""):
-            handle.write(block)
-            digest.update(block)
-    if digest.hexdigest() != expected.lower():
-        partial.unlink()
-        raise SystemExit(f"Checksum mismatch for {path.name}")
-    partial.replace(path)
+    # The lock remains in place so all processes lock the same inode.
+    with path.with_suffix(path.suffix + ".lock").open("a") as lock:
+        fcntl.flock(lock, fcntl.LOCK_EX)
+        if reusable():
+            return
+        partial = path.with_suffix(path.suffix + ".partial")
+        digest = hashlib.sha256()
+        try:
+            with urllib.request.urlopen(url, timeout=120) as response, partial.open("wb") as handle:
+                header = (
+                    response.headers.get("Content-Length") if hasattr(response, "headers") else None
+                )
+                if header is not None and int(header) > max_bytes:
+                    raise ValueError(f"Asset exceeds size limit: {path.name}")
+                size = 0
+                for block in iter(lambda: response.read(1024 * 1024), b""):
+                    size += len(block)
+                    if size > max_bytes:
+                        raise ValueError(f"Asset exceeds size limit: {path.name}")
+                    handle.write(block)
+                    digest.update(block)
+            if digest.hexdigest() != expected.lower():
+                raise SystemExit(f"Checksum mismatch for {path.name}")
+            partial.replace(path)
+        finally:
+            partial.unlink(missing_ok=True)
 
 
 def main():
+    def startup_timeout(signum, frame):
+        raise TimeoutError("Startup exceeded the 90-minute budget")
+
+    # Bounds downloads, asset locks, preflight and both server loads together.
+    signal.signal(signal.SIGALRM, startup_timeout)
+    signal.alarm(STARTUP_BUDGET_SECONDS)
     subprocess.run(["nvidia-smi"], check=True)
     # A real CUDA operation, before model load; built from CUDA's sample API.
     subprocess.run(["/opt/bin/cuda-check"], check=True)
     input_path = Path("/input/debriefing_walled.jsonl")
     if os.environ.get("INPUT_URL"):
         input_path = Path("/data/input/debriefing_walled.jsonl")
-        fetch_asset(input_path, os.environ["INPUT_URL"], os.environ.get("INPUT_SHA256"))
+        fetch_asset(
+            input_path, os.environ["INPUT_URL"], os.environ.get("INPUT_SHA256"), INPUT_MAX_BYTES
+        )
     if not input_path.is_file() or validate_jsonl(input_path):
         raise SystemExit("Missing or invalid input JSONL; supply valid MemoryRecord input first")
     model = Path(os.environ["MODEL_PATH"])
@@ -126,6 +164,7 @@ def main():
                 time.sleep(1)
         if pending:
             raise RuntimeError("GGUF load timed out after 600 seconds")
+        signal.alarm(0)
         worker = subprocess.Popen(
             [sys.executable, "-m", "vuorse_vortex.forge", "--input", str(input_path), *sys.argv[1:]]
         )

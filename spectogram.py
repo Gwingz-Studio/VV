@@ -1,5 +1,5 @@
-import numpy as np
 import matplotlib.pyplot as plt
+import numpy as np
 
 # Parameters
 freqs = np.linspace(10, 20, 256)  # Frequency in kHz

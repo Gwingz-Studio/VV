@@ -35,6 +35,6 @@ ENV PATH=/app/.venv/bin:$PATH HOME=/home/forge ANONYMIZED_TELEMETRY=False CORTEX
 LABEL org.opencontainers.image.title="VUORSE draft memory forge" org.opencontainers.image.revision=$FORGE_REVISION
 WORKDIR /app
 USER 10001:10001
-HEALTHCHECK --interval=30s --timeout=5s --start-period=600s CMD ["/app/.venv/bin/python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8080/health', timeout=3)"]
+HEALTHCHECK --interval=30s --timeout=5s --start-period=5700s CMD ["/app/.venv/bin/python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8080/health', timeout=3)"]
 ENTRYPOINT ["/app/.venv/bin/python", "/opt/entrypoint.py"]
 CMD ["--cycles", "1000"]
