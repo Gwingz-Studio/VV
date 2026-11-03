@@ -1,0 +1,36 @@
+services:
+  forge:
+    image: ${FORGE_IMAGE:-vuorse-forge:0.1.0}
+    platform: linux/amd64
+    build:
+      context: .
+      args:
+        FORGE_REVISION: ${FORGE_REVISION:-working-tree}
+    gpus: all
+    init: true
+    restart: "no"
+    read_only: true
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    tmpfs:
+      - /tmp:rw,noexec,nosuid,size=1g
+    environment:
+      CONTEXT_SIZE: ${CONTEXT_SIZE:-4096}
+      PARALLEL: ${PARALLEL:-1}
+    volumes:
+      - type: bind
+        source: ${MODEL_DIRECTORY:-D:/ComfyUI312/ComfyUI/models/LLM/HauhauCS/Qwen3.8-27B-Uncensored}
+        target: /models
+        read_only: true
+        bind:
+          create_host_path: false
+      - type: bind
+        source: ./hooplehopper_totality
+        target: /input
+        read_only: true
+        bind:
+          create_host_path: false
+      - forge-data:/data
+    command: ["--cycles", "${FORGE_CYCLES:-1000}", "--seed", "${FORGE_SEED:-42}"]
+volumes:
+  forge-data:
