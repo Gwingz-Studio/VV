@@ -1,0 +1,12 @@
+# Allowlist: never send the corpus, quarantine, archives, credentials or GGUFs.
+**
+!Dockerfile
+!pyproject.toml
+!uv.lock
+!README.md
+!vuorse_vortex/
+!vuorse_vortex/*.py
+!containers/
+!containers/forge/
+!containers/forge/*.py
+!containers/forge/*.cu
