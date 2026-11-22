@@ -56,7 +56,8 @@ build-backend = "hatchling.build"
 
 [tool.uv]
 package = true
-
+[tool.vercel]
+entrypoint = "scripts.vast_provision:app"
 [tool.ruff]
 line-length = 100
 target-version = "py311"
